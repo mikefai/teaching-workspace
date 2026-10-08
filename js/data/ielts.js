@@ -293,11 +293,214 @@ window.APEX_DATA.ielts = {
     },
 
     // ===================== PACK 2 — ROADMAP STUBS (15) =====================
-    { id: "ielts-16", title: "Writing Task 1: Bar & Pie Charts — Data Selection Framework", skill: "Writing", category: "writing-t1", comingSoon: true, tags: ["writing task 1", "bar chart", "pie chart"], summary: "Choosing which figures matter and grouping categorical data logically. Coming in Content Pack 2." },
-    { id: "ielts-17", title: "Writing Task 1: Process Diagrams — Sequencing Language", skill: "Writing", category: "writing-t1", comingSoon: true, tags: ["writing task 1", "process diagram"], summary: "Describing a cyclical or linear process using passive sequencing language. Coming in Content Pack 2." },
-    { id: "ielts-18", title: "Writing Task 1: Maps & Comparisons", skill: "Writing", category: "writing-t1", comingSoon: true, tags: ["writing task 1", "maps"], summary: "Describing change between two maps using spatial and change-over-time language. Coming in Content Pack 2." },
-    { id: "ielts-19", title: "Writing Task 2: Problem/Solution Essays", skill: "Writing", category: "writing-t2", comingSoon: true, tags: ["writing task 2", "problem solution"], summary: "Structuring causes, problems, and realistic solutions in a balanced four-paragraph essay. Coming in Content Pack 2." },
-    { id: "ielts-20", title: "Writing Task 2: Advantages/Disadvantages & Direct Question Essays", skill: "Writing", category: "writing-t2", comingSoon: true, tags: ["writing task 2", "advantages disadvantages"], summary: "Handling the two remaining Task 2 essay types with the correct structural expectations. Coming in Content Pack 2." },
+    {
+      id: "ielts-16",
+      title: "Writing Task 1: Bar & Pie Charts — Data Selection Framework",
+      skill: "Writing",
+      category: "writing-t1",
+      bandFocus: "5.5–9.0",
+      comingSoon: false,
+      tags: ["writing task 1", "bar chart", "pie chart", "data selection", "academic"],
+      summary: "Choosing which figures matter, grouping categories logically, and reporting them with accurate approximation language.",
+      body: [
+        {
+          heading: "What the Examiner Is Really Marking",
+          html: "<p>Task 1 has 20 minutes and a 150-word minimum. Task Achievement (TA) does <strong>not</strong> reward reporting every number. It rewards <em>selecting</em> the key features, reporting them accurately, and giving a clear overview. A response that lists all twenty figures in the order they appear is unlikely to score above Band 5 for Task Achievement because nothing has been selected.</p>"
+        },
+        {
+          heading: "The Select–Group–Compare Method",
+          html: "<ul><li><strong>Select:</strong> pick the highest value, the lowest value, and the biggest change (if there are two time points). That is usually about 4–8 figures in total.</li><li><strong>Group:</strong> put categories that behave alike in the same sentence or paragraph (for example, the two age groups that rose slightly versus the one that rose sharply).</li><li><strong>Compare:</strong> use a ratio or a gap instead of repeating raw numbers: <em>'roughly double'</em>, <em>'a third lower'</em>, <em>'a gap of 15 percentage points'</em>.</li></ul>"
+        },
+        {
+          heading: "Writing the Overview (No Numbers)",
+          html: "<p>The overview is a separate paragraph that states the 2 most important patterns in words only. Weak: <em>'The chart shows many different figures.'</em> Strong: <em>'Overall, participation rose in every group, and the largest increase occurred among the oldest adults.'</em> Place it directly after your introduction so the examiner cannot miss it.</p>"
+        },
+        {
+          heading: "Approximation and Data Language",
+          html: "<ul><li><strong>Approximating:</strong> <em>just over, roughly, approximately, a little under, close to, nearly</em>.</li><li><strong>Reporting a share:</strong> <em>accounted for, made up, represented, stood at, was responsible for</em>.</li><li><strong>Comparing:</strong> <em>twice as high as, considerably lower than, marginally ahead of, in contrast, whereas</em>.</li><li><strong>Units:</strong> a <em>percentage</em> is a number out of 100; a <em>percentage point</em> is the difference between two percentages. Writing '15 per cent' when you mean a 15-point gap changes the meaning.</li></ul>"
+        },
+        {
+          heading: "Pie Charts and Multiple Charts",
+          html: "<p>A pie chart shows parts of a whole, so the natural language is rank and share: <em>'the largest share'</em>, <em>'a quarter'</em>, <em>'the remaining'</em>. With two pies for different years, describe the biggest shift first, then the categories that stayed stable. With a bar chart <em>and</em> a table, use the table to support one or two points rather than writing a second report.</p>"
+        }
+      ],
+      modelAnswer: {
+        prompt: "The bar chart shows the percentage of adults in four age groups who exercised at least three times a week in a European country in 2005 and 2020. Data (2005 → 2020): ages 18–29: 45% → 52%; ages 30–44: 38% → 41%; ages 45–59: 30% → 35%; ages 60 and over: 22% → 37%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+        text: "The bar chart compares the proportion of adults in four age groups who exercised at least three times a week in a European country in 2005 and 2020.\n\nOverall, regular exercise became more common in every age group, and the increase was most striking among the oldest adults, who moved from having the lowest participation to a level close to that of the middle-aged groups.\n\nIn 2005, young adults aged 18 to 29 were the most active, at 45 per cent, followed by the 30 to 44 group on 38 per cent. Participation then fell steadily with age, reaching just 22 per cent among people aged 60 and over.\n\nBy 2020, the youngest group had risen modestly to 52 per cent and remained the most active, while the 30 to 44 and 45 to 59 groups gained only three and five percentage points respectively, reaching 41 and 35 per cent. The most dramatic change occurred among the over-60s, whose figure climbed by 15 points to 37 per cent, overtaking the 45 to 59 group.",
+        bandAnnotation: "TA: A clear overview with no numbers, followed by selected figures (highest, lowest, biggest change) rather than a full data dump. CC: Paragraphs are organised by time period, with 'overtaking' creating a natural link between the final two points. LR: Accurate data vocabulary ('modestly', 'dramatic', 'percentage points') and correct use of 'per cent' versus 'points'. GRA: A range of structures, including a relative clause ('who moved from...'), a participle phrase ('reaching just 22 per cent') and 'while' contrast, all accurate."
+      },
+      turkishL1Note: "Writers at this level may tend to move through the chart one figure at a time in the order shown. Group instead: put the categories that behave alike in one sentence. Remember too that Turkish has no articles, so check 'the' and 'a' in comparisons: 'the oldest adults', 'a steady rise'.",
+      commonMistakes: [
+        "Reporting every figure in the chart instead of selecting the key features, which gives no overview and leaves the examiner nothing to credit for TA.",
+        "Putting numbers in the overview. Numbers belong in the body paragraphs; the overview describes patterns in words only.",
+        "Confusing 'percentage' and 'percentage points', for example writing that a rise from 22% to 37% is 'a 15 per cent increase'."
+      ],
+      practiceTip: "Take any bar chart and give yourself 3 minutes to write only two things: the overview (2 sentences, no numbers) and a list of 4–8 figures you would select. Check that every figure is either an extreme or a major change."
+    },
+    {
+      id: "ielts-17",
+      title: "Writing Task 1: Process Diagrams — Sequencing Language",
+      skill: "Writing",
+      category: "writing-t1",
+      bandFocus: "5.5–9.0",
+      comingSoon: false,
+      tags: ["writing task 1", "process diagram", "passive voice", "sequencing"],
+      summary: "Describing a linear or cyclical process clearly using the passive voice, precise verbs and varied sequencing connectors.",
+      body: [
+        {
+          heading: "What Makes a Process Task Different",
+          html: "<p>A process diagram has no trends and no comparisons. You are explaining <em>how something happens</em>, step by step. There are two types: <strong>man-made</strong> processes (producing olive oil, recycling glass), where people or machines act, and <strong>natural</strong> processes (the water cycle, the life cycle of a frog), where nature acts. The type decides your grammar: man-made processes are mostly passive; natural processes often use the active voice.</p>"
+        },
+        {
+          heading: "The Overview: Count, Start, Finish",
+          html: "<p>Your overview should state <strong>how many stages</strong> there are, <strong>where the process begins and ends</strong>, and whether it is linear or cyclical. Example: <em>'Overall, the production of olive oil involves seven stages, beginning with the harvesting of the olives and ending with the bottling of the filtered oil.'</em> Do not describe individual steps in the overview.</p>"
+        },
+        {
+          heading: "Passive Voice for Man-Made Processes",
+          html: "<ul><li>Active: <em>Workers shake the trees.</em> → Passive: <em>The olives are shaken from the trees.</em></li><li>Use the passive when the doer is obvious or unimportant; add 'by' only when the machine matters: <em>'by a centrifuge'</em>.</li><li>Keep tense consistent: present simple passive (<em>is/are + past participle</em>) for a general process.</li></ul>"
+        },
+        {
+          heading: "Sequencing Without Repeating 'Then'",
+          html: "<ul><li><strong>Beginning:</strong> <em>At the first stage, To begin with, The process starts when</em></li><li><strong>Middle:</strong> <em>Next, Following this, After that, Once this has been completed, Subsequently</em></li><li><strong>Simultaneous:</strong> <em>At the same time, Meanwhile, while this is happening</em></li><li><strong>End:</strong> <em>Finally, In the last stage, The process concludes when</em></li></ul><p>Join short steps into one sentence with participles or 'before/after': <em>'The paste is mixed for about 30 minutes before being spun in a centrifuge.'</em></p>"
+        },
+        {
+          heading: "Cyclical Processes",
+          html: "<p>For a cycle such as the water cycle, say that it has no real beginning or end: <em>'The diagram illustrates a continuous cycle with four main stages.'</em> Choose a logical starting point (for example evaporation), and finish by noting that the cycle then repeats.</p>"
+        }
+      ],
+      modelAnswer: {
+        prompt: "The diagram shows how olive oil is produced. Stages: 1) Olives are harvested by shaking the trees. 2) The olives are washed to remove leaves. 3) The olives are crushed into a paste. 4) The paste is mixed slowly for 30 to 40 minutes. 5) The paste is spun in a centrifuge, which separates oil from water and solids. 6) The oil is filtered. 7) The oil is stored in steel tanks and then bottled. Summarise the information by selecting and reporting the main features.",
+        text: "The diagram illustrates the process by which olive oil is produced, from the harvesting of the fruit to the final bottling.\n\nOverall, the process is linear and consists of seven stages, beginning with the collection of olives from the trees and ending with the storage and bottling of the filtered oil.\n\nAt the first stage, the olives are harvested by shaking the trees, and they are then washed so that any leaves are removed. Next, the clean olives are crushed to form a thick paste. This paste is mixed slowly for between 30 and 40 minutes.\n\nFollowing this, the mixture is spun in a centrifuge, which separates the oil from the water and the solids. Once the oil has been extracted, it is filtered to remove any remaining particles. Finally, the oil is kept in steel tanks before being poured into bottles for sale.",
+        bandAnnotation: "TA: The overview states the number of stages, the type of process and its start and end points; all seven stages are covered. CC: Sequencing is varied ('At the first stage', 'Next', 'Following this', 'Once...', 'Finally') and short steps are joined into longer sentences. LR: Process-specific vocabulary ('centrifuge', 'solids', 'particles') and accurate reference words ('this paste', 'the mixture'). GRA: Consistent passive voice, a relative clause ('which separates...'), and 'before being + past participle' used accurately."
+      },
+      turkishL1Note: "Turkish verb endings can express the passive, so students understand it well but sometimes build English passives with the wrong auxiliary ('The olives are shake'). Check every passive for 'be + past participle' and make sure the verb form is the third form (shaken, crushed, filtered).",
+      commonMistakes: [
+        "Repeating 'then' at the start of every sentence, which typically holds Coherence and Cohesion around Band 5–6.",
+        "Mixing active and passive for a man-made process ('The workers wash the olives and the paste is crushed'), which makes the description inconsistent.",
+        "Adding explanation or opinion that is not in the diagram. Describe only what the diagram shows."
+      ],
+      practiceTip: "Describe any everyday process (making tea, recharging a phone) in 8 passive sentences using 6 different sequencing expressions, then underline each connector and check that none is used twice."
+    },
+    {
+      id: "ielts-18",
+      title: "Writing Task 1: Maps & Comparisons",
+      skill: "Writing",
+      category: "writing-t1",
+      bandFocus: "5.5–9.0",
+      comingSoon: false,
+      tags: ["writing task 1", "maps", "change over time", "spatial language"],
+      summary: "Describing change between two maps using controlled tenses, precise spatial prepositions and a clear overview of the biggest transformation.",
+      body: [
+        {
+          heading: "Reading a Map Task",
+          html: "<p>Map tasks show the same place at two (or three) different times, or a plan of a site before and after development. The task is to describe <strong>what changed</strong>, <strong>what stayed the same</strong> and <strong>where</strong>. There is no trend language; the skill is spatial precision and tense control.</p>"
+        },
+        {
+          heading: "Tense Control",
+          html: "<ul><li>Both maps in the past: use the <strong>past simple</strong> for each (<em>'was replaced'</em>, <em>'were built'</em>).</li><li>One past, one present: use the past simple for the earlier map and the <strong>present simple or present perfect</strong> for the later one (<em>'Today, a supermarket stands...'</em>).</li><li>Past and future (a planned development): use <em>'will be'</em> or <em>'is planned to'</em> for the later map.</li></ul>"
+        },
+        {
+          heading: "Spatial Language",
+          html: "<ul><li><strong>Position:</strong> <em>in the north-east, to the west of, alongside, adjacent to, in the centre, opposite, between...</em></li><li><strong>Change verbs:</strong> <em>was demolished, was replaced by, was converted into, was extended, was built, was relocated, remained unchanged</em>.</li><li><strong>Quantity of change:</strong> <em>doubled in size, was enlarged, was reduced</em>.</li></ul>"
+        },
+        {
+          heading: "Overview and Grouping",
+          html: "<p>Your overview should say what kind of change dominates: <em>'Overall, the village changed from a mainly agricultural area into a more developed, residential community with better road access.'</em> In the body, organise by <strong>area</strong> (north, centre, south) or by <strong>type of change</strong> (new buildings, demolished features, unchanged features). Do not describe the maps one feature at a time.</p>"
+        }
+      ],
+      modelAnswer: {
+        prompt: "The maps show a village in 1995 and today. 1995: farmland in the north; a small primary school in the centre; a river along the east side with a wooden footbridge; a few houses on the west along the main road; a pond in the south. Today: the northern farmland is a housing estate; the school has been extended and has a playground; the footbridge is a road bridge; a supermarket with a car park occupies the area where the pond was; the western houses remain. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+        text: "The two maps illustrate how a village changed between 1995 and the present day.\n\nOverall, the village developed from a largely agricultural settlement into a more built-up community with better facilities and improved access, although the western part along the main road remained the same.\n\nIn 1995, the northern part of the village consisted entirely of farmland, while a small primary school stood in the centre. A river ran along the eastern edge and was crossed by a wooden footbridge, and a pond was located in the south.\n\nToday, the farmland in the north has been replaced by a housing estate. The primary school has been extended and now includes a playground. In the east, the footbridge has been replaced by a road bridge, which allows vehicles to cross the river. In the south, the pond has disappeared, and a supermarket with its own car park now occupies the site. The houses on the western side of the main road are the only feature that has not changed.",
+        bandAnnotation: "TA: The overview identifies the dominant change (agricultural to built-up) and the one unchanged area; every feature on the maps is covered. CC: Information is grouped by time (1995, then today) and by area, with 'which' clauses showing results. LR: Precise change verbs ('replaced by', 'extended', 'occupies the site') and position language ('along the eastern edge', 'in the south'). GRA: Accurate tense shift from past simple to present perfect passive, plus relative clauses."
+      },
+      turkishL1Note: "Prepositions of place are a common Turkish L1 weak spot (case suffixes do this job in Turkish). Practise 'in the north', 'on the river', 'to the west of', 'at the entrance', and check that you have not written 'in the east side' where 'on the east side' is needed.",
+      commonMistakes: [
+        "Describing each map separately and never comparing them, so the examiner cannot see the change.",
+        "Using the past simple ('a supermarket was built') for the second map when no past time is given and the focus is what exists today; the present perfect or present simple is usually clearer.",
+        "Using vague spatial language such as 'on the left' instead of compass points or fixed reference features."
+      ],
+      practiceTip: "Sketch two quick maps of your own street (then and now, or now and planned) and write 6 sentences using 6 different change verbs, each with a precise position phrase."
+    },
+    {
+      id: "ielts-19",
+      title: "Writing Task 2: Problem/Solution Essays",
+      skill: "Writing",
+      category: "writing-t2",
+      bandFocus: "6.0–9.0",
+      comingSoon: false,
+      tags: ["writing task 2", "problem solution", "causes", "essay structure"],
+      summary: "Mapping every part of a problem/solution question to a paragraph, and proposing solutions that are specific, realistic and linked to the causes.",
+      body: [
+        {
+          heading: "Identify the Exact Question Type",
+          html: "<p>Problem/solution prompts come in two main shapes, and the paragraph plan depends on which you have:</p><ul><li><strong>Causes + solutions:</strong> 'What are the causes and what can be done?'</li><li><strong>Problems + solutions:</strong> 'What problems does this cause and how can they be solved?'</li></ul><p>Underline each question word. Leaving a part of the question unanswered usually limits Task Response to about Band 5, so each question needs its own clearly marked paragraph or half-paragraph.</p>"
+        },
+        {
+          heading: "The Four-Paragraph Plan",
+          html: "<ul><li><strong>Introduction:</strong> paraphrase the topic + a thesis that previews both parts (<em>'This essay will examine the main causes and propose two practical solutions.'</em>).</li><li><strong>Body 1:</strong> two causes (or problems), each with an explanation and a specific example.</li><li><strong>Body 2:</strong> two solutions, each linked to a cause from Body 1, with an explanation of <em>how</em> it would work.</li><li><strong>Conclusion:</strong> a brief summary and, if you like, a final judgment on which solution is most effective.</li></ul>"
+        },
+        {
+          heading: "Making Solutions Realistic",
+          html: "<p>Band 7+ solutions are <em>specific, actionable and explained</em>. Weak: <em>'The government should do something about it.'</em> Stronger: <em>'Governments could introduce congestion charges in city centres, which would discourage unnecessary car journeys and generate revenue to improve bus services.'</em> Always include who acts (government, schools, individuals), what they do, and why it works.</p>"
+        },
+        {
+          heading: "Useful Language",
+          html: "<ul><li><strong>Causes:</strong> <em>stems from, is largely attributable to, can be traced back to, is driven by</em></li><li><strong>Effects:</strong> <em>leads to, results in, gives rise to, has a knock-on effect on</em></li><li><strong>Solutions:</strong> <em>could be tackled by, one effective measure would be, this would help to, would go a long way towards</em></li></ul>"
+        }
+      ],
+      modelAnswer: {
+        prompt: "In many cities, traffic congestion is becoming a serious problem. What are the causes of this, and what solutions can be suggested?",
+        text: "Traffic congestion has become a daily frustration for residents of many large cities. This essay will examine two major causes of the problem and propose measures that could realistically reduce it.\n\nOne significant cause is the continuing growth in private car ownership. As incomes rise, more households buy a car, and many commuters choose to drive alone because public transport seems slow or unreliable. A second cause is poor urban planning. When housing, jobs and shops are located in different parts of a city, people are forced to make long journeys every day. In several fast-growing cities, for example, new apartment districts have been built on the outskirts with no direct rail link to the business centre, so thousands of residents depend on a single motorway.\n\nTo address the first cause, governments should invest in fast, frequent and affordable public transport, because commuters will leave their cars at home only if buses and trains offer a genuine alternative. This could be supported by congestion charges in city centres, which would discourage unnecessary journeys and raise money for further improvements. As for the second cause, planners could encourage mixed-use development so that people can live close to where they work and shop. Cities that have created compact neighbourhoods with local services have seen far fewer long-distance commuting trips.\n\nIn conclusion, congestion results mainly from rising car use and poorly planned cities. Better public transport, charges on driving in busy areas and more integrated planning would together make urban travel faster and less stressful.",
+        bandAnnotation: "TA: Both parts of the question (causes and solutions) are answered fully, and each solution is explicitly matched to a cause. CC: Clear paragraphing with a preview in the introduction; solutions are introduced with 'To address the first cause' and 'As for the second cause', giving a logical link to Body 1. LR: Topic-specific vocabulary ('congestion charges', 'mixed-use development', 'compact neighbourhoods') and accurate cause-effect verbs. GRA: A wide range of complex structures (relative clauses, a 'so that' purpose clause, 'when' and 'only if' clauses) with high accuracy."
+      },
+      turkishL1Note: "Writers at this level may name a solution without saying how it works ('The government must build more roads'). Add a 'because/which would' clause to every solution. This turns a bare instruction into an explained argument, which is what Task Response rewards.",
+      commonMistakes: [
+        "Answering only one part of the question (for example, giving three solutions but no causes), which usually limits Task Response to about Band 5.",
+        "Offering solutions that do not match the causes you described, so the essay reads as two separate lists.",
+        "Proposing unrealistic or vague solutions such as 'ban all cars' or 'people should be more careful' without explaining how they would work."
+      ],
+      practiceTip: "Take five problem/solution questions and, for each, spend 5 minutes writing only the plan: two causes, two matching solutions, and one concrete example for each. Check that every solution names who acts and how it works."
+    },
+    {
+      id: "ielts-20",
+      title: "Writing Task 2: Advantages/Disadvantages & Direct Question Essays",
+      skill: "Writing",
+      category: "writing-t2",
+      bandFocus: "6.0–9.0",
+      comingSoon: false,
+      tags: ["writing task 2", "advantages disadvantages", "outweigh", "direct question"],
+      summary: "Handling the two remaining Task 2 essay types: weighing advantages against disadvantages, and answering two-part direct questions in full.",
+      body: [
+        {
+          heading: "Advantages/Disadvantages: Three Prompt Shapes",
+          html: "<ul><li><strong>Discuss both:</strong> 'What are the advantages and disadvantages?' — present both sides; a personal opinion is optional.</li><li><strong>Outweigh:</strong> 'Do the advantages outweigh the disadvantages?' — you <em>must</em> take a position.</li><li><strong>Single side:</strong> 'What are the advantages of...?' — write only about the side asked for.</li></ul>"
+        },
+        {
+          heading: "Balanced vs Position Plan",
+          html: "<p>For 'discuss both', use two equal body paragraphs, one per side. For 'outweigh', state your verdict in the introduction (<em>'I believe the benefits are greater'</em>) and give more space to the side you support, while still acknowledging the other. Do not write a plan of two equal paragraphs and then a conclusion that reverses your view.</p>"
+        },
+        {
+          heading: "Direct Questions: Answer Each One Explicitly",
+          html: "<p>Direct-question essays ask two separate questions, for example <em>'Why is this happening? Is it a positive or negative development?'</em> Plan one body paragraph for each question and answer them in the order given. Use the question's own words in your topic sentences: <em>'There are several reasons why...'</em>, <em>'On balance, I consider this development to be positive.'</em></p>"
+        },
+        {
+          heading: "Language for Weighing",
+          html: "<ul><li><strong>Advantage:</strong> <em>a key benefit is, one clear advantage is, this offers the opportunity to</em></li><li><strong>Disadvantage:</strong> <em>a notable drawback is, this comes at a cost, the downside is</em></li><li><strong>Weighing:</strong> <em>outweigh, on balance, although this is true, nevertheless, the benefits clearly exceed</em></li></ul>"
+        }
+      ],
+      modelAnswer: {
+        prompt: "More and more people are choosing to work from home instead of travelling to an office. Do the advantages of this development outweigh the disadvantages?",
+        text: "Advances in communication technology have made it possible for many employees to work from home rather than commute to an office. Although this arrangement has some drawbacks, I believe that the advantages are greater, both for workers and for employers.\n\nThe most obvious benefit is the time and money that employees save. Without a daily commute, a worker in a large city can regain an hour or more each day, which can be spent on family life, exercise or rest. This often leads to better wellbeing and higher productivity, because people feel less tired and have more control over their working hours. Employers also gain, since they can reduce expensive office space and recruit talented staff from anywhere, rather than only from the local area.\n\nHowever, working from home is not without problems. Some employees feel isolated without daily contact with colleagues, and younger workers may miss the informal learning that comes from watching experienced staff. In addition, the boundary between work and personal life can disappear when the kitchen table becomes an office, leading some people to work longer hours than before.\n\nNevertheless, these drawbacks can largely be managed. Companies can arrange regular video meetings and occasional days in the office, which maintain team spirit and allow training, while clear working hours protect personal time. In conclusion, although remote work requires careful management, its benefits for time, wellbeing and flexibility outweigh its disadvantages.",
+        bandAnnotation: "TA: A clear position is given in the introduction and maintained throughout; the disadvantages are acknowledged and then answered, as the 'outweigh' question requires. CC: Four logical paragraphs, with 'However' and 'Nevertheless' signalling the shift in argument. LR: Natural collocations ('regain an hour', 'maintain team spirit', 'informal learning') and precise weighing vocabulary. GRA: A variety of complex structures (concessive 'Although', 'since' reason clause, relative clauses) with very few errors."
+      },
+      turkishL1Note: "A common pattern at this level, not specific to Turkish, is writing a long list of advantages and disadvantages with no weighing. Add one sentence that explicitly compares the two sides ('Nevertheless, these drawbacks can largely be managed...'). The examiner needs to see your judgment, not just your inventory of points.",
+      commonMistakes: [
+        "Treating an 'outweigh' question as 'discuss both' and never stating which side is stronger.",
+        "In a direct-question essay, answering only the first question or merging both answers into one paragraph so the second is not clearly addressed.",
+        "Giving a conclusion that contradicts the position taken in the introduction."
+      ],
+      practiceTip: "For three different prompts (one of each shape), write only the introduction and the topic sentences of the body paragraphs. Read them aloud: do they show your position and answer every part of the question?"
+    },
     { id: "ielts-21", title: "Sentence & Summary Completion — Word Limit Rules", skill: "Reading", category: "reading", comingSoon: true, tags: ["reading", "summary completion"], summary: "Exact word-limit compliance and paraphrase-aware gap filling. Coming in Content Pack 2." },
     { id: "ielts-22", title: "Multiple Choice & Matching Features", skill: "Reading", category: "reading", comingSoon: true, tags: ["reading", "mcq", "matching features"], summary: "Handling multi-answer MCQs and matching names/terms to descriptions. Coming in Content Pack 2." },
     { id: "ielts-23", title: "Reading: Distractor Analysis Masterclass", skill: "Reading", category: "reading", comingSoon: true, tags: ["reading", "distractors"], summary: "Why each wrong answer is designed to be plausible, question type by question type. Coming in Content Pack 2." },
