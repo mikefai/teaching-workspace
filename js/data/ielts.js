@@ -1252,6 +1252,294 @@ window.APEX_DATA.ielts = {
           tag: "summary-completion"
         }
       ]
+    },
+    {
+      id: "ielts-read-04",
+      title: "Reading Practice 4 — Night Trains Make a Comeback",
+      bandFocus: "6.5–8.0",
+      passageTitle: "Night Trains Make a Comeback",
+      timeLimitMinutes: 20,
+      instructions: "Read the passage and answer questions 1–13. (The studies, surveys and people described are fictional and written for practice.) Where a question says NO MORE THAN TWO WORDS, write words exactly as they appear in the passage. For True / False / Not Given, type True, False or Not Given.",
+      text: "[A] Not long ago, the overnight train seemed to belong to the past. Budget airlines had made short flights so cheap that many operators withdrew their sleeper services, and several famous routes across Europe were closed. In the last few years, however, the picture has begun to change. New night services have opened between several major cities, and some older routes have returned with modernised carriages. Supporters argue that the revival reflects a wider shift in how people think about travel, while sceptics point out that night trains remain a small part of the market.\n\n[B] Environmental concern is the most frequently cited reason for the revival. Travel by train produces far less carbon dioxide per passenger than the equivalent flight, and a growing number of travellers say that they want to reduce their own contribution. Surveys carried out by rail operators suggest that environmental motives are important to a majority of night-train passengers, although the same surveys show that price and convenience still matter more to most people than climate arguments. One operator notes that its customers are more likely to mention the experience of the journey than any environmental benefit.\n\n[C] That experience has been redesigned. Older sleeper carriages often offered little more than a narrow bunk and a shared corridor, and many travellers remember them as noisy and uncomfortable. Newer trains offer private compartments with their own washbasins, and some include showers and a dining car serving regional dishes. Designers say that the aim is to make the train feel like a hotel that happens to move. Not everyone is persuaded. A travel writer who tested several of the new services reported that sleep was still interrupted by stops at stations during the night, and that the improved comfort came at a price that was closer to that of a hotel room than a bus ticket.\n\n[D] Cost is indeed the central difficulty. Running a night train requires specialist carriages, which are expensive to build and cannot easily be used for other services. Because each train carries fewer passengers than a day service, fares must be higher to cover costs. Several operators therefore depend on public funding. Supporters of subsidies argue that governments already support aviation indirectly, for example by not taxing aircraft fuel, and that fairness requires similar help for rail. Opponents reply that rail should compete on its own merits and that subsidies make sense only for routes with strong demand.\n\n[E] Demand, in fact, varies widely. Routes between large cities roughly a thousand kilometres apart appear to work best, because the journey fits comfortably into a night and passengers arrive in the morning with a full working day ahead. On much longer routes, the train spends a second night on board, and fewer travellers are willing to accept this. On much shorter routes, a day train is quicker and cheaper. Planners are therefore choosing their routes with care, and they expect that the most successful services will be those that connect cities where flying is either inconvenient or expensive.\n\n[F] Cross-border services present a further obstacle. Railway networks in different countries use different signalling systems and electricity supplies, so a train crossing several borders must either carry expensive equipment that works on all of them or change locomotives on the way. Booking systems are also separate, which makes it difficult for passengers to buy a single ticket for a long journey. Several governments have agreed to work together on these problems, but progress has been slow. Industry experts suggest that night trains will expand steadily rather than dramatically, and that their long-term future will depend as much on administrative cooperation as on passenger enthusiasm.",
+      questions: [
+        {
+          id: "rd4-q01",
+          type: "tfng",
+          prompt: "1. All of the long-established sleeper routes in Europe were closed when budget airlines became popular.",
+          correctAnswer: "False",
+          explanation: "Paragraph A: 'several famous routes across Europe were closed'. 'All' contradicts 'several'. Pattern: over-generalisation.",
+          tag: "tfng"
+        },
+        {
+          id: "rd4-q02",
+          type: "tfng",
+          prompt: "2. Most night-train passengers say that environmental reasons matter more to them than price.",
+          correctAnswer: "False",
+          explanation: "Paragraph B: environmental motives are important to a majority, but 'price and convenience still matter more to most people'. Pattern: partial match — the first half of the sentence is true, the comparison is reversed.",
+          tag: "tfng"
+        },
+        {
+          id: "rd4-q03",
+          type: "tfng",
+          prompt: "3. Some of the new night trains have compartments with their own washbasins.",
+          correctAnswer: "True",
+          explanation: "Paragraph C: 'private compartments with their own washbasins'.",
+          tag: "tfng"
+        },
+        {
+          id: "rd4-q04",
+          type: "tfng",
+          prompt: "4. The travel writer found the new trains quieter than the older ones.",
+          correctAnswer: "Not Given",
+          explanation: "Paragraph C says the writer's sleep 'was still interrupted' but makes no comparison with the older trains. Pattern: true but irrelevant — the interruption is mentioned, the comparison is not.",
+          tag: "tfng"
+        },
+        {
+          id: "rd4-q05",
+          type: "tfng",
+          prompt: "5. Governments pay part of the running costs of some night services.",
+          correctAnswer: "True",
+          explanation: "Paragraph D: 'Several operators therefore depend on public funding.'",
+          tag: "tfng"
+        },
+        {
+          id: "rd4-q06",
+          type: "summary",
+          prompt: "6. Complete the sentence using NO MORE THAN TWO WORDS from the passage: Night trains need specialist ______, which are expensive to build and cannot easily be used for other services.",
+          correctAnswer: "carriages",
+          explanation: "Paragraph D: 'specialist carriages, which are expensive to build'. Pattern: wrong subject — 'fares' and 'services' are nearby but do not fit the relative clause.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd4-q07",
+          type: "summary",
+          prompt: "7. Complete the sentence using NO MORE THAN TWO WORDS from the passage: Because night trains carry fewer passengers than day services, ______ must be higher to cover costs.",
+          correctAnswer: "fares",
+          explanation: "Paragraph D: 'fares must be higher to cover costs'. Pattern: partial match — 'costs' is in the sentence already and cannot also fill the gap.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd4-q08",
+          type: "summary",
+          prompt: "8. Complete the sentence using NO MORE THAN TWO WORDS from the passage: Routes of roughly a thousand kilometres work best because the journey fits comfortably into a ______.",
+          correctAnswer: "night",
+          explanation: "Paragraph E: 'the journey fits comfortably into a night'. Pattern: true but irrelevant — 'morning' also appears but follows the arrival, not the journey.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd4-q09",
+          type: "summary",
+          prompt: "9. Complete the sentence using NO MORE THAN TWO WORDS from the passage: A train crossing several borders must either carry expensive equipment or change ______ on the way.",
+          correctAnswer: "locomotives",
+          explanation: "Paragraph F: 'change locomotives on the way'. Pattern: partial match — 'equipment' is in the same sentence but is the other option.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd4-q10",
+          type: "mcq",
+          prompt: "10. What is the main point of paragraph C?",
+          options: [
+            "Older sleeper carriages were popular with travellers",
+            "Newer trains are more comfortable, but not everyone is convinced by them",
+            "A dining car is the most important feature of a night train",
+            "Hotel rooms are cheaper than train tickets"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph C describes the redesign and then the writer's doubts about sleep and price. A is opposite polarity (travellers remember them as uncomfortable); C is a minor detail; D reverses the comparison.",
+          tag: "mcq"
+        },
+        {
+          id: "rd4-q11",
+          type: "mcq",
+          prompt: "11. What argument do supporters of subsidies use in paragraph D?",
+          options: [
+            "Rail is already cheaper than flying",
+            "Governments already help aviation indirectly, so rail deserves similar help",
+            "Night trains are always full",
+            "Airlines pay too much tax"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph D: governments 'already support aviation indirectly ... fairness requires similar help for rail'. A and C are unsupported claims; D reverses the point about fuel not being taxed.",
+          tag: "mcq"
+        },
+        {
+          id: "rd4-q12",
+          type: "mcq",
+          prompt: "12. According to paragraph E, which services do planners expect to be most successful?",
+          options: [
+            "Those on the longest routes",
+            "Those connecting cities where flying is inconvenient or expensive",
+            "Those on the shortest routes",
+            "Those with no day trains at all"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph E: 'cities where flying is either inconvenient or expensive'. A and C contradict the points about very long and very short routes; D is not mentioned.",
+          tag: "mcq"
+        },
+        {
+          id: "rd4-q13",
+          type: "mcq",
+          prompt: "13. What do industry experts suggest about the future of night trains?",
+          options: [
+            "They will expand very quickly",
+            "They will grow steadily, depending on cooperation as well as demand",
+            "They will disappear again",
+            "They will not change"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph F: 'expand steadily rather than dramatically ... as much on administrative cooperation as on passenger enthusiasm'. A is opposite polarity; C and D are not supported.",
+          tag: "mcq"
+        }
+      ]
+    },
+    {
+      id: "ielts-read-05",
+      title: "Reading Practice 5 — The Case for Boredom",
+      bandFocus: "7.0–8.5",
+      passageTitle: "The Case for Boredom",
+      timeLimitMinutes: 20,
+      instructions: "Read the passage and answer questions 1–13. (The studies, surveys and people described are fictional and written for practice.) Questions 5–8 ask which researcher holds each view. For True / False / Not Given, type True, False or Not Given.",
+      text: "[A] Few people today have to endure a long period with nothing to do. A phone in the pocket can fill every gap, from the queue at the bank to the wait for a bus. Yet a number of researchers are beginning to ask whether the disappearance of boredom is entirely good news. The question is not simply whether people are happier without it, but what they might lose when it disappears. Boredom, they suggest, may be an uncomfortable but useful signal that pushes people towards new goals, and a life without it could have costs that are only now becoming visible.\n\n[B] Dr Elena Voss, a psychologist, has studied how people behave when they are given a dull task. In one of her experiments, volunteers copied numbers from a phone directory for fifteen minutes and were then asked to think of as many uses as they could for a pair of plastic cups. The task was deliberately dull, and the volunteers themselves described it as tedious. Those who had completed it produced a larger number of ideas, and more unusual ones, than a control group who went straight to the creative task. Dr Voss argues that boredom makes the mind search for stimulation, and that this search can lead to original thinking. She is careful to add that the result applies to mildly boring tasks and that extreme or prolonged boredom does not seem to help.\n\n[C] Professor Kwame Adjei approaches the question from the study of the brain. When people are not concentrating on anything in particular, he explains, a network of brain regions becomes more active, and this network is associated with imagining the future, recalling memories and understanding other people. He believes that constant stimulation may leave little time for this kind of mental activity. However, he warns against drawing firm conclusions, since scanning studies show only which regions are active and cannot show whether the activity is useful.\n\n[D] Dr Priya Nair, who works with schools, is more concerned with children. She notes that teachers now report more difficulty in getting pupils to settle to a single task for long periods, and she suspects that children who rarely experience boredom have little practice in tolerating it. In her view, schools should not entertain pupils at every moment but should sometimes allow them to work through a slow or repetitive task. She admits that there is little long-term evidence for this opinion and that her observations come mainly from teachers' accounts.\n\n[E] Technology designers see the matter differently. Tom Lindgren, who designs mobile applications, argues that people choose to fill idle moments with their phones because they find it pleasant, and that criticism of this choice assumes people cannot judge what is good for them. He points out that a bored person may as easily read a book on the device as scroll through messages, and that blaming the technology ignores the difference between how people use it. Critics reply that applications are deliberately built to be hard to put down, which makes a free choice less simple than he suggests.\n\n[F] Most researchers in this area agree that the evidence is still limited and that boredom is not valuable in every form. Short periods of boredom may encourage creativity, but chronic boredom is linked with low mood and a sense that life lacks meaning. Even so, they stress that no single study settles the matter. The practical lesson, several of them suggest, is not to seek out boredom deliberately but to avoid filling every free moment automatically. Leaving a few minutes each day without any screen, they say, may be enough to let the mind wander.",
+      questions: [
+        {
+          id: "rd5-q01",
+          type: "tfng",
+          prompt: "1. In Dr Voss's experiment, the volunteers who copied numbers produced more ideas than the control group.",
+          correctAnswer: "True",
+          explanation: "Paragraph B: they 'produced a larger number of ideas, and more unusual ones, than a control group'.",
+          tag: "tfng"
+        },
+        {
+          id: "rd5-q02",
+          type: "tfng",
+          prompt: "2. Dr Voss found that very long periods of boredom improve creativity.",
+          correctAnswer: "False",
+          explanation: "Paragraph B: 'extreme or prolonged boredom does not seem to help'. Pattern: over-generalisation — the result is limited to mildly dull tasks.",
+          tag: "tfng"
+        },
+        {
+          id: "rd5-q03",
+          type: "tfng",
+          prompt: "3. Professor Adjei says that scanning studies prove that mind-wandering is useful.",
+          correctAnswer: "False",
+          explanation: "Paragraph C: scanning studies 'cannot show whether the activity is useful'. Pattern: opposite polarity.",
+          tag: "tfng"
+        },
+        {
+          id: "rd5-q04",
+          type: "tfng",
+          prompt: "4. Tom Lindgren believes that blaming technology ignores how differently people use it.",
+          correctAnswer: "True",
+          explanation: "Paragraph E: 'blaming the technology ignores the difference between how people use it'.",
+          tag: "tfng"
+        },
+        {
+          id: "rd5-q05",
+          type: "matching",
+          prompt: "5. Which researcher holds this view? 'Periods without stimulation may give the mind a chance to imagine the future.'",
+          options: ["Dr Voss", "Professor Adjei", "Dr Nair", "Mr Lindgren"],
+          correctAnswer: 1,
+          explanation: "Paragraph C: the network active when people are not concentrating is 'associated with imagining the future'. Pattern: wrong subject — Dr Voss also links boredom to thinking, but to original ideas, not imagining the future.",
+          tag: "matching-features"
+        },
+        {
+          id: "rd5-q06",
+          type: "matching",
+          prompt: "6. Which researcher holds this view? 'Children may need practice in putting up with slow or repetitive tasks.'",
+          options: ["Dr Voss", "Professor Adjei", "Dr Nair", "Mr Lindgren"],
+          correctAnswer: 2,
+          explanation: "Paragraph D: 'children who rarely experience boredom have little practice in tolerating it'.",
+          tag: "matching-features"
+        },
+        {
+          id: "rd5-q07",
+          type: "matching",
+          prompt: "7. Which researcher holds this view? 'Boredom can push the mind to search for new ideas.'",
+          options: ["Dr Voss", "Professor Adjei", "Dr Nair", "Mr Lindgren"],
+          correctAnswer: 0,
+          explanation: "Paragraph B: 'boredom makes the mind search for stimulation, and ... this search can lead to original thinking'.",
+          tag: "matching-features"
+        },
+        {
+          id: "rd5-q08",
+          type: "matching",
+          prompt: "8. Which researcher holds this view? 'People should be trusted to decide how to spend their idle moments.'",
+          options: ["Dr Voss", "Professor Adjei", "Dr Nair", "Mr Lindgren"],
+          correctAnswer: 3,
+          explanation: "Paragraph E: criticism 'assumes people cannot judge what is good for them'. Pattern: wrong subject — Dr Nair also discusses choice, but argues that schools should limit entertainment.",
+          tag: "matching-features"
+        },
+        {
+          id: "rd5-q09",
+          type: "mcq",
+          prompt: "9. Why does Dr Voss add a warning to her conclusion?",
+          options: [
+            "Her volunteers were all students",
+            "The result applies only to mildly boring tasks",
+            "The control group performed better",
+            "The experiment was too short"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph B: 'the result applies to mildly boring tasks and ... extreme or prolonged boredom does not seem to help'. A and D are not mentioned; C is opposite polarity.",
+          tag: "mcq"
+        },
+        {
+          id: "rd5-q10",
+          type: "mcq",
+          prompt: "10. Why does Professor Adjei avoid firm conclusions?",
+          options: [
+            "He has not scanned any brains",
+            "Scans show which regions are active, not whether the activity is useful",
+            "Brain activity cannot be measured",
+            "Most people dislike being scanned"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph C: scanning studies 'show only which regions are active and cannot show whether the activity is useful'. A and C overstate; D is not mentioned.",
+          tag: "mcq"
+        },
+        {
+          id: "rd5-q11",
+          type: "mcq",
+          prompt: "11. How do critics respond to Tom Lindgren?",
+          options: [
+            "They say applications are designed to be hard to put down",
+            "They say phones are pleasant to use",
+            "They say people read too many books",
+            "They say designers are paid too much"
+          ],
+          correctAnswer: 0,
+          explanation: "Paragraph E: 'applications are deliberately built to be hard to put down'. B repeats his own argument; C and D are not mentioned.",
+          tag: "mcq"
+        },
+        {
+          id: "rd5-q12",
+          type: "mcq",
+          prompt: "12. According to paragraph F, what is chronic boredom linked with?",
+          options: [
+            "Greater creativity",
+            "Low mood and a sense that life lacks meaning",
+            "Better concentration",
+            "Longer sleep"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph F: 'chronic boredom is linked with low mood and a sense that life lacks meaning'. A belongs to short periods of boredom (wrong subject).",
+          tag: "mcq"
+        },
+        {
+          id: "rd5-q13",
+          type: "mcq",
+          prompt: "13. What practical suggestion do researchers make?",
+          options: [
+            "Seek out boredom deliberately",
+            "Avoid filling every free moment automatically",
+            "Ban phones in all schools",
+            "Work through repetitive tasks every day"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph F: 'not to seek out boredom deliberately but to avoid filling every free moment automatically'. A is the reverse; C and D go beyond the text.",
+          tag: "mcq"
+        }
+      ]
     }
   ],
 
