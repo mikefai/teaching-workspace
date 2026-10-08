@@ -12,12 +12,27 @@ vm.runInNewContext(fs.readFileSync(file, "utf8"), sandbox, { filename: file });
 const D = sandbox.window.APEX_DATA.ielts;
 
 const args = process.argv.slice(2);
+const failures = [];
 const flag = name => {
   const i = args.indexOf(name);
-  return i === -1 ? null : args[i + 1];
+  if (i === -1) return null;
+  const v = args[i + 1];
+  if (v === undefined || v.startsWith("--")) {
+    failures.push(`FAIL args: ${name} needs a value`);
+    return null;
+  }
+  return v;
+};
+const countFlag = name => {
+  const v = flag(name);
+  if (v === null) return null;
+  if (!/^\d+$/.test(v)) {
+    failures.push(`FAIL args: ${name} needs a whole number (got '${v}')`);
+    return null;
+  }
+  return Number(v);
 };
 
-const failures = [];
 const fail = (id, msg) => failures.push(`FAIL ${id}: ${msg}`);
 const words = s => String(s || "").trim().split(/\s+/).filter(Boolean).length;
 
@@ -57,7 +72,10 @@ function checkHtml(id, html) {
 
 // ---------- notes ----------
 // Pack 1 notes (ielts-01..15) predate these rules and are grandfathered.
-const isLegacy = n => Number(String(n.id).replace(/[^0-9]/g, "")) <= 15;
+const isLegacy = n => {
+  const m = /^ielts-(\d+)$/.exec(String(n.id));
+  return !!m && Number(m[1]) <= 15; // any other id shape is validated, never skipped
+};
 (D.notes || []).forEach(n => {
   if (n.comingSoon || isLegacy(n)) return;
   if (!n.summary) fail(n.id, "missing summary");
@@ -119,7 +137,7 @@ const TFNG = ["True", "False", "Not Given"];
   if (s.dataTable) {
     const t = s.dataTable;
     if (!Array.isArray(t.headers) || !Array.isArray(t.rows)) fail(s.id, "dataTable needs headers[] and rows[][]");
-    else t.rows.forEach((r, i) => { if (r.length !== t.headers.length) fail(s.id, `dataTable row ${i} has ${r.length} cells, expected ${t.headers.length}`); });
+    else t.rows.forEach((r, i) => { if (!Array.isArray(r)) fail(s.id, `dataTable row ${i} is not an array`); else if (r.length !== t.headers.length) fail(s.id, `dataTable row ${i} has ${r.length} cells, expected ${t.headers.length}`); });
   }
 });
 
@@ -136,10 +154,11 @@ list(flag("--expect-practice")).forEach(id => {
   ["TA", "CC", "LR", "GRA"].forEach(k => { if (!(p.rubric && p.rubric[k])) fail(id, `rubric.${k} missing`); });
   if (!p.bandNote) fail(id, "bandNote missing");
 });
-const expR = flag("--expect-reading");
-if (expR !== null && (D.readingSets || []).length < Number(expR)) fail("readingSets", `expected >= ${expR}, found ${(D.readingSets || []).length}`);
-const expW = flag("--expect-writing");
-if (expW !== null && (D.writingSets || []).length < Number(expW)) fail("writingSets", `expected >= ${expW}, found ${(D.writingSets || []).length}`);
+// --expect-reading / --expect-writing mean "at least n sets exist"
+const expR = countFlag("--expect-reading");
+if (expR !== null && (D.readingSets || []).length < expR) fail("readingSets", `expected >= ${expR}, found ${(D.readingSets || []).length}`);
+const expW = countFlag("--expect-writing");
+if (expW !== null && (D.writingSets || []).length < expW) fail("writingSets", `expected >= ${expW}, found ${(D.writingSets || []).length}`);
 
 if (failures.length) {
   console.log(failures.join("\n"));
