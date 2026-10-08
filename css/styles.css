@@ -313,3 +313,49 @@ body::before{
 .apex-datatable-wrap:focus-visible{ outline:2px solid var(--indigo-700); outline-offset:2px; }
 .apex-datatable th, .apex-datatable td{ border:1px solid var(--line); padding:.35rem .6rem; text-align:left; white-space:nowrap; color:var(--ink); }
 .apex-datatable th{ background:var(--paper); color:var(--ink-soft); font-weight:600; }
+
+/* ---------- Subject + skill colour coding ----------
+   Subject (set on #main-content[data-subject]): ESL = teal/green, IELTS = indigo/violet/blue, SAT = amber/orange.
+   Skill (class skill-<subject>-<skill> on cards and badges): a distinct hue inside its subject's family.
+   --skill-base is the pure colour; badges tint with color-mix and lighten the text in dark mode. */
+#main-content[data-subject="esl"]{ --subj:#0f6155; --subj-fill:#0f6155; }
+#main-content[data-subject="ielts"]{ --subj:#3c3a8c; --subj-fill:#3c3a8c; }
+#main-content[data-subject="sat"]{ --subj:#b5741a; --subj-fill:#99600f; }
+:root[data-theme="dark"] #main-content[data-subject="esl"]{ --subj:#5fd0bd; }
+:root[data-theme="dark"] #main-content[data-subject="ielts"]{ --subj:#a9a7f2; }
+:root[data-theme="dark"] #main-content[data-subject="sat"]{ --subj:#f0b45a; }
+
+#main-content[data-subject] h1{ border-left:6px solid var(--subj-fill); padding-left:.75rem; }
+#main-content[data-subject] .pill-group .btn-primary,
+#main-content[data-subject] .apex-card .btn-primary{ background:var(--subj-fill); }
+#main-content[data-subject] .pill-group .btn-primary:hover,
+#main-content[data-subject] .apex-card .btn-primary:hover{ filter:brightness(.9); }
+#main-content[data-subject] .pill-group .btn-outline:hover{ border-color:var(--subj-fill); }
+
+/* ESL skills (teal -> cyan -> green) */
+.skill-esl-grammar{ --skill-base:#0f6155; }
+.skill-esl-phrasal-verbs{ --skill-base:#157a8c; }
+.skill-esl-idioms{ --skill-base:#2c8a52; }
+.skill-esl-writing{ --skill-base:#0b4f6c; }
+.skill-esl-vocabulary{ --skill-base:#5b8f1f; }
+.skill-esl-mocks{ --skill-base:#0b6b6b; }
+/* IELTS skills (indigo -> blue -> violet -> magenta) */
+.skill-ielts-writing{ --skill-base:#3c3a8c; }
+.skill-ielts-reading{ --skill-base:#2f5fb3; }
+.skill-ielts-listening{ --skill-base:#6a3fa8; }
+.skill-ielts-speaking{ --skill-base:#a03d8f; }
+.skill-ielts-vocabulary-grammar{ --skill-base:#3d7a9e; }
+.skill-ielts-strategy{ --skill-base:#5b5f7a; }
+.skill-ielts-mock{ --skill-base:#4a3f9e; }
+/* SAT sections (amber -> rust) */
+.skill-sat-reading-writing{ --skill-base:#b5741a; }
+.skill-sat-math{ --skill-base:#b5421a; }
+
+.badge-skill{
+  --skill:color-mix(in srgb, var(--skill-base) 72%, #000000);
+  background:color-mix(in srgb, var(--skill) 14%, var(--paper-raised));
+  color:var(--skill);
+  border:1px solid color-mix(in srgb, var(--skill) 30%, transparent);
+}
+:root[data-theme="dark"] .badge-skill{ --skill:color-mix(in srgb, var(--skill-base) 45%, #ffffff); }
+.apex-card[class*="skill-"]{ border-top:3px solid var(--skill-base); }

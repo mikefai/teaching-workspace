@@ -145,6 +145,7 @@ function render() {
 function renderMainOnly() {
   const main = document.getElementById("main-content");
   if (APP.engine || APP.flashSession) { return; } // engine/flashcards own #main-content while active
+  main.setAttribute("data-subject", ["esl", "ielts", "sat"].includes(APP.tab) ? APP.tab : "");
   if (APP.tab === "home") main.innerHTML = renderHome();
   else if (APP.tab === "esl") main.innerHTML = renderEslHub();
   else if (APP.tab === "ielts") main.innerHTML = renderIeltsSuite();
@@ -249,6 +250,7 @@ function renderEslHub() {
     body = `<div class="grid md:grid-cols-2 gap-4">${mocks.map(m => mockCard({
       title: m.title, badge: m.level, minutes: m.timeLimitMinutes,
       desc: "Reading comprehension, gap-fill, and sentence transformations with fully explained answer keys.",
+      skillCls: "skill-esl-mocks",
       onLaunch: `launchEslMock('${m.level}')`
     })).join("")}</div>`;
   } else {
@@ -299,6 +301,7 @@ function renderIeltsSuite() {
       badge: "Section " + s.section,
       minutes: s.timeLimitMinutes,
       desc: (s.audioContext ? s.audioContext + " " : "") + "Band focus: " + s.bandFocus + ".",
+      skillCls: "skill-ielts-listening",
       onLaunch: `launchIeltsListening('${s.id}')`
     })).join("") || emptyState()}</div>`;
   } else if (APP.ieltsView === "reading") {
@@ -308,6 +311,7 @@ function renderIeltsSuite() {
       badge: "Reading",
       minutes: s.timeLimitMinutes,
       desc: "Band focus: " + s.bandFocus + ". " + s.questions.length + " questions.",
+      skillCls: "skill-ielts-reading",
       onLaunch: `launchIeltsReading('${s.id}')`
     })).join("") || emptyState()}</div>`;
   } else if (APP.ieltsView === "writing") {
@@ -317,6 +321,7 @@ function renderIeltsSuite() {
       badge: "Task " + s.task,
       minutes: s.timeLimitMinutes,
       desc: "Band focus: " + s.bandFocus + ". Minimum " + s.minWords + " words, with a model answer and annotation.",
+      skillCls: "skill-ielts-writing",
       onLaunch: `launchIeltsWriting('${s.id}')`
     })).join("") || emptyState()}</div>`;
   } else if (APP.ieltsView === "flashcards") {
@@ -328,7 +333,7 @@ function renderIeltsSuite() {
         <div class="text-sm text-[color:var(--ink-soft)] leading-relaxed">${escapeHtml(mock.note)}</div>
       </div>
       <div class="grid md:grid-cols-2 gap-4">
-        ${mockCard({ title: mock.title, badge: "Academic", minutes: 90, desc: "Full Reading passage (mixed question types) + Writing Task 1 &amp; 2 with Band 9 models and full annotations.", onLaunch: "launchIeltsMock()" })}
+        ${mockCard({ title: mock.title, badge: "Academic", minutes: 90, desc: "Full Reading passage (mixed question types) + Writing Task 1 &amp; 2 with Band 9 models and full annotations.", skillCls: "skill-ielts-mock", onLaunch: "launchIeltsMock()" })}
       </div>`;
   }
 
@@ -361,8 +366,9 @@ function renderIeltsNoteDetail(id) {
 }
 
 function practiceCard(p) {
-  return `<div class="apex-card p-5">
-    <span class="badge badge-ielts mb-2 inline-block">${escapeHtml(p.skill)}</span>
+  const sk = skillClass("ielts", p.skill);
+  return `<div class="apex-card p-5 ${sk}">
+    <span class="badge badge-skill ${sk} mb-2 inline-block">${escapeHtml(p.skill)}</span>
     <h3 class="font-serif-academic font-bold text-base mb-2">${escapeHtml(p.title)}</h3>
     <p class="text-sm text-[color:var(--ink-soft)] mb-3 leading-relaxed">${escapeHtml(p.prompt)}</p>
     <div class="grid grid-cols-2 gap-2 text-xs mb-3">
@@ -384,7 +390,7 @@ function renderSatZone() {
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       ${tests.map(t => t.comingSoon
         ? mockCard({ title: t.title, badge: "Coming Soon", minutes: null, desc: t.summary, onLaunch: null, soon: true })
-        : mockCard({ title: t.title, badge: "Ready", minutes: 67, desc: t.note, onLaunch: `launchSatMock('${t.id}')` })
+        : mockCard({ title: t.title, badge: "Ready", minutes: 67, desc: t.note, chips: SAT_CHIPS, onLaunch: `launchSatMock('${t.id}')` })
       ).join("")}
     </div>
   </section>`;
@@ -521,12 +527,15 @@ function renderSubnav(items, active, stateKey) {
 }
 
 function noteCard(note, badgeClass, badgeText, kind) {
+  const subject = kind === "esl-note" ? "esl" : "ielts";
+  const sk = skillClass(subject, subject === "esl" ? note.category : note.skill);
+  const skillChip = subject === "esl" && note.category ? chipHtml({ text: note.category.replace(/-/g, " "), cls: sk }) : "";
   const soon = note.comingSoon ? `<span class="badge badge-soon ml-2">Coming Soon</span>` : "";
   const saved = Store.isBookmarked(note.id);
-  return `<div class="apex-card p-5 text-left cursor-pointer" data-open="${kind}:${note.id}">
+  return `<div class="apex-card p-5 text-left cursor-pointer ${sk}" data-open="${kind}:${note.id}">
     <div class="flex items-start justify-between gap-2 mb-2">
       <div class="flex items-center flex-wrap gap-2">
-        <span class="badge ${badgeClass}">${escapeHtml(badgeText || "")}</span>${soon}
+        <span class="badge ${subject === "ielts" && sk ? "badge-skill " + sk : badgeClass}">${escapeHtml(badgeText || "")}</span>${skillChip}${soon}
       </div>
       <button class="bookmark-star ${saved ? "is-saved" : ""}" data-bookmark="${note.id}" title="${saved ? "Remove bookmark" : "Save for later"}">${saved ? "★" : "☆"}</button>
     </div>
@@ -535,10 +544,34 @@ function noteCard(note, badgeClass, badgeText, kind) {
   </div>`;
 }
 
-function mockCard({ title, badge, minutes, desc, onLaunch, soon }) {
-  return `<div class="apex-card p-5">
+// ---- colour coding: subject (esl / ielts / sat) -> skill sub-colour (see css "Subject + skill colour coding") ----
+const SAT_CHIPS = [
+  { text: "Reading & Writing", cls: "skill-sat-reading-writing" },
+  { text: "Math", cls: "skill-sat-math" }
+];
+
+function skillSlug(subject, label) {
+  const l = String(label || "").toLowerCase();
+  if (subject === "ielts") {
+    for (const k of ["writing", "reading", "listening", "speaking", "strategy"]) if (l.startsWith(k)) return k;
+    if (l.startsWith("vocab")) return "vocabulary-grammar";
+  }
+  return l.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function skillClass(subject, label) {
+  const slug = skillSlug(subject, label);
+  return slug ? "skill-" + subject + "-" + slug : "";
+}
+
+function chipHtml(c) {
+  return `<span class="badge badge-skill ${c.cls}">${escapeHtml(c.text)}</span>`;
+}
+
+function mockCard({ title, badge, minutes, desc, onLaunch, soon, skillCls = "", chips = [] }) {
+  return `<div class="apex-card p-5 ${skillCls}">
     <div class="flex items-center flex-wrap gap-2 mb-2">
-      <span class="badge ${soon ? "badge-soon" : "badge-level"}">${escapeHtml(badge)}</span>
+      <span class="badge ${soon ? "badge-soon" : skillCls ? "badge-skill " + skillCls : "badge-level"}">${escapeHtml(badge)}</span>${soon ? "" : chips.map(chipHtml).join("")}
       ${minutes ? `<span class="text-xs text-[color:var(--muted)]">&#9200; ~${minutes} min</span>` : ""}
     </div>
     <div class="font-serif-academic font-bold text-base mb-1 text-[color:var(--heading)]">${escapeHtml(title)}</div>
@@ -573,10 +606,11 @@ function noteDetailArticle(note, badgeClass) {
 
   const saved = Store.isBookmarked(note.id);
 
-  return `<article class="apex-card p-6 md:p-8 note-article">
+  const nsk = note.skill ? skillClass("ielts", note.skill) : skillClass("esl", note.category);
+  return `<article class="apex-card p-6 md:p-8 note-article ${nsk}">
     <div class="flex items-start justify-between gap-2 mb-3">
       <div class="flex items-center flex-wrap gap-2">
-        <span class="badge ${badgeClass}">${escapeHtml(note.level || note.skill || "")}</span>
+        <span class="badge ${note.skill && nsk ? "badge-skill " + nsk : badgeClass}">${escapeHtml(note.level || note.skill || "")}</span>${note.level && note.category ? chipHtml({ text: note.category.replace(/-/g, " "), cls: nsk }) : ""}
         ${note.bandFocus ? `<span class="badge badge-level">Band ${escapeHtml(note.bandFocus)}</span>` : ""}
       </div>
       <button class="bookmark-star ${saved ? "is-saved" : ""}" data-bookmark="${note.id}" title="${saved ? "Remove bookmark" : "Save for later"}">${saved ? "★ Saved" : "☆ Save"}</button>
