@@ -407,6 +407,10 @@ window.APEX_DATA.ielts = {
     }
   ],
 
+  readingSets: [],
+
+  writingSets: [],
+
   ultimateMock: {
     id: "ielts-ultimate-mock-1",
     title: "IELTS Ultimate Mock Exam — Set 1",
@@ -508,4 +512,13 @@ window.APEX_DATA.ielts = {
  *   needs a paid ElevenLabs plan, free-tier accounts get a 402 on every TTS call) into
  *   audio/ielts/section{N}/, then add one object here — app.js discovers listeningSets generically
  *   (js/app.js renderIeltsSuite "listening" branch), no UI code changes needed.
+ * readingSets[]: { id ("ielts-read-NN"), title, bandFocus, passageTitle, text, timeLimitMinutes:20, instructions,
+ *   questions:[13 x { id, type, prompt, options?, correctAnswer, explanation, tag }] } — same question shapes as
+ *   ultimateMock.reading: anything with options[] uses a 0-based INDEX answer; tfng uses "True"/"False"/"Not Given";
+ *   text answers are compared lower-case, whitespace removed, so avoid hyphens/slashes. Listed generically in the
+ *   "Reading Practice" sub-tab, no UI changes needed.
+ * writingSets[]: { id ("ielts-write-NN"), title, task:1|2, bandFocus, timeLimitMinutes, minWords (150|250), prompt,
+ *   dataTable?:{caption?, headers[], rows[][]} (required for task 1), modelAnswer (string), bandAnnotation (string,
+ *   must name TA, CC, LR, GRA) } — listed in the "Writing Practice" sub-tab.
+ * Validate any change with: node scripts/validate-content.js
  */

@@ -9,7 +9,7 @@
 const APP = {
   tab: "home",
   eslView: "notes",       // notes | mocks | flashcards
-  ieltsView: "notes",     // notes | practice | listening | mock | flashcards
+  ieltsView: "notes",     // notes | practice | listening | reading | writing | mock | flashcards
   search: "",
   filter: "all",
   detail: null,           // { kind:'esl-note'|'ielts-note', id }
@@ -280,6 +280,8 @@ function renderIeltsSuite() {
     { id: "notes", label: "Study Notes" },
     { id: "practice", label: "Guided Practice" },
     { id: "listening", label: "Listening Practice" },
+    { id: "reading", label: "Reading Practice" },
+    { id: "writing", label: "Writing Practice" },
     { id: "mock", label: "Ultimate Mock Exam" },
     { id: "flashcards", label: "Flashcards" }
   ], APP.ieltsView, "ieltsView");
@@ -298,6 +300,24 @@ function renderIeltsSuite() {
       minutes: s.timeLimitMinutes,
       desc: (s.audioContext ? s.audioContext + " " : "") + "Band focus: " + s.bandFocus + ".",
       onLaunch: `launchIeltsListening('${s.id}')`
+    })).join("") || emptyState()}</div>`;
+  } else if (APP.ieltsView === "reading") {
+    const sets = D().ielts.readingSets || [];
+    body = `<div class="grid md:grid-cols-2 gap-4">${sets.map(s => mockCard({
+      title: s.title,
+      badge: "Reading",
+      minutes: s.timeLimitMinutes,
+      desc: "Band focus: " + s.bandFocus + ". " + s.questions.length + " questions.",
+      onLaunch: `launchIeltsReading('${s.id}')`
+    })).join("") || emptyState()}</div>`;
+  } else if (APP.ieltsView === "writing") {
+    const sets = D().ielts.writingSets || [];
+    body = `<div class="grid md:grid-cols-2 gap-4">${sets.map(s => mockCard({
+      title: s.title,
+      badge: "Task " + s.task,
+      minutes: s.timeLimitMinutes,
+      desc: "Band focus: " + s.bandFocus + ". Minimum " + s.minWords + " words, with a model answer and annotation.",
+      onLaunch: `launchIeltsWriting('${s.id}')`
     })).join("") || emptyState()}</div>`;
   } else if (APP.ieltsView === "flashcards") {
     body = deckListView(D().ielts.flashcardDecks);
@@ -622,6 +642,30 @@ function launchIeltsListening(setId) {
     }]
   };
   startEngine(runner);
+}
+
+function launchIeltsReading(setId) {
+  const set = D().ielts.readingSets.find(s => s.id === setId);
+  startEngine({
+    id: set.id, title: set.title, subjectBadge: "IELTS Suite · Reading Practice",
+    timeLimitMinutes: set.timeLimitMinutes,
+    parts: [{
+      id: "reading", title: set.title, kind: "objective", timeLimitMinutes: set.timeLimitMinutes,
+      passage: { title: set.passageTitle, text: set.text }, instructions: set.instructions, questions: set.questions
+    }]
+  });
+}
+
+function launchIeltsWriting(setId) {
+  const set = D().ielts.writingSets.find(s => s.id === setId);
+  startEngine({
+    id: set.id, title: set.title, subjectBadge: "IELTS Suite · Writing Practice",
+    parts: [{
+      id: "writing", title: set.title, kind: "writing", timeLimitMinutes: set.timeLimitMinutes,
+      minWords: set.minWords, prompt: set.prompt, dataTable: set.dataTable,
+      modelAnswer: { text: set.modelAnswer, bandAnnotation: set.bandAnnotation }
+    }]
+  });
 }
 
 function launchSatMock(id) {
