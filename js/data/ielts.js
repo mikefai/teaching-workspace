@@ -1,5 +1,5 @@
 /* ApexPrep Academy — IELTS Academic & General Suite data module
-   15 of 30 study notes are fully authored (Pack 1). The remaining 15 (Pack 2) are
+   23 of 30 study notes are fully authored (Pack 1 plus the Pack 2 Reading/Writing notes). The remaining 7 (Pack 2: Listening/Speaking/Strategy) are
    listed as roadmap stubs with comingSoon:true — see schema notes at the bottom
    for how to complete them without touching app.js. */
 window.APEX_DATA = window.APEX_DATA || {};
@@ -1255,7 +1255,131 @@ window.APEX_DATA.ielts = {
     }
   ],
 
-  writingSets: [],
+  writingSets: [
+    {
+      id: "ielts-write-01",
+      title: "Writing Practice 1 — Task 1: Teenage Leisure Time (Bar Chart)",
+      task: 1,
+      bandFocus: "6.0–8.0",
+      timeLimitMinutes: 20,
+      minWords: 150,
+      prompt: "The bar chart shows the average number of hours per week that teenagers in one country spent on four leisure activities in 2010 and 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      dataTable: {
+        caption: "Average hours per week spent on leisure activities by teenagers",
+        headers: ["Activity", "2010 (hours)", "2022 (hours)"],
+        rows: [
+          ["Watching television", "12", "6"],
+          ["Playing video games", "5", "9"],
+          ["Using social media", "3", "11"],
+          ["Reading for pleasure", "4", "2"]
+        ]
+      },
+      modelAnswer: "The bar chart compares the average number of hours per week that teenagers in one country spent on four leisure activities in 2010 and 2022.\n\nOverall, time spent on video games and social media rose, while the time given to television and reading fell. Social media showed the most dramatic increase, and television the most significant decline.\n\nIn 2010, television was by far the most popular activity, at 12 hours a week, followed by video games at five hours. Reading for pleasure and social media occupied only four and three hours respectively.\n\nBy 2022, the picture had changed markedly. Social media use more than tripled to 11 hours, making it the most time-consuming activity, and video games rose by four hours to nine. In contrast, television viewing halved to six hours, and reading, already the second lowest, fell from four hours to just two. In total, the four activities took up 28 hours a week in 2022, compared with 24 hours in 2010.",
+      bandAnnotation: "TA: The overview names both the shared direction of change and the two extreme movements before any numbers are given. CC: Paragraphs are organised by time period, and 'By 2022, the picture had changed markedly' links them. LR: Precise data vocabulary ('more than tripled', 'halved', 'by far the most popular', 'respectively'). GRA: Accurate past tenses, comparative structures and a participle phrase ('making it the most time-consuming activity')."
+    },
+    {
+      id: "ielts-write-02",
+      title: "Writing Practice 2 — Task 1: Household Energy Use (Pie Charts)",
+      task: 1,
+      bandFocus: "6.0–8.0",
+      timeLimitMinutes: 20,
+      minWords: 150,
+      prompt: "The two pie charts show the percentage of household energy used for five different purposes in a country in 1990 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      dataTable: {
+        caption: "Share of household energy use by purpose (%)",
+        headers: ["Purpose", "1990 (%)", "2020 (%)"],
+        rows: [
+          ["Heating", "58", "44"],
+          ["Water heating", "20", "18"],
+          ["Lighting", "9", "4"],
+          ["Appliances and electronics", "8", "28"],
+          ["Cooking", "5", "6"]
+        ]
+      },
+      modelAnswer: "The pie charts compare how households in one country used energy for five purposes in 1990 and 2020.\n\nOverall, heating remained the largest use of household energy in both years, although its share fell considerably, while the proportion used by appliances and electronics increased dramatically.\n\nIn 1990, heating accounted for more than half of all energy use, at 58 per cent, followed by water heating at 20 per cent. Lighting, appliances and cooking were all minor categories, making up 9, 8 and 5 per cent respectively.\n\nBy 2020, heating had dropped to 44 per cent, and lighting had more than halved to just 4 per cent. In contrast, appliances and electronics rose from 8 to 28 per cent, meaning that they overtook water heating, which stood at 18 per cent, to become the second largest category. Cooking changed very little, edging up by one percentage point to 6 per cent. Lighting was the smallest category at the end of the period.",
+      bandAnnotation: "TA: A clear overview of the largest category and the biggest change; all five categories are reported and compared across both years. CC: Information is grouped by year, with 'In contrast' and 'meaning that' linking cause and result. LR: Share language ('accounted for', 'making up', 'stood at') and correct 'per cent' versus 'percentage point'. GRA: Participle phrases ('making up', 'edging up'), a relative clause ('which stood at 18 per cent') and consistent tenses."
+    },
+    {
+      id: "ielts-write-03",
+      title: "Writing Practice 3 — Task 1: How Recycled Paper Is Made (Process)",
+      task: 1,
+      bandFocus: "6.0–8.0",
+      timeLimitMinutes: 20,
+      minWords: 150,
+      prompt: "The diagram shows the stages in the process of making recycled paper from used paper. Summarise the information by selecting and reporting the main features. Write at least 150 words.",
+      dataTable: {
+        caption: "Stages in the production of recycled paper",
+        headers: ["Stage", "What happens"],
+        rows: [
+          ["1. Collection", "Used paper is collected from homes and offices."],
+          ["2. Sorting", "Paper is sorted by type and quality; non-paper items are removed."],
+          ["3. Pulping", "Paper is mixed with water and chemicals in a large tank to form a pulp."],
+          ["4. Cleaning", "The pulp is screened and cleaned to remove ink, staples and glue."],
+          ["5. Pressing", "Clean pulp is spread on a moving belt and pressed to squeeze out water."],
+          ["6. Drying", "The pressed sheet passes over heated rollers and dries."],
+          ["7. Rolling", "Dried paper is wound onto large rolls and cut."]
+        ]
+      },
+      modelAnswer: "The diagram illustrates the process by which used paper is turned into new paper, from the collection of waste paper to the cutting of the finished product.\n\nOverall, the process is linear and consists of seven stages, beginning with the collection of used paper and ending with the winding and cutting of the dried sheets.\n\nFirst, used paper is collected from homes and offices and then sorted by type and quality, so that any non-paper items can be removed. Next, the sorted paper is mixed with water and chemicals in a large tank, where it forms a pulp.\n\nFollowing this, the pulp is screened and cleaned to remove ink, staples and glue. Once it is clean, the pulp is spread onto a moving belt and pressed so that the water is squeezed out.\n\nThe resulting sheet then passes over heated rollers, which dry it. In the final stage, the dried paper is wound onto large rolls and cut.",
+      bandAnnotation: "TA: The overview states the type of process, the number of stages and the start and end points; all seven stages are covered accurately. CC: Varied sequencing ('First', 'Next', 'Following this', 'Once it is clean', 'In the final stage') with short steps joined into longer sentences. LR: Process vocabulary ('screened', 'pulp', 'squeezed out') and accurate reference ('the resulting sheet'). GRA: Consistent passive voice, relative clauses ('which dry it') and 'so that' purpose clauses."
+    },
+    {
+      id: "ielts-write-04",
+      title: "Writing Practice 4 — Task 1: A Coastal Town Centre (Maps)",
+      task: 1,
+      bandFocus: "6.0–8.0",
+      timeLimitMinutes: 20,
+      minWords: 150,
+      prompt: "The two maps show a coastal town centre in 2000 and at the present time. The table describes what each map shows. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      dataTable: {
+        caption: "A coastal town centre: 2000 and today",
+        headers: ["Feature", "2000", "Today"],
+        rows: [
+          ["Harbour", "Fishing boats and a fish market", "Marina for leisure boats and a café"],
+          ["Main street", "Open to traffic", "Pedestrian zone with trees"],
+          ["North-west", "Textile factory", "Apartment block"],
+          ["East", "Small surface car park", "Multi-storey car park"],
+          ["Railway station", "One platform", "Extended, with a new ticket hall"],
+          ["Beach", "Open sand with a few huts", "Promenade along the beach"]
+        ]
+      },
+      modelAnswer: "The two maps show how a coastal town centre has changed between 2000 and the present day.\n\nOverall, the town has changed from a working fishing and industrial community into a more leisure-oriented area, with improved facilities for visitors and pedestrians.\n\nIn 2000, the harbour was used by fishing boats and contained a fish market, while the main street was open to traffic. A textile factory stood in the north-west, and a small surface car park was located to the east. The railway station had a single platform, and the beach consisted of open sand with a few huts.\n\nToday, the harbour has been converted into a marina for leisure boats, and a café has been added. The main street has become a pedestrian zone with trees, and the old factory has been replaced by an apartment block. The surface car park has been replaced by a multi-storey car park, and the station has been extended with a new ticket hall. Finally, a promenade has been built along the beach.",
+      bandAnnotation: "TA: The overview identifies the dominant change (working to leisure) and every feature in the table is described. CC: The answer moves from the earlier map to the later one in a clear order, with 'Finally' closing the sequence. LR: Change verbs ('converted into', 'replaced by', 'added', 'extended') and position language ('in the north-west', 'to the east'). GRA: Accurate shift from past simple to present perfect passive, with complex sentences using 'while' and compound sentences using 'and'."
+    },
+    {
+      id: "ielts-write-05",
+      title: "Writing Practice 5 — Task 2: Childhood Obesity (Problem/Solution)",
+      task: 2,
+      bandFocus: "6.5–8.5",
+      timeLimitMinutes: 40,
+      minWords: 250,
+      prompt: "In many countries, the number of overweight children is increasing. What are the causes of this problem, and what can be done to solve it? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      modelAnswer: "In many countries, the number of overweight children has risen sharply in recent decades. This essay will examine the main causes of this trend and suggest practical measures to reverse it.\n\nOne major cause is a change in diet. Processed snacks and sugary drinks are cheap, heavily advertised and available almost everywhere, so many children consume far more calories than they need. A second cause is a decline in physical activity. Children now spend long hours sitting in front of screens, and in busy cities many parents consider the streets too dangerous for children to play outside or cycle to school. As a result, the energy children take in is no longer balanced by the energy they use. Together, these two changes make it far easier for children to gain weight than it was for earlier generations.\n\nTo address the dietary problem, governments could restrict the advertising of unhealthy food aimed at children and introduce a tax on sugary drinks, as Mexico and the United Kingdom have already done. Schools can also help by serving nutritious meals and teaching children to cook simple, healthy dishes, which would build habits that last into adulthood. To increase activity, local authorities should create safe parks and cycle lanes, while schools could extend daily sport and active play. Parents, too, have a role to play by limiting screen time and eating together as a family.\n\nIn conclusion, childhood obesity is mainly caused by poor diets and inactive lifestyles. A combination of government regulation, better school programmes and responsible parenting would give children the best chance of growing up healthy.",
+      bandAnnotation: "TA: Both parts of the question are answered; each solution is matched to a cause (diet and activity) and explained. CC: A clear preview in the introduction, one cause paragraph and one solution paragraph, and a conclusion that summarises both. LR: Topic vocabulary ('processed snacks', 'nutritious meals', 'screen time') and accurate cause-effect phrases ('As a result'). GRA: A range of structures, including a relative clause ('which would build habits'), a comparative ('far more calories than') and a passive ('is no longer balanced'), used accurately."
+    },
+    {
+      id: "ielts-write-06",
+      title: "Writing Practice 6 — Task 2: International Tourism (Advantages/Disadvantages)",
+      task: 2,
+      bandFocus: "6.5–8.5",
+      timeLimitMinutes: 40,
+      minWords: 250,
+      prompt: "International tourism has increased greatly in recent years. Discuss the advantages and disadvantages of this development for the countries that receive tourists. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      modelAnswer: "Tourism has grown rapidly in recent years, and millions of people now travel abroad every year. While this brings clear economic benefits to host countries, it also creates problems that should not be ignored.\n\nThe most obvious advantage is economic. Tourists spend money on hotels, restaurants, transport and souvenirs, which creates jobs and generates tax revenue. In countries with few other industries, such as small island nations, tourism may be the main source of income, allowing governments to invest in roads, hospitals and schools. Tourism can also encourage countries to protect their heritage, since historic buildings and natural parks attract visitors and therefore have a financial value. Local crafts and traditions may also be revived, since visitors are willing to pay for authentic products.\n\nHowever, there are significant disadvantages. Large numbers of visitors can damage the very attractions they come to see: fragile coral reefs, ancient monuments and quiet villages suffer from pollution, litter and overcrowding. In addition, rising demand for hotels and holiday homes can push up housing costs, making it difficult for local residents to afford to live in their own communities. Many tourism jobs are also seasonal and low-paid, so the economic benefits are not always shared fairly. Furthermore, some of the income may leave the country when foreign companies own the large hotels.\n\nIn my opinion, the benefits of tourism outweigh the drawbacks, provided that governments manage visitor numbers carefully. Limits on daily visitors, taxes that fund environmental protection and regulations on holiday rentals would help countries enjoy the advantages of tourism without sacrificing their environment or their residents' quality of life.",
+      bandAnnotation: "TA: Both sides are developed with comparable depth and specific support; an opinion is added, which is optional for a 'discuss both' question but is clearly consistent. CC: Each paragraph has a clear topic sentence ('The most obvious advantage...', 'However, there are significant disadvantages'), and the conclusion links back to both sides. LR: Natural collocations ('generates tax revenue', 'push up housing costs', 'fragile coral reefs'). GRA: Participle phrases ('allowing governments...', 'making it difficult...'), a concessive 'While' clause and a conditional-style 'provided that' clause, all accurate."
+    },
+    {
+      id: "ielts-write-07",
+      title: "Writing Practice 7 — Task 2: Online Shopping (Direct Questions)",
+      task: 2,
+      bandFocus: "6.5–8.5",
+      timeLimitMinutes: 40,
+      minWords: 250,
+      prompt: "Many people now do most of their shopping online instead of in physical shops. Why is this happening? Is this a positive or negative development? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      modelAnswer: "Online shopping has expanded enormously in recent years, and many consumers now buy most of their goods through websites and apps instead of visiting physical shops. This essay will explain the main reasons for this change and argue that, on balance, it is a positive development.\n\nThere are several reasons why shopping online has become so popular. The first is convenience: customers can compare products at any hour, from home or while travelling, without queuing or carrying heavy bags. The second is price and choice. Online retailers often have lower costs than high-street shops, so they can offer discounts, and they can display a far wider range of products than any physical store. Fast delivery and free returns have also removed much of the risk of buying something unseen. Taken together, these factors make buying online faster and less stressful than a trip to town.\n\nOn balance, I believe this trend is positive. It saves time and money for consumers and gives people in remote areas, or those with limited mobility, access to goods that were previously difficult to obtain. It also allows small businesses to reach customers across the country without paying for expensive shop premises. However, the shift does have a cost, since many town-centre shops are closing and delivery vehicles add to traffic and pollution. These problems are real but can be reduced through measures such as encouraging local pick-up points and electric delivery vans.\n\nIn conclusion, online shopping has grown because it is convenient, cheap and offers a wide choice, and its benefits for consumers and small businesses outweigh its drawbacks.",
+      bandAnnotation: "TA: Both questions are answered in order (why, then positive or negative), with a clear judgement and a brief acknowledgement of the downside. CC: Paragraph 2 answers the first question and paragraph 3 the second, signalled by 'There are several reasons why' and 'On balance'. LR: Precise vocabulary ('queuing', 'premises', 'limited mobility', 'pick-up points') and natural collocations. GRA: A mix of complex structures (reason clause with 'since', relative clauses, a participle phrase 'while travelling') with high accuracy."
+    }
+  ],
 
   ultimateMock: {
     id: "ielts-ultimate-mock-1",
