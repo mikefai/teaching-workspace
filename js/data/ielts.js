@@ -501,9 +501,115 @@ window.APEX_DATA.ielts = {
       ],
       practiceTip: "For three different prompts (one of each shape), write only the introduction and the topic sentences of the body paragraphs. Read them aloud: do they show your position and answer every part of the question?"
     },
-    { id: "ielts-21", title: "Sentence & Summary Completion — Word Limit Rules", skill: "Reading", category: "reading", comingSoon: true, tags: ["reading", "summary completion"], summary: "Exact word-limit compliance and paraphrase-aware gap filling. Coming in Content Pack 2." },
-    { id: "ielts-22", title: "Multiple Choice & Matching Features", skill: "Reading", category: "reading", comingSoon: true, tags: ["reading", "mcq", "matching features"], summary: "Handling multi-answer MCQs and matching names/terms to descriptions. Coming in Content Pack 2." },
-    { id: "ielts-23", title: "Reading: Distractor Analysis Masterclass", skill: "Reading", category: "reading", comingSoon: true, tags: ["reading", "distractors"], summary: "Why each wrong answer is designed to be plausible, question type by question type. Coming in Content Pack 2." },
+    {
+      id: "ielts-21",
+      title: "Sentence & Summary Completion — Word Limit Rules",
+      skill: "Reading",
+      category: "reading",
+      bandFocus: "5.0–8.0",
+      comingSoon: false,
+      tags: ["reading", "summary completion", "sentence completion", "word limit"],
+      summary: "Exact word-limit compliance, grammar-fit checking and paraphrase-aware locating for gap-fill questions.",
+      body: [
+        {
+          heading: "Read the Instruction First, Every Time",
+          html: "<p>The instruction line sets the rule that decides whether your answer is marked correct. The common versions are <strong>NO MORE THAN TWO WORDS</strong>, <strong>ONE WORD ONLY</strong>, and <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong>. An answer that exceeds the limit is wrong even if the idea is right.</p><ul><li>A hyphenated word counts as <strong>one</strong> word (<em>well-known</em>).</li><li>A number counts as one word (<em>20</em> or <em>twenty</em>).</li><li>Copy the word <strong>exactly as it appears in the passage</strong>. Do not change its form, and spell it correctly.</li></ul>"
+        },
+        {
+          heading: "Predict the Missing Word Before You Look",
+          html: "<p>Read the sentence with the gap and decide what is needed: a noun, an adjective, a verb, a number? The words around the gap tell you. <em>'a ______ increase'</em> needs an adjective; <em>'an ______'</em> needs a word that begins with a vowel sound; <em>'the number of ______ rose'</em> needs a plural noun. After you choose a word, read the whole sentence again: it must be grammatically correct and make sense.</p>"
+        },
+        {
+          heading: "Locate by Paraphrase, Not by Matching Words",
+          html: "<p>The sentence you complete is a <em>paraphrase</em> of the passage, so the exact words rarely match. Find the idea using synonyms and numbers or names, then read the sentence around it. In summary completion the gaps usually follow the order of the passage, so after you find gap 1 you can start looking for gap 2 further down, not back at the beginning.</p>"
+        },
+        {
+          heading: "Worked Example",
+          html: "<p><strong>Passage:</strong> <em>'Beekeepers have long known that bees navigate using the position of the sun, but researchers have recently shown that bees also rely on patterns of polarised light when the sun is hidden by cloud.'</em></p><p><strong>Question (NO MORE THAN TWO WORDS):</strong> <em>When the sun cannot be seen, bees use ______ light to find their way.</em></p><p><strong>Answer: polarised.</strong> The gap sits before 'light', so an adjective is needed. 'Cannot be seen' paraphrases 'hidden by cloud', and 'find their way' paraphrases 'navigate'. 'The sun' is wrong because it does not fit the grammar and is the first method, not the one used when the sun is hidden.</p>"
+        },
+        {
+          heading: "When You Are Given a Word Box",
+          html: "<p>If the task gives a list of words (A–J), you write only the <strong>letter</strong> (or the word if the instructions say so). There are more words than gaps, so some are distractors; cross out each word as you use it. Choose by part of speech first, then by meaning.</p>"
+        }
+      ],
+      turkishL1Note: "Turkish has no articles, so students can overlook the clue in 'a', 'an' or 'the' before a gap. Check the word before the gap ('an' signals a vowel sound) and check that your answer is singular or plural as the sentence requires.",
+      commonMistakes: [
+        "Writing three words when the limit is two, or adding an extra word such as 'the' that is not required.",
+        "Choosing a word from the right area of the passage that does not fit the grammar of the sentence.",
+        "Changing the form of the word (writing 'polarise' for 'polarised') or misspelling it, which makes the answer wrong."
+      ],
+      practiceTip: "For ten gap-fill sentences, write down the part of speech you expect before you search the passage. After you find the answer, check whether your prediction was right; this trains the grammar-fit habit that prevents most lost marks."
+    },
+    {
+      id: "ielts-22",
+      title: "Multiple Choice & Matching Features",
+      skill: "Reading",
+      category: "reading",
+      bandFocus: "5.5–8.5",
+      comingSoon: false,
+      tags: ["reading", "mcq", "matching features", "multiple answer"],
+      summary: "Eliminating plausible wrong options in multiple-choice questions and matching names or terms to statements without confusing similar ideas.",
+      body: [
+        {
+          heading: "Single-Answer Multiple Choice",
+          html: "<p>Questions follow the order of the passage. Read the question stem, underline its keywords, and locate the matching section before you look at the options. Then check each option against the text. Wrong options are rarely absurd; they are usually <em>almost</em> right, so eliminate them by finding the exact word or detail that makes each one wrong rather than picking the one that sounds best.</p><ul><li>Decide your own answer from the passage first, then see which option matches it.</li><li>If two options seem right, one of them contains a detail the passage does not support.</li><li>Never choose an option only because it repeats a phrase from the passage; the repeated phrase is often the trap.</li></ul>"
+        },
+        {
+          heading: "Multiple-Answer Multiple Choice (Choose TWO or THREE)",
+          html: "<p>Here you pick two or three letters from five or more options. The answers may come from <strong>different parts</strong> of the passage and the questions are usually not in text order, so find the evidence for each option separately. Do not give more letters than the instruction asks for, and the letters may be written in either order.</p>"
+        },
+        {
+          heading: "Matching Features",
+          html: "<p>You match statements to a list of features: people, places, theories, or companies. Read the list first and underline each feature, then scan the passage for the names; they usually stand out because they are capitalised. Read the sentences around each name to find the opinion or fact attached to it. The statements are not necessarily in passage order, so search for each statement's idea separately.</p><ul><li>Check the instruction: if it says <em>'You may use any letter more than once'</em>, one feature can match several statements.</li><li>A name may appear several times, so match the <em>statement</em>, not just the first mention.</li></ul>"
+        },
+        {
+          heading: "Worked Example (Matching Features)",
+          html: "<p><strong>Passage:</strong> <em>'Dr Okafor argues that city trees mainly reduce noise. Professor Lindqvist, by contrast, believes their main benefit is lowering summer temperatures, while Dr Reyes focuses on the improvement in residents’ mental health.'</em></p><p><strong>Statement:</strong> <em>The main value of urban trees is that they make cities cooler.</em></p><p><strong>Answer: Professor Lindqvist.</strong> 'Lowering summer temperatures' paraphrases 'make cities cooler'. Dr Okafor is a trap because the same topic (city trees) is attached to a different benefit, noise.</p>"
+        }
+      ],
+      turkishL1Note: "Long English sentences with several clauses can hide who said what. When you find a name, mark the verb that goes with it ('argues', 'believes', 'focuses on') and read only that clause. This stops you attributing an opinion to the wrong person.",
+      commonMistakes: [
+        "Choosing the option that contains the most words from the passage rather than the one that carries the same meaning.",
+        "In multiple-answer questions, selecting two options from the same paragraph without checking the other options.",
+        "In matching features, matching a statement to the first name mentioned near the topic instead of the name attached to that specific idea."
+      ],
+      practiceTip: "Do one multiple-choice set and, for every question, write one sentence explaining why each wrong option is wrong. If you cannot explain a wrong option, you have not yet understood the question."
+    },
+    {
+      id: "ielts-23",
+      title: "Reading: Distractor Analysis Masterclass",
+      skill: "Reading",
+      category: "reading",
+      bandFocus: "6.0–9.0",
+      comingSoon: false,
+      tags: ["reading", "distractors", "tfng", "mcq", "error analysis"],
+      summary: "Why each wrong answer is designed to look plausible, and how to recognise five common distractor patterns across every question type.",
+      body: [
+        {
+          heading: "Why Distractors Exist",
+          html: "<p>IELTS Reading questions are built so that a candidate who only <em>matches words</em> will choose wrongly. Each wrong option is a deliberate trap, and many traps follow one of five common patterns. Naming the pattern is faster than re-reading the whole passage.</p>"
+        },
+        {
+          heading: "Five Common Distractor Patterns",
+          html: "<ul><li><strong>1. Partial match:</strong> the option is true for part of the idea but wrong for the rest.</li><li><strong>2. Wrong subject:</strong> a true fact attached to a different person, place or group.</li><li><strong>3. Over-generalisation:</strong> the passage says <em>some, often, may</em>; the option says <em>all, always, will</em>.</li><li><strong>4. Opposite polarity:</strong> the option reverses the direction (an increase becomes a decrease).</li><li><strong>5. True but irrelevant:</strong> the statement is in the passage but does not answer this question.</li></ul>"
+        },
+        {
+          heading: "Distractors by Question Type",
+          html: "<ul><li><strong>True/False/Not Given:</strong> 'False' contradicts the passage; 'Not Given' is a claim the passage never makes. Over-generalisation is a common Not Given trap.</li><li><strong>Multiple choice:</strong> wrong options often follow these patterns; try to name the pattern in each one.</li><li><strong>Matching headings:</strong> the wrong heading matches a <em>detail</em> in the paragraph, not the main idea.</li><li><strong>Summary completion:</strong> a wrong word may fit the grammar but not the meaning of the passage.</li></ul>"
+        },
+        {
+          heading: "Worked Example",
+          html: "<p><strong>Passage:</strong> <em>'A trial in two of the six schools found that pupils who started lessons at 9:30 rather than 8:30 performed better in afternoon tests. The researchers say further trials are needed before any national policy is considered.'</em></p><p><strong>Question:</strong> What do the researchers conclude about later school start times?</p><ul><li><strong>A</strong> They improve results in every school. <em>(Over-generalisation: the trial covered two schools.)</em></li><li><strong>B</strong> They should be introduced nationally. <em>(Partial match / goes beyond the text: the researchers say more trials are needed first.)</em></li><li><strong>C</strong> They helped in the schools tested, but more evidence is needed. <em>(Correct.)</em></li><li><strong>D</strong> They reduced the length of the school day. <em>(Not mentioned.)</em></li></ul>"
+        }
+      ],
+      turkishL1Note: "Limiting words such as 'some', 'may' and 'often' are easy to skim past, and they are exactly what separates a correct option from an over-generalised one. Circle every limiting or absolute word (all, never, only, always) in both the question and the passage.",
+      commonMistakes: [
+        "Choosing an option because it contains the exact words from the passage, when the same words are used to say something different.",
+        "Choosing False for a statement the passage simply does not mention, when it should be Not Given.",
+        "Choosing a heading that matches one detail in the paragraph instead of the main idea."
+      ],
+      practiceTip: "After finishing any reading set, review your errors only. For each one, write the name of the distractor pattern that caught you. After 20 errors, you will see which pattern is your personal weakness and can target it."
+    },
     { id: "ielts-24", title: "Listening: Parallel Expression & Paraphrase", skill: "Listening", category: "listening", comingSoon: true, tags: ["listening", "paraphrase"], summary: "Recognising when the recording says X but the correct answer requires understanding it means Y. Coming in Content Pack 2." },
     { id: "ielts-25", title: "Listening: Spelling, Numbers & Common Traps", skill: "Listening", category: "listening", comingSoon: true, tags: ["listening", "spelling", "numbers"], summary: "High-frequency number and spelling traps across all four sections. Coming in Content Pack 2." },
     { id: "ielts-26", title: "Listening: Map/Plan/Diagram Labelling", skill: "Listening", category: "listening", comingSoon: true, tags: ["listening", "map labelling"], summary: "Following spatial/directional language in real time to label a plan correctly. Coming in Content Pack 2." },
@@ -579,6 +685,97 @@ window.APEX_DATA.ielts = {
         GRA: "Is at least one conditional or speculative structure used accurately (e.g. 'if X continues, Y will likely...')?"
       },
       bandNote: "This is the clearest Band 6 vs Band 7+ divide in Part 3: Band 6 answers often stop after the 'reason' step; Band 7+ answers reliably add the counterpoint and speculative close."
+    },
+    {
+      id: "gp-w3",
+      skill: "Writing Task 1",
+      title: "Bar-Chart Data Selection Drill",
+      prompt: "A bar chart shows the number of visitors (in thousands) to five museums in one year: Science 480, History 410, Art 350, Maritime 120, Toy 95. (1) List the THREE features you would select for a Task 1 report. (2) Write ONE sentence that compares two of them using an approximation phrase.",
+      rubric: {
+        TA: "Are the selected features the highest (Science), the lowest (Toy) and one meaningful comparison or gap, rather than all five museums?",
+        CC: "Is the comparison sentence a single, clear statement rather than a list of numbers?",
+        LR: "Is approximation language used accurately (e.g. 'just under half a million', 'roughly five times', 'close to')?",
+        GRA: "Is a comparative structure used accurately (e.g. 'attracted just over five times as many visitors as')?"
+      },
+      bandNote: "Weak: 'Science had 480, History had 410, Art had 350...' (a list). Band 7+: 'The Science museum was by far the most popular, attracting roughly five times as many visitors as the Toy museum, which received the fewest at 95,000.' Two extremes and one comparison say more than five numbers."
+    },
+    {
+      id: "gp-w4",
+      skill: "Writing Task 1",
+      title: "Process Sequencing Sentence-Builder",
+      prompt: "Combine these four steps into TWO passive sentences using different sequencing expressions (do not use 'then' or 'and then'): the tea leaves are picked; the leaves are dried in the sun; the dried leaves are rolled; the rolled leaves are packed into boxes.",
+      rubric: {
+        TA: "Are all four steps included, in the correct order, with no steps added or invented?",
+        CC: "Are two different sequencing devices used (e.g. 'Once...', 'Following this', 'before being...') and is each sentence clearly linked to the next?",
+        LR: "Are the process verbs precise and varied (picked, dried, rolled, packed) with accurate reference words ('the dried leaves')?",
+        GRA: "Is the passive formed correctly (be + past participle) and is the tense consistent?"
+      },
+      bandNote: "Band 5–6: 'The leaves are picked. Then they are dried. Then they are rolled. Then they are packed.' Band 7+: 'Once the tea leaves have been picked, they are dried in the sun. Following this, the leaves are rolled before being packed into boxes.' Fewer, longer sentences with varied connectors raise CC and GRA at the same time."
+    },
+    {
+      id: "gp-w5",
+      skill: "Writing Task 2",
+      title: "Problem/Solution Paragraph Plan",
+      prompt: "Topic: 'Many young people spend several hours a day on their phones.' What problems does this cause and how can they be solved? Write a plan (not the essay): two problems, and for each one a matched solution in one line stating WHO acts, WHAT they do, and WHY it works.",
+      rubric: {
+        TA: "Does each solution directly address one of the two problems named, and is each realistic and specific?",
+        CC: "Is the plan organised so that Body 1 (problems) and Body 2 (solutions) can be linked point by point?",
+        LR: "Are problems and solutions described with precise vocabulary (e.g. 'reduced concentration', 'screen-time limits') rather than 'bad' and 'good'?",
+        GRA: "Are 'who/what/why' expressed in a complete clause, for example with 'which would' or 'because'?"
+      },
+      bandNote: "Weak: 'Problem: phones are bad. Solution: parents should stop them.' Band 7+: 'Problem: poor sleep. Solution: schools and parents could agree a phone-free evening routine, which would give teenagers a regular chance to rest.' Notice the solution names who acts and why it works."
+    },
+    {
+      id: "gp-w6",
+      skill: "Writing Task 2",
+      title: "Advantages/Disadvantages Introduction",
+      prompt: "Topic: 'Many universities now offer complete degree courses online. Do the advantages of this development outweigh the disadvantages?' Write a TWO-sentence introduction: sentence 1 paraphrases the topic; sentence 2 states your position and previews the main reasons.",
+      rubric: {
+        TA: "Is a clear position given (it must answer 'outweigh'), rather than 'there are both advantages and disadvantages'?",
+        CC: "Does sentence 2 preview the structure of the essay (what the two body paragraphs will cover)?",
+        LR: "Is the topic paraphrased with synonyms (e.g. 'distance learning', 'degree programmes') instead of copying the question?",
+        GRA: "Is a complex sentence used accurately (e.g. 'Although... I believe... mainly because...')?"
+      },
+      bandNote: "Weak: 'Online degrees have advantages and disadvantages. In this essay I will discuss them.' Band 7+: 'Fully online degree programmes have become widespread in higher education. Although they raise concerns about isolation, I believe their advantages outweigh these drawbacks, mainly because they are flexible and affordable.'"
+    },
+    {
+      id: "gp-r2",
+      skill: "Reading",
+      title: "Summary Completion Word-Limit Check",
+      prompt: "Passage: 'Researchers found that the new road reduced journey times by about twenty minutes, although the cost of building it was higher than expected.' Complete the summary using NO MORE THAN ONE WORD AND/OR A NUMBER: The new road reduced journey times by about ______ minutes, but the ______ of building it was higher than expected. Give both answers, and explain why 'about twenty' would be marked wrong for the first gap.",
+      rubric: {
+        TA: "Correct answers: gap 1 = 'twenty' (or '20'); gap 2 = 'cost'. 'About twenty' is wrong because it is two words and the limit is one word and/or a number.",
+        CC: "N/A for this micro-drill.",
+        LR: "N/A for this micro-drill.",
+        GRA: "N/A for this micro-drill."
+      },
+      bandNote: "'About' is already printed in the summary, so repeating it breaks the word limit and also duplicates the sentence. Always read the words either side of the gap, and check the gap against the instruction line before you write."
+    },
+    {
+      id: "gp-r3",
+      skill: "Reading",
+      title: "Matching Features Micro-Set",
+      prompt: "Passage: 'Maya Chen believes the main cause of the decline in bee numbers is pesticide use. Tomas Weber, however, points to the loss of wild-flower habitat, while Aisha Rahman argues that disease spread by imported colonies is the key factor.' Match each statement to a researcher: A Chen, B Weber, C Rahman. You may use any letter more than once. (1) The decline is mainly caused by the destruction of wild-flower areas. (2) Chemicals used on crops are chiefly responsible.",
+      rubric: {
+        TA: "Correct answers: (1) B, Weber; (2) A, Chen. Statement 1 paraphrases 'loss of wild-flower habitat'; statement 2 paraphrases 'pesticide use'.",
+        CC: "N/A for this micro-drill.",
+        LR: "N/A for this micro-drill.",
+        GRA: "N/A for this micro-drill."
+      },
+      bandNote: "All three researchers discuss the same topic, so matching a name to the topic alone gets you nowhere. Match the specific cause: 'destruction of wild-flower areas' is a paraphrase of 'loss of habitat', and that belongs to Weber, not to the first name mentioned."
+    },
+    {
+      id: "gp-r4",
+      skill: "Reading",
+      title: "Spot the Distractor",
+      prompt: "Passage: 'Although electric buses cost about forty per cent more to buy than diesel ones, city councils that have adopted them report lower running costs over ten years.' What does the passage say about electric buses? A They are cheaper to buy than diesel buses. B They are more expensive to buy but cheaper to run. C They are more expensive both to buy and to run. D They have been adopted by every city council. Choose the answer, and name the distractor pattern behind each wrong option.",
+      rubric: {
+        TA: "Correct answer: B. A = opposite polarity (the passage says they cost more to buy). C = partial match (right about purchase cost, wrong about running costs). D = over-generalisation (the passage says 'city councils that have adopted them', not all councils).",
+        CC: "N/A for this micro-drill.",
+        LR: "N/A for this micro-drill.",
+        GRA: "N/A for this micro-drill."
+      },
+      bandNote: "Three of the four options reuse words from the passage, so word-matching cannot separate them. The skill being tested is naming why an option is wrong: reversed direction, half-true, or too general. That is the same skill you need for True/False/Not Given."
     }
   ],
 
