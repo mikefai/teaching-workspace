@@ -306,3 +306,9 @@ body::before{
   a[href]::after{ content:""; }
   body, .passage-panel, .note-article p, .note-article li{ color:#000 !important; }
 }
+
+/* ---------- Writing Task 1 data table ---------- */
+.apex-datatable{ width:100%; border-collapse:collapse; font-size:.8125rem; background:var(--paper-raised); }
+.apex-datatable caption{ caption-side:top; text-align:left; font-weight:600; color:var(--muted); padding:0 0 .35rem; }
+.apex-datatable th, .apex-datatable td{ border:1px solid var(--line); padding:.35rem .6rem; text-align:left; white-space:nowrap; }
+.apex-datatable th{ background:var(--paper); color:var(--ink-soft); font-weight:600; }

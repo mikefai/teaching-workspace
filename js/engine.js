@@ -4,7 +4,8 @@
    Part shapes:
      { id, title, kind:'objective', passage?, audioSrc?, audioTitle?, audioContext?, transcript?,
        instructions?, questions:[...], timeLimitMinutes? }
-     { id, title, kind:'writing', prompt, modelAnswer:{text,bandAnnotation}, timeLimitMinutes? }
+     { id, title, kind:'writing', prompt, minWords?, dataTable?:{caption?,headers[],rows[][]},
+       modelAnswer:{text,bandAnnotation}, timeLimitMinutes? }
 */
 
 class TestEngine {
@@ -245,7 +246,8 @@ class TestEngine {
       <div class="space-y-4">
         <div class="apex-card p-4 bg-[var(--amber-50)]">
           <div class="font-semibold text-sm text-[var(--amber-600)] mb-1">Task Prompt</div>
-          <div class="text-sm leading-relaxed">${escapeHtml(part.prompt)}</div>
+          <div class="text-sm leading-relaxed" style="white-space:pre-line">${escapeHtml(part.prompt)}</div>
+          ${this._renderDataTable(part.dataTable)}
         </div>
         <div>
           <div class="flex items-center justify-between">
@@ -263,6 +265,19 @@ class TestEngine {
         ` : ""}
       </div>
     `;
+  }
+
+  // Optional chart/process/map data shown under a Writing Task 1 prompt. All text is escaped.
+  _renderDataTable(table) {
+    if (!table || !Array.isArray(table.headers) || !Array.isArray(table.rows)) return "";
+    const head = table.headers.map(h => `<th scope="col">${escapeHtml(h)}</th>`).join("");
+    const rows = table.rows.map(r => `<tr>${r.map(c => `<td>${escapeHtml(c)}</td>`).join("")}</tr>`).join("");
+    return `<div class="overflow-x-auto mt-3">
+      <table class="apex-datatable">
+        ${table.caption ? `<caption>${escapeHtml(table.caption)}</caption>` : ""}
+        <thead><tr>${head}</tr></thead><tbody>${rows}</tbody>
+      </table>
+    </div>`;
   }
 
   _wireWritingPart(part) {
