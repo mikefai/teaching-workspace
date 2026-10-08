@@ -613,9 +613,153 @@ window.APEX_DATA.ielts = {
     { id: "ielts-24", title: "Listening: Parallel Expression & Paraphrase", skill: "Listening", category: "listening", comingSoon: true, tags: ["listening", "paraphrase"], summary: "Recognising when the recording says X but the correct answer requires understanding it means Y. Coming in Content Pack 2." },
     { id: "ielts-25", title: "Listening: Spelling, Numbers & Common Traps", skill: "Listening", category: "listening", comingSoon: true, tags: ["listening", "spelling", "numbers"], summary: "High-frequency number and spelling traps across all four sections. Coming in Content Pack 2." },
     { id: "ielts-26", title: "Listening: Map/Plan/Diagram Labelling", skill: "Listening", category: "listening", comingSoon: true, tags: ["listening", "map labelling"], summary: "Following spatial/directional language in real time to label a plan correctly. Coming in Content Pack 2." },
-    { id: "ielts-27", title: "Speaking: Band 7+ Idiomatic Language Bank", skill: "Speaking", category: "speaking", comingSoon: true, tags: ["speaking", "idiomatic language"], summary: "Natural idiomatic phrases that read as native-like rather than textbook-rehearsed. Coming in Content Pack 2." },
-    { id: "ielts-28", title: "Speaking: Fluency & Coherence — Managing Hesitation", skill: "Speaking", category: "speaking", comingSoon: true, tags: ["speaking", "fluency", "hesitation"], summary: "Natural filler strategies that buy thinking time without being penalised. Coming in Content Pack 2." },
-    { id: "ielts-29", title: "Speaking: Pronunciation for Turkish L1 Speakers", skill: "Speaking", category: "speaking", comingSoon: true, tags: ["speaking", "pronunciation", "turkish l1"], summary: "Consonant-cluster reduction and vowel-harmony transfer, and how to target them directly. Coming in Content Pack 2." },
+    {
+      id: "ielts-27",
+      title: "Speaking: Band 7+ Idiomatic Language Bank",
+      skill: "Speaking",
+      category: "speaking",
+      bandFocus: "6.5–8.5",
+      comingSoon: false,
+      tags: ["speaking", "idiomatic language", "collocations", "lexical resource"],
+      summary: "Natural idioms, collocations and phrasal verbs that sound fluent rather than memorised, and how to place them in an answer.",
+      body: [
+        {
+          heading: "What 'Idiomatic' Means in the Marking",
+          html: "<p>In the Lexical Resource criterion, the higher bands refer to less common and idiomatic vocabulary used with awareness of style and collocation. The key idea is <strong>naturalness</strong>: an idiom that fits the topic and the register earns credit, while an idiom that is forced into an answer can lower it. One or two well-placed idiomatic phrases in an answer are enough; a string of them sounds rehearsed.</p>"
+        },
+        {
+          heading: "Three Safe Types of Idiomatic Language",
+          html: "<ul><li><strong>Collocations:</strong> word pairs that natural speakers choose automatically (<em>heavy traffic</em>, <em>make a decision</em>, <em>strongly believe</em>).</li><li><strong>Phrasal verbs:</strong> <em>pick up</em> (a skill), <em>look into</em> (a problem), <em>cut down on</em> (sugar).</li><li><strong>Light idioms:</strong> short, common expressions that fit many topics (<em>get the hang of</em>, <em>in the long run</em>, <em>a double-edged sword</em>).</li></ul>"
+        },
+        {
+          heading: "A Small Idiom Bank by Topic",
+          html: "<p>Each phrase below is common in everyday speech and safe to use when the situation fits.</p>",
+          examples: [
+            "Work and study: get the hang of (learn how to do), learn the ropes (learn a new job), burn the midnight oil (work late)",
+            "Feelings: over the moon (very happy), under the weather (slightly ill), on edge (nervous)",
+            "Opinions: it's a double-edged sword (has good and bad sides), to be honest, that's a matter of opinion",
+            "Change and time: in the long run, a thing of the past, once in a blue moon (very rarely)"
+          ]
+        },
+        {
+          heading: "How to Place an Idiom in an Answer",
+          html: "<p>Use the pattern <strong>idiom, then explanation, then example</strong>. The explanation proves you understand the phrase and extends your answer at the same time. <em>'I'm still getting the hang of cooking, which means I follow recipes very carefully, for example when I make pasta.'</em> Never use an idiom you cannot explain in plain English.</p>"
+        },
+        {
+          heading: "What to Avoid",
+          html: "<ul><li>Translating a Turkish idiom word for word. It usually sounds odd in English.</li><li>Using the same idiom in every answer.</li><li>Overused clichés that sound memorised when they do not match the question.</li></ul>"
+        }
+      ],
+      modelAnswer: {
+        prompt: "Part 3 question: Do you think people today have enough free time?",
+        text: "To be honest, I think it depends on the person. For many people in big cities, free time is something of a luxury, because long commutes and busy work schedules leave very little room for it. Some of my friends burn the midnight oil at the office and are exhausted by the weekend, so they simply stay at home and recover. On the other hand, technology has made some daily tasks quicker, so in the long run people could have more time for themselves. The real problem, in my view, is that we tend to fill any spare moment with our phones, which means we often feel busy even when we are not.",
+        bandAnnotation: "Fluency and Coherence: The answer opens with a natural time-buying phrase ('To be honest'), takes a balanced position and develops it with clear linking ('On the other hand'). Lexical Resource: Light idioms and collocations ('burn the midnight oil', 'in the long run', 'leave very little room') are placed naturally and explained by the context. Grammatical Range and Accuracy: Mixed complex structures (reason clauses with 'because', a relative clause with 'which means', a conditional-style 'could'). Pronunciation: Not assessed from a transcript; practise stressing key content words ('luxury', 'midnight', 'long run')."
+      },
+      turkishL1Note: "Turkish has many colourful idioms, and translating them word for word rarely works in English. Instead of translating, learn English idioms together with their collocations and say them aloud in full sentences. Checking one phrase against a dictionary example takes less than a minute.",
+      commonMistakes: [
+        "Packing three or four idioms into one answer so that it sounds memorised instead of natural.",
+        "Using an idiom whose meaning you cannot explain, which makes a follow-up sentence impossible.",
+        "Translating idioms from Turkish directly, which often produces phrases English speakers do not use."
+      ],
+      practiceTip: "Choose three idioms from the bank each week. Use each one once in a recorded 30-second answer, then listen back and ask: does it sound natural, and did I explain it with a following sentence?"
+    },
+    {
+      id: "ielts-28",
+      title: "Speaking: Fluency & Coherence — Managing Hesitation",
+      skill: "Speaking",
+      category: "speaking",
+      bandFocus: "5.5–8.5",
+      comingSoon: false,
+      tags: ["speaking", "fluency", "hesitation", "discourse markers"],
+      summary: "Natural strategies for buying thinking time, repairing mistakes and linking ideas without long silences or repeated fillers.",
+      body: [
+        {
+          heading: "What Fluency and Coherence Look For",
+          html: "<p>The Fluency and Coherence criterion rewards speaking at length without noticeable effort, with ideas that are logically connected. Short pauses to think are normal for every speaker. The weaknesses are <strong>long silences</strong>, <strong>repeated sounds like 'um' and 'er'</strong> used as a habit, and hesitation caused by searching for words rather than for ideas.</p>"
+        },
+        {
+          heading: "Natural Time-Buying Phrases",
+          html: "<p>Replace silent pauses and repeated fillers with short phrases that sound thoughtful.</p>",
+          examples: [
+            "Well, let me think about that for a moment...",
+            "That's an interesting question. I suppose...",
+            "It really depends on...",
+            "To be honest, I haven't thought about it much, but...",
+            "There are a couple of ways to look at it."
+          ]
+        },
+        {
+          heading: "Repairing a Mistake Without Panic",
+          html: "<p>Speakers correct themselves all the time, and a quick repair shows control. Use a short phrase and move on: <em>'What I mean is...'</em>, <em>'Let me put it another way...'</em>, <em>'Sorry, what I meant to say was...'</em>. Do not apologise at length or restart the whole answer.</p>"
+        },
+        {
+          heading: "Linking Ideas with Discourse Markers",
+          html: "<ul><li><strong>Adding:</strong> besides, what's more, as well as that</li><li><strong>Contrasting:</strong> however, on the other hand, whereas</li><li><strong>Giving a result:</strong> so, as a result, that's why</li><li><strong>Giving an example:</strong> for instance, for example, a good example of this is</li></ul><p>Two or three varied markers in an answer are enough. Using the same one repeatedly (<em>'and then... and then...'</em>) is a common limit on this criterion.</p>"
+        },
+        {
+          heading: "A 60-Second Practice Routine",
+          html: "<p>Pick a Part 3 question, set a one-minute timer and answer aloud while recording. Replay it and count the pauses longer than two seconds and the repeated fillers. Then answer the same question again with two time-buying phrases and one repair phrase prepared in advance. Most learners find the second recording clearly smoother.</p>"
+        }
+      ],
+      modelAnswer: {
+        prompt: "Part 3 question: Is it better to live in a city or in the countryside?",
+        text: "That's an interesting question. I suppose it really depends on what stage of life you are at. For young people, a city is usually more attractive, because there are more jobs, more entertainment and better transport. What's more, you can meet people from many different backgrounds. However, the countryside has its own advantages. Life is quieter, the air is cleaner, and housing is often cheaper, so families may prefer it. Let me put it another way: a city suits people who want opportunities, whereas the countryside suits people who want space and calm. Personally, I would like to live in a city while I am building my career and then move somewhere quieter later on.",
+        bandAnnotation: "Fluency and Coherence: Time-buying ('That's an interesting question. I suppose...'), a repair phrase ('Let me put it another way') and varied markers ('What's more', 'However', 'whereas') keep the answer smooth and well organised. Lexical Resource: Natural collocations ('stage of life', 'build my career', 'space and calm'). Grammatical Range and Accuracy: A range of structures, including reason clauses, a contrast with 'whereas' and a time clause ('while I am building my career'). Pronunciation: Not assessed from a transcript; practise a falling tone at the end of statements and stress on 'city' and 'countryside'."
+      },
+      turkishL1Note: "Many Turkish learners are used to answering questions briefly and directly, so a long pause to organise ideas can feel like a failure. Practise treating a thinking phrase ('Well, let me think...') as a normal part of an answer, not as an admission that you do not know.",
+      commonMistakes: [
+        "Using 'um' or 'er' repeatedly instead of a short thinking phrase.",
+        "Stopping completely to search for a perfect word when a simpler word would keep the answer moving.",
+        "Restarting an answer from the beginning after a small mistake instead of repairing it in one phrase."
+      ],
+      practiceTip: "Record yourself answering three Part 3 questions for one minute each. Count the repeated fillers and the silences longer than two seconds. Repeat after a week and compare the numbers."
+    },
+    {
+      id: "ielts-29",
+      title: "Speaking: Pronunciation for Turkish L1 Speakers",
+      skill: "Speaking",
+      category: "speaking",
+      bandFocus: "5.5–8.0",
+      comingSoon: false,
+      tags: ["speaking", "pronunciation", "turkish l1", "word stress", "rhythm"],
+      summary: "Common sound, stress and rhythm differences between Turkish and English, with practical ways to be clearer.",
+      body: [
+        {
+          heading: "How Pronunciation Is Assessed",
+          html: "<p>Pronunciation is judged on how easily the examiner can understand you. It covers individual sounds, word stress, sentence stress and rhythm, and intonation. Having an accent is <strong>not</strong> penalised. Unclear sounds or unnatural stress that make you hard to follow are what lower the score.</p>"
+        },
+        {
+          heading: "Sounds That Often Need Attention",
+          html: "<p>These are tendencies that many Turkish speakers find, not rules for every learner. Listen to yourself to see which apply to you.</p><ul><li><strong>'th' sounds.</strong> Turkish does not have /θ/ and /ð/, so <em>think</em> may sound like <em>tink</em> or <em>sink</em>, and <em>this</em> like <em>dis</em> or <em>zis</em>.</li><li><strong>/w/ and /v/.</strong> Turkish has /v/ but no /w/, so <em>west</em> and <em>vest</em> can sound alike.</li><li><strong>Vowel length.</strong> Turkish vowels do not change meaning by length, so <em>ship</em> and <em>sheep</em>, or <em>full</em> and <em>fool</em>, can merge.</li><li><strong>The vowel in 'bad' and 'bed'.</strong> English separates /æ/ and /e/; many learners use one sound for both.</li><li><strong>Starting clusters.</strong> Turkish native words do not start with two consonants, and borrowed words often add a vowel (for example <em>okul</em> for 'school'). Learners may therefore say <em>eschool</em> for <em>school</em> or <em>estreet</em> for <em>street</em>.</li></ul>",
+          examples: [
+            "think / sink / tink; this / dis / zis",
+            "west / vest; wine / vine",
+            "ship / sheep; full / fool; live / leave",
+            "bad / bed; man / men",
+            "school, street, spring: say the first two consonants together, with no vowel before them"
+          ]
+        },
+        {
+          heading: "Word Stress and Sentence Rhythm",
+          html: "<p>Word stress in Turkish often falls on the last syllable, so learners may stress English words on the end as well. English stress moves: <em>PHOtograph</em>, <em>phoTOgrapher</em>, <em>photoGRAPHic</em>. When you learn a new word, learn its stress at the same time and mark it in your notes. English is also stress-timed: <strong>content words</strong> (nouns, main verbs, adjectives) are stressed and clear, while <strong>function words</strong> (to, of, and, a) are short and weak. Saying every word with equal weight sounds slow and flat.</p>"
+        },
+        {
+          heading: "Intonation That Helps the Listener",
+          html: "<ul><li>Statements usually end with a <strong>falling</strong> tone, which tells the examiner you have finished.</li><li>Yes/no questions often rise at the end.</li><li>In a list, use a rising tone on each item and a falling tone on the last one.</li><li>Stress the word that carries your main idea: <em>'I REALLY enjoy it'</em> versus <em>'I really ENJOY it'</em> changes the emphasis.</li></ul>"
+        },
+        {
+          heading: "A Weekly Practice Routine",
+          html: "<p>Choose one sound or stress pattern per week. Practise it with five minimal pairs, then record one 30-second answer and listen for it. <strong>Shadowing</strong> works well too: play a short clip of a native speaker, pause it and repeat each sentence with the same rhythm and tone. Ten minutes a day is more effective than one long weekly session.</p>"
+        }
+      ],
+      turkishL1Note: "Because Turkish is written almost exactly as it is pronounced, English spelling can mislead you (for example, 'comfortable' or 'Wednesday'). When you meet a new word, check its pronunciation in a learner's dictionary with audio, not only its spelling.",
+      commonMistakes: [
+        "Concentrating only on individual sounds and ignoring word stress and rhythm, which often affect clarity more.",
+        "Pronouncing every word with equal strength, so that the speech sounds slow and flat.",
+        "Learning a new word from its spelling alone and guessing the stress."
+      ],
+      practiceTip: "Pick five words you use in Speaking answers (for example 'photograph', 'important', 'university'). Look up the stress and sounds with audio, say each one ten times, then use all five in a recorded 30-second answer."
+    },
     { id: "ielts-30", title: "Overcoming Test Anxiety — Psychology for Band Success", skill: "Strategy", category: "strategy", comingSoon: true, tags: ["psychology", "test anxiety", "mindset"], summary: "Self-efficacy, reframing, and calm-focus techniques grounded in test-anxiety research. Coming in Content Pack 2." }
   ],
 
