@@ -645,7 +645,8 @@ function launchIeltsListening(setId) {
 }
 
 function launchIeltsReading(setId) {
-  const set = D().ielts.readingSets.find(s => s.id === setId);
+  const set = (D().ielts.readingSets || []).find(s => s.id === setId);
+  if (!set) return;
   startEngine({
     id: set.id, title: set.title, subjectBadge: "IELTS Suite · Reading Practice",
     timeLimitMinutes: set.timeLimitMinutes,
@@ -657,7 +658,8 @@ function launchIeltsReading(setId) {
 }
 
 function launchIeltsWriting(setId) {
-  const set = D().ielts.writingSets.find(s => s.id === setId);
+  const set = (D().ielts.writingSets || []).find(s => s.id === setId);
+  if (!set) return;
   startEngine({
     id: set.id, title: set.title, subjectBadge: "IELTS Suite · Writing Practice",
     parts: [{

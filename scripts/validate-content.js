@@ -25,6 +25,8 @@ const words = s => String(s || "").trim().split(/\s+/).filter(Boolean).length;
 const seen = new Map();
 function claim(id, where) {
   if (!id) return fail(where, "missing id");
+  // ids are interpolated into inline onclick handlers, so keep them to a safe charset
+  if (!/^[A-Za-z0-9-]+$/.test(id)) fail(id, "id must match [A-Za-z0-9-]+");
   if (seen.has(id)) fail(id, `duplicate id (also in ${seen.get(id)})`);
   seen.set(id, where);
 }

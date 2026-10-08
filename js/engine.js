@@ -272,7 +272,8 @@ class TestEngine {
     if (!table || !Array.isArray(table.headers) || !Array.isArray(table.rows)) return "";
     const head = table.headers.map(h => `<th scope="col">${escapeHtml(h)}</th>`).join("");
     const rows = table.rows.map(r => `<tr>${r.map(c => `<td>${escapeHtml(c)}</td>`).join("")}</tr>`).join("");
-    return `<div class="overflow-x-auto mt-3">
+    const label = (table.caption || "Data table") + " (scrolls horizontally)";
+    return `<div class="overflow-x-auto mt-3 apex-datatable-wrap" tabindex="0" role="region" aria-label="${escapeHtml(label)}">
       <table class="apex-datatable">
         ${table.caption ? `<caption>${escapeHtml(table.caption)}</caption>` : ""}
         <thead><tr>${head}</tr></thead><tbody>${rows}</tbody>
