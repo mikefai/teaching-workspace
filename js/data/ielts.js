@@ -625,7 +625,7 @@ window.APEX_DATA.ielts = {
       body: [
         {
           heading: "What 'Idiomatic' Means in the Marking",
-          html: "<p>In the Lexical Resource criterion, the higher bands refer to less common and idiomatic vocabulary used with awareness of style and collocation. The key idea is <strong>naturalness</strong>: an idiom that fits the topic and the register earns credit, while an idiom that is forced into an answer can lower it. One or two well-placed idiomatic phrases in an answer are enough; a string of them sounds rehearsed.</p>"
+          html: "<p>In the Lexical Resource criterion, the higher bands refer to less common and idiomatic vocabulary used with awareness of style and collocation. The key idea is <strong>naturalness</strong>: an idiom that fits the topic and the register earns credit, while an idiom that is forced into an answer may sound unnatural and lower the impression it makes. One or two well-placed idiomatic phrases in an answer are enough; a string of them sounds rehearsed.</p>"
         },
         {
           heading: "Three Safe Types of Idiomatic Language",
@@ -653,7 +653,7 @@ window.APEX_DATA.ielts = {
       modelAnswer: {
         prompt: "Part 3 question: Do you think people today have enough free time?",
         text: "To be honest, I think it depends on the person. For many people in big cities, free time is something of a luxury, because long commutes and busy work schedules leave very little room for it. Some of my friends burn the midnight oil at the office and are exhausted by the weekend, so they simply stay at home and recover. On the other hand, technology has made some daily tasks quicker, so in the long run people could have more time for themselves. The real problem, in my view, is that we tend to fill any spare moment with our phones, which means we often feel busy even when we are not.",
-        bandAnnotation: "Fluency and Coherence: The answer opens with a natural time-buying phrase ('To be honest'), takes a balanced position and develops it with clear linking ('On the other hand'). Lexical Resource: Light idioms and collocations ('burn the midnight oil', 'in the long run', 'leave very little room') are placed naturally and explained by the context. Grammatical Range and Accuracy: Mixed complex structures (reason clauses with 'because', a relative clause with 'which means', a conditional-style 'could'). Pronunciation: Not assessed from a transcript; practise stressing key content words ('luxury', 'midnight', 'long run')."
+        bandAnnotation: "Fluency and Coherence: The answer opens with a natural time-buying phrase ('To be honest'), takes a balanced position and develops it with clear linking ('On the other hand'). Lexical Resource: Light idioms and collocations ('burn the midnight oil', 'in the long run', 'leave very little room') are placed naturally and explained by the context. Grammatical Range and Accuracy: Mixed complex structures (reason clauses with 'because', a relative clause with 'which means', and a modal ('could') for possibility). Pronunciation: Not assessed from a transcript; practise stressing key content words ('luxury', 'midnight', 'long run')."
       },
       turkishL1Note: "Turkish has many colourful idioms, and translating them word for word rarely works in English. Instead of translating, learn English idioms together with their collocations and say them aloud in full sentences. Checking one phrase against a dictionary example takes less than a minute.",
       commonMistakes: [
@@ -694,19 +694,19 @@ window.APEX_DATA.ielts = {
         },
         {
           heading: "Linking Ideas with Discourse Markers",
-          html: "<ul><li><strong>Adding:</strong> besides, what's more, as well as that</li><li><strong>Contrasting:</strong> however, on the other hand, whereas</li><li><strong>Giving a result:</strong> so, as a result, that's why</li><li><strong>Giving an example:</strong> for instance, for example, a good example of this is</li></ul><p>Two or three varied markers in an answer are enough. Using the same one repeatedly (<em>'and then... and then...'</em>) is a common limit on this criterion.</p>"
+          html: "<ul><li><strong>Adding:</strong> besides, what's more, on top of that</li><li><strong>Contrasting:</strong> however, on the other hand, whereas</li><li><strong>Giving a result:</strong> so, as a result, that's why</li><li><strong>Giving an example:</strong> for instance, for example, a good example of this is</li></ul><p>Two or three varied markers in an answer are enough. Using the same one repeatedly (<em>'and then... and then...'</em>) is a common limit on this criterion.</p>"
         },
         {
           heading: "A 60-Second Practice Routine",
-          html: "<p>Pick a Part 3 question, set a one-minute timer and answer aloud while recording. Replay it and count the pauses longer than two seconds and the repeated fillers. Then answer the same question again with two time-buying phrases and one repair phrase prepared in advance. Most learners find the second recording clearly smoother.</p>"
+          html: "<p>Pick a Part 3 question, set a one-minute timer and answer aloud while recording. Replay it and count the pauses longer than two seconds and the repeated fillers. Then answer the same question again with two time-buying phrases and one repair phrase prepared in advance. You will probably notice that the second recording is smoother.</p>"
         }
       ],
       modelAnswer: {
         prompt: "Part 3 question: Is it better to live in a city or in the countryside?",
         text: "That's an interesting question. I suppose it really depends on what stage of life you are at. For young people, a city is usually more attractive, because there are more jobs, more entertainment and better transport. What's more, you can meet people from many different backgrounds. However, the countryside has its own advantages. Life is quieter, the air is cleaner, and housing is often cheaper, so families may prefer it. Let me put it another way: a city suits people who want opportunities, whereas the countryside suits people who want space and calm. Personally, I would like to live in a city while I am building my career and then move somewhere quieter later on.",
-        bandAnnotation: "Fluency and Coherence: Time-buying ('That's an interesting question. I suppose...'), a repair phrase ('Let me put it another way') and varied markers ('What's more', 'However', 'whereas') keep the answer smooth and well organised. Lexical Resource: Natural collocations ('stage of life', 'build my career', 'space and calm'). Grammatical Range and Accuracy: A range of structures, including reason clauses, a contrast with 'whereas' and a time clause ('while I am building my career'). Pronunciation: Not assessed from a transcript; practise a falling tone at the end of statements and stress on 'city' and 'countryside'."
+        bandAnnotation: "Fluency and Coherence: Time-buying ('That's an interesting question. I suppose...'), a rephrasing phrase ('Let me put it another way') introducing a summary, and varied markers ('What's more', 'However', 'whereas') keep the answer smooth and well organised. Lexical Resource: Natural collocations ('stage of life', 'build my career', 'space and calm'). Grammatical Range and Accuracy: A range of structures, including reason clauses, a contrast with 'whereas' and a time clause ('while I am building my career'). Pronunciation: Not assessed from a transcript; practise a falling tone at the end of statements and stress on 'city' and 'countryside'."
       },
-      turkishL1Note: "Many Turkish learners are used to answering questions briefly and directly, so a long pause to organise ideas can feel like a failure. Practise treating a thinking phrase ('Well, let me think...') as a normal part of an answer, not as an admission that you do not know.",
+      turkishL1Note: "Some learners are used to answering questions briefly and directly, so a long pause to organise ideas can feel like a failure. Practise treating a thinking phrase ('Well, let me think...') as a normal part of an answer, not as an admission that you do not know.",
       commonMistakes: [
         "Using 'um' or 'er' repeatedly instead of a short thinking phrase.",
         "Stopping completely to search for a perfect word when a simpler word would keep the answer moving.",
@@ -726,22 +726,22 @@ window.APEX_DATA.ielts = {
       body: [
         {
           heading: "How Pronunciation Is Assessed",
-          html: "<p>Pronunciation is judged on how easily the examiner can understand you. It covers individual sounds, word stress, sentence stress and rhythm, and intonation. Having an accent is <strong>not</strong> penalised. Unclear sounds or unnatural stress that make you hard to follow are what lower the score.</p>"
+          html: "<p>Pronunciation is judged on how easily the examiner can understand you. It covers individual sounds, word stress, sentence stress and rhythm, and intonation. An accent is not marked in itself; what counts is its effect on how easily you can be understood. Unclear sounds or unnatural stress that make you hard to follow are what lower the score.</p>"
         },
         {
           heading: "Sounds That Often Need Attention",
-          html: "<p>These are tendencies that many Turkish speakers find, not rules for every learner. Listen to yourself to see which apply to you.</p><ul><li><strong>'th' sounds.</strong> Turkish does not have /θ/ and /ð/, so <em>think</em> may sound like <em>tink</em> or <em>sink</em>, and <em>this</em> like <em>dis</em> or <em>zis</em>.</li><li><strong>/w/ and /v/.</strong> Turkish has /v/ but no /w/, so <em>west</em> and <em>vest</em> can sound alike.</li><li><strong>Vowel length.</strong> Turkish vowels do not change meaning by length, so <em>ship</em> and <em>sheep</em>, or <em>full</em> and <em>fool</em>, can merge.</li><li><strong>The vowel in 'bad' and 'bed'.</strong> English separates /æ/ and /e/; many learners use one sound for both.</li><li><strong>Starting clusters.</strong> Turkish native words do not start with two consonants, and borrowed words often add a vowel (for example <em>okul</em> for 'school'). Learners may therefore say <em>eschool</em> for <em>school</em> or <em>estreet</em> for <em>street</em>.</li></ul>",
+          html: "<p>These are tendencies that many Turkish speakers find, not rules for every learner. Listen to yourself to see which apply to you.</p><ul><li><strong>'th' sounds.</strong> Turkish does not have /θ/ and /ð/, so <em>think</em> may sound like <em>tink</em> or <em>sink</em>, and <em>this</em> like <em>dis</em> or <em>zis</em>.</li><li><strong>/w/ and /v/.</strong> Turkish has /v/ but no /w/, so <em>west</em> and <em>vest</em> can sound alike.</li><li><strong>Vowel length.</strong> In native Turkish words, vowel length does not change meaning, and these English pairs also differ in vowel quality, so <em>ship</em> and <em>sheep</em>, or <em>full</em> and <em>fool</em>, can merge.</li><li><strong>The vowel in 'bad' and 'bed'.</strong> English separates /æ/ and /e/; many learners use one sound for both.</li><li><strong>Starting clusters.</strong> Turkish native words do not start with two consonants, and some older loanwords add a vowel (for example <em>okul</em>, from French <em>école</em>). Learners may therefore insert a short vowel before an English cluster, saying something like <em>iskool</em> for <em>school</em> or <em>istreet</em> for <em>street</em>.</li></ul>",
           examples: [
             "think / sink / tink; this / dis / zis",
             "west / vest; wine / vine",
             "ship / sheep; full / fool; live / leave",
             "bad / bed; man / men",
-            "school, street, spring: say the first two consonants together, with no vowel before them"
+            "school, street, spring: say the opening consonants together (two in 'school' and 'street', three in 'spring'), with no vowel before them"
           ]
         },
         {
           heading: "Word Stress and Sentence Rhythm",
-          html: "<p>Word stress in Turkish often falls on the last syllable, so learners may stress English words on the end as well. English stress moves: <em>PHOtograph</em>, <em>phoTOgrapher</em>, <em>photoGRAPHic</em>. When you learn a new word, learn its stress at the same time and mark it in your notes. English is also stress-timed: <strong>content words</strong> (nouns, main verbs, adjectives) are stressed and clear, while <strong>function words</strong> (to, of, and, a) are short and weak. Saying every word with equal weight sounds slow and flat.</p>"
+          html: "<p>Word stress in native Turkish words often falls on the last syllable (with exceptions such as many place names, some loanwords and some adverbs), so learners may stress English words on the end as well. English stress moves: <em>PHOtograph</em>, <em>phoTOgrapher</em>, <em>photoGRAPHic</em>. When you learn a new word, learn its stress at the same time and mark it in your notes. English is also stress-timed: <strong>content words</strong> (nouns, main verbs, adjectives) are stressed and clear, while <strong>function words</strong> (to, of, and, a) are short and weak. Saying every word with equal weight sounds slow and flat.</p>"
         },
         {
           heading: "Intonation That Helps the Listener",
@@ -749,7 +749,7 @@ window.APEX_DATA.ielts = {
         },
         {
           heading: "A Weekly Practice Routine",
-          html: "<p>Choose one sound or stress pattern per week. Practise it with five minimal pairs, then record one 30-second answer and listen for it. <strong>Shadowing</strong> works well too: play a short clip of a native speaker, pause it and repeat each sentence with the same rhythm and tone. Ten minutes a day is more effective than one long weekly session.</p>"
+          html: "<p>Choose one sound or stress pattern per week. Practise it with five minimal pairs, then record one 30-second answer and listen for it. <strong>Shadowing</strong> works well too: play a short clip of a native speaker, pause it and repeat each sentence with the same rhythm and tone. Short daily practice is usually easier to sustain than one long weekly session.</p>"
         }
       ],
       turkishL1Note: "Because Turkish is written almost exactly as it is pronounced, English spelling can mislead you (for example, 'comfortable' or 'Wednesday'). When you meet a new word, check its pronunciation in a learner's dictionary with audio, not only its spelling.",
@@ -920,6 +920,71 @@ window.APEX_DATA.ielts = {
         GRA: "N/A for this micro-drill."
       },
       bandNote: "Three of the four options reuse words from the passage, so word-matching cannot separate them. The skill being tested is naming why an option is wrong: reversed direction, half-true, or too general. That is the same skill you need for True/False/Not Given."
+    },
+    {
+      id: "gp-s1",
+      skill: "Speaking Part 1",
+      title: "Extend a Part 1 Answer",
+      prompt: "Part 1 question: 'Do you enjoy cooking?' Say your answer aloud in three sentences: answer the question directly, give one reason, then add a short example from your own life. Write down the three sentences you said.",
+      rubric: {
+        TA: "Does sentence 1 answer the question directly (yes, no, or 'it depends') rather than starting with background?",
+        CC: "Do the three sentences connect naturally with a linking word such as 'because', 'for example' or 'so'?",
+        LR: "Is at least one specific topic word used (for example 'recipe', 'ingredients', 'from scratch') instead of 'good' and 'nice'?",
+        GRA: "Is the reason expressed in a full clause (for example 'because it helps me relax') rather than a fragment?"
+      },
+      bandNote: "One-sentence answers ('Yes, I do.') give the examiner almost nothing to assess. Stronger: 'Yes, I really do, because it helps me relax after work. For example, last weekend I made a vegetable curry from scratch and shared it with my neighbours.'"
+    },
+    {
+      id: "gp-s4",
+      skill: "Speaking Part 2",
+      title: "Round Off a Cue Card Answer",
+      prompt: "Cue card: 'Describe a place you would like to visit again.' Imagine you have spoken for almost two minutes. Write ONLY the last two sentences you would say to finish your answer smoothly, without stopping suddenly or saying 'That's all.'",
+      rubric: {
+        TA: "Do the closing sentences return to the 'why' of the cue card (why you would like to visit again)?",
+        CC: "Is there a clear signal that you are finishing (for example 'So, to sum up' or 'All in all')?",
+        LR: "Is a precise feeling or reason used instead of 'good' or 'nice' (for example 'peaceful', 'unforgettable')?",
+        GRA: "Is a future form used accurately (for example 'I would love to go back next summer' or 'I'm hoping to')?"
+      },
+      bandNote: "Weak: 'Yes, so that's all about that place.' Stronger: 'All in all, it's somewhere I'd love to go back to, because the quiet streets and the sea air made me feel completely relaxed. I'm hoping to return next summer with my family.'"
+    },
+    {
+      id: "gp-s5",
+      skill: "Speaking Part 3",
+      title: "Compare Past and Present",
+      prompt: "Part 3 question: 'How has the way people travel to work changed in your country over the last thirty years?' Write TWO spoken-style sentences: one about the past and one about the present, joined by a contrast marker such as 'whereas' or 'nowadays'.",
+      rubric: {
+        TA: "Does the answer clearly describe both a past situation and a present situation, not only one?",
+        CC: "Is a contrast marker used correctly to link the two time periods?",
+        LR: "Are time expressions varied (for example 'thirty years ago', 'these days', 'in the past')?",
+        GRA: "Are the tenses correct: past simple or 'used to' for the past, present simple or present perfect for the present?"
+      },
+      bandNote: "Band 5 answers describe only the present. Band 7+ compares: 'Thirty years ago, most people used buses or walked, whereas these days many commute by car or train, which has made roads much busier.'"
+    },
+    {
+      id: "gp-s6",
+      skill: "Speaking Fluency",
+      title: "Replace the Filler",
+      prompt: "Each sentence below starts with a filler sound. Rewrite the start of each with a natural thinking phrase, then say all three aloud: (1) 'Um... I think cities are better.' (2) 'Er... it's difficult to say.' (3) 'Uh... maybe because of money.'",
+      rubric: {
+        TA: "Does each rewritten sentence still answer the original question?",
+        CC: "Is each filler replaced by a different thinking phrase (not the same one three times)?",
+        LR: "Are the replacements natural spoken phrases (for example 'Well, let me think', 'It really depends', 'To be honest')?",
+        GRA: "Is the grammar after each phrase correct (for example 'It depends on...' followed by a noun)?"
+      },
+      bandNote: "Possible answers: (1) 'Well, let me think about that... I suppose cities are better for young people.' (2) 'That's hard to say, because it really depends on the person.' (3) 'To be honest, I think it's mainly because of the cost.' The aim is a short, natural pause, not silence."
+    },
+    {
+      id: "gp-s7",
+      skill: "Speaking Pronunciation",
+      title: "Mark the Word Stress",
+      prompt: "Say each word aloud and mark the stressed syllable (for example 'im-POR-tant'): photograph, photographer, photographic, important, university, comfortable. Then check your answers in a learner's dictionary with audio.",
+      rubric: {
+        TA: "Is exactly one syllable marked as the main stress in each word?",
+        CC: "Does the stress move when the word changes (photograph, photographer, photographic)?",
+        LR: "Are 'important', 'university' and 'comfortable' stressed on the syllable a dictionary gives?",
+        GRA: "Is 'comfortable' counted as three syllables (not four) in natural speech?"
+      },
+      bandNote: "Answers: PHO-to-graph, pho-TO-gra-pher, pho-to-GRA-phic, im-POR-tant, u-ni-VER-si-ty, COMF-ta-ble (about three syllables in natural speech, not four). Many learners stress English words on the last syllable; learning the stress with each new word fixes this faster than correcting it later."
     }
   ],
 
@@ -1868,7 +1933,68 @@ window.APEX_DATA.ielts = {
     }
   ],
 
-  speakingSets: [],
+  speakingSets: [
+    {
+      id: "ielts-speak-01",
+      title: "Speaking Practice 1 — Part 1: Hometown",
+      part: 1,
+      bandFocus: "6.0–8.0",
+      timeLimitMinutes: 3,
+      prompt: "Answer these three Part 1 questions aloud, extending each answer to 3–4 sentences:\n1. Where is your hometown?\n2. What do you like most about it?\n3. Has it changed much since you were a child?",
+      modelAnswer: "I come from a medium-sized city on the coast, and I lived there until I was eighteen. What I like most about it is the sea. In summer, we used to walk along the waterfront after dinner, and it felt as though the whole town was outside, which created a very friendly atmosphere.\n\nIt has changed quite a lot since I was a child. When I was young, there were only a few small shops near our home, but now there are several shopping centres and a lot of new apartment blocks. That has made life more convenient, although the streets are busier than they used to be, and I think some of the old character has disappeared.\n\nI still go back a few times a year, mainly to see my family, and every time I notice something new.",
+      bandAnnotation: "Fluency and Coherence: Each answer is extended with a reason or an example, and the ideas flow with natural linking ('although', 'mainly to'). Lexical Resource: Precise, natural vocabulary ('waterfront', 'friendly atmosphere', 'old character'). Grammatical Range and Accuracy: A mix of tenses (present, past simple, 'used to', present perfect) and complex clauses ('which created...', 'although...'). Pronunciation: Not assessed from a transcript; say the answer aloud and stress key words such as 'sea', 'changed' and 'convenient'."
+    },
+    {
+      id: "ielts-speak-02",
+      title: "Speaking Practice 2 — Part 1: Free Time",
+      part: 1,
+      bandFocus: "6.0–8.0",
+      timeLimitMinutes: 3,
+      prompt: "Answer these three Part 1 questions aloud, extending each answer to 3–4 sentences:\n1. What do you usually do in your free time?\n2. Do you prefer relaxing at home or going out?\n3. Is there a hobby you would like to try?",
+      modelAnswer: "In my free time I usually listen to music or go for a walk, especially after a long day at work. If the weather is good, I like to meet friends at a café, and we chat for a couple of hours. At the weekend, I sometimes watch a series online, but I try not to spend too much time in front of a screen.\n\nI'd say I prefer going out, because I find it more energising. Staying at home is relaxing, but after a while I start to feel restless, whereas a short trip or a visit to friends gives me something to look forward to.\n\nThere is a hobby I'd really like to try, and that's pottery. I've seen videos of people making bowls and cups with their hands, and it looks both creative and calming. I'm planning to join a beginners' class next month if I can find one near my home.",
+      bandAnnotation: "Fluency and Coherence: The answers are developed with reasons and contrasts ('whereas'), and the final answer ends with a clear plan. Lexical Resource: Natural collocations ('spend too much time in front of a screen', 'look forward to', 'beginners' class'). Grammatical Range and Accuracy: A conditional ('If the weather is good...'), a contrast clause with 'whereas', and a future plan ('I'm planning to join'). Pronunciation: Not assessed from a transcript; practise the stress in 'energising' and 'restless'."
+    },
+    {
+      id: "ielts-speak-03",
+      title: "Speaking Practice 3 — Part 2: A Film That Taught You Something",
+      part: 2,
+      bandFocus: "6.5–8.5",
+      timeLimitMinutes: 3,
+      prompt: "Describe a film or documentary that taught you something.\nYou should say:\n- what it was\n- when you watched it\n- what you learned from it\nand explain why it was important to you.\n\nYou have 1 minute to plan and then should speak for 1–2 minutes.",
+      modelAnswer: "I'd like to talk about a documentary about plastic in the oceans that I watched about three years ago, when I was at university. A friend recommended it, and we watched it together one evening in her flat.\n\nThe film followed marine scientists who studied how plastic waste travels across the sea and harms animals. What I learned was how much of the rubbish we throw away every day ends up far from where it started. For example, one scientist showed a bird's stomach full of small pieces of plastic, which was shocking.\n\nIt was important to me because it changed my habits. Before I saw it, I used plastic bags without thinking, but afterwards I started bringing a cloth bag to the supermarket and refusing straws in cafés. These are small changes, but I think they matter, especially if many people make them. What I also liked was that the film didn't only describe problems; it showed ordinary people organising beach clean-ups, so I felt that individual action could make a difference. I still recommend it to friends whenever the topic of the environment comes up.",
+      bandAnnotation: "Fluency and Coherence: The answer follows the cue card in order, develops each point and links ideas smoothly ('For example', 'but afterwards', 'What I also liked was'). Lexical Resource: Topic vocabulary ('marine scientists', 'plastic waste', 'beach clean-ups') and natural collocations ('make a difference', 'comes up'). Grammatical Range and Accuracy: Past simple and past perfect-style sequencing, relative clauses ('who studied...', 'which was shocking') and conditional-style structures. Pronunciation: Not assessed from a transcript; practise stressing 'plastic', 'oceans' and 'important'."
+    },
+    {
+      id: "ielts-speak-04",
+      title: "Speaking Practice 4 — Part 2: A Place to Be Alone",
+      part: 2,
+      bandFocus: "6.5–8.5",
+      timeLimitMinutes: 3,
+      prompt: "Describe a place where you like to spend time alone.\nYou should say:\n- where it is\n- how often you go there\n- what you do there\nand explain why you like being alone there.\n\nYou have 1 minute to plan and then should speak for 1–2 minutes.",
+      modelAnswer: "A place I like to spend time alone is a small park near my flat, about ten minutes' walk away. It has a pond, a few benches under old trees, and a path that goes around the edge.\n\nI go there two or three times a week, usually in the early evening when most people have gone home. I take a book or just my headphones, and I sit by the pond. Sometimes I bring a notebook and write down ideas or things I need to do the next day.\n\nWhat I like about being alone there is that it gives me space to think. At work and at home, I'm surrounded by people and notifications, so it's rare to have a quiet moment. In the park, I can watch the ducks, listen to the wind and let my mind slow down. I always leave feeling calmer and clearer, as if I'd had a short holiday.\n\nIt's also a place that changes with the seasons. In autumn the path is covered with leaves, and in winter the pond sometimes freezes at the edges, so I never get bored of it. If I had to choose one reason I value it, I'd say it reminds me that quiet time is not wasted time.",
+      bandAnnotation: "Fluency and Coherence: The answer covers every bullet point, then adds a final reflection, with clear signposting ('What I like about...', 'It's also a place that...'). Lexical Resource: Descriptive and natural language ('slow down', 'calmer and clearer', 'surrounded by people and notifications'). Grammatical Range and Accuracy: Relative clauses, a second conditional ('If I had to choose...') and a comparison clause ('as if I'd had a short holiday'). Pronunciation: Not assessed from a transcript; practise the stress and linking in 'ten minutes' walk' and 'notifications'."
+    },
+    {
+      id: "ielts-speak-05",
+      title: "Speaking Practice 5 — Part 3: Technology and Communication",
+      part: 3,
+      bandFocus: "7.0–8.5",
+      timeLimitMinutes: 5,
+      prompt: "Discuss these Part 3 questions aloud, giving reasons and examples (about 40–60 seconds each):\n1. How has technology changed the way people communicate?\n2. Do you think face-to-face communication will become less common?\n3. What are the dangers of relying too much on online communication?",
+      modelAnswer: "Technology has changed communication enormously. Fifty years ago, people had to write letters or wait to use a landline, whereas now we can send a message or make a video call in seconds, even to someone on the other side of the world. That has made it much easier to stay in touch with family who live abroad, which is something I value personally.\n\nAs for face-to-face communication, I don't think it will disappear, but it may become less frequent for routine matters. Many meetings and even medical appointments can now be held online, and that saves time. However, I believe people still need real contact for important conversations, because a screen can't fully show body language or emotion.\n\nThe main danger of relying too much on online communication is that relationships can become shallow. It's easy to send a quick message without really listening, and some people, especially teenagers, may feel lonelier even though they are constantly connected. Another risk is misunderstanding: a short text can sound rude when the writer didn't mean it. In my view, the best approach is to use technology to support relationships, not to replace meeting people in person.",
+      bandAnnotation: "Fluency and Coherence: Each question is answered in order with a clear position and developed with reasons and contrasts ('whereas', 'However', 'Another risk is'). Lexical Resource: Abstract vocabulary used precisely ('routine matters', 'body language', 'shallow', 'constantly connected'). Grammatical Range and Accuracy: Comparison, concession ('even though'), relative clauses and modal verbs for speculation ('may become', 'can sound'). Pronunciation: Not assessed from a transcript; practise stressing the key idea in each answer ('enormously', 'disappear', 'shallow')."
+    },
+    {
+      id: "ielts-speak-06",
+      title: "Speaking Practice 6 — Part 3: Education and Learning",
+      part: 3,
+      bandFocus: "7.0–8.5",
+      timeLimitMinutes: 5,
+      prompt: "Discuss these Part 3 questions aloud, giving reasons and examples (about 40–60 seconds each):\n1. What is the best way to learn a new skill?\n2. Should schools teach practical skills such as cooking or managing money?\n3. How might education change in the future?",
+      modelAnswer: "I think the best way to learn a new skill is to combine practice with feedback. Reading about something helps, but you only really improve when you try it yourself and someone points out your mistakes. For example, when I learned to cook, I made much faster progress after a friend showed me how to cut vegetables properly than I had from watching videos alone.\n\nI definitely think schools should teach practical skills such as cooking and managing money. Many young people leave school able to solve complex equations but unable to make a simple budget, which can cause real problems when they start living independently. Of course, these lessons shouldn't replace core subjects, but a few hours a week would be very useful.\n\nIn the future, I expect education to become more flexible. Online courses already allow people to study at their own pace, and I think classrooms will increasingly mix technology with face-to-face teaching. At the same time, teachers will probably play a more important role as guides who help students think critically, rather than simply giving them information, since information is now available everywhere.",
+      bandAnnotation: "Fluency and Coherence: A clear answer-reason-example pattern in each response, with natural linking ('For example', 'Of course', 'At the same time'). Lexical Resource: Precise topic vocabulary ('core subjects', 'live independently', 'think critically') and natural collocations ('make faster progress', 'at their own pace'). Grammatical Range and Accuracy: Comparatives, relative clauses ('who help students...'), a 'since' reason clause and future forms ('will probably play'). Pronunciation: Not assessed from a transcript; practise the stress in 'independently', 'critically' and 'information'."
+    }
+  ],
 
   ultimateMock: {
     id: "ielts-ultimate-mock-1",
@@ -1944,6 +2070,152 @@ window.APEX_DATA.ielts = {
         { id: "l1-7", term: "Lexical chunks — spot the fix", definition: "❌ 'do a mistake' → ✅ 'make a mistake' (word-for-word collocation transfer — LR capped ~5.5)", example: "make a mistake" },
         { id: "l1-8", term: "Prepositions — spot the fix", definition: "❌ 'depend to' → ✅ 'depend on' (postposition→preposition mapping error)", example: "It depends on the weather." },
         { id: "l1-9", term: "Register — spot the fix", definition: "❌ 'Hey, I would be grateful if...' → ✅ pick one register and hold it consistently (formal OR informal, never mixed)", example: "I would be grateful if you could confirm the details." }
+      ]
+    },
+    {
+      id: "ielts-deck-speaking-idioms",
+      title: "Speaking: Everyday Idioms and Collocations",
+      sourceNoteId: "ielts-27",
+      cards: [
+        {
+          id: "si-1",
+          term: "get the hang of",
+          definition: "to learn how to do something",
+          example: "It took me a month to get the hang of the new software."
+        },
+        {
+          id: "si-2",
+          term: "learn the ropes",
+          definition: "to learn the basics of a new job or activity",
+          example: "I'm still learning the ropes at my new company."
+        },
+        {
+          id: "si-3",
+          term: "burn the midnight oil",
+          definition: "to work late into the night",
+          example: "I had to burn the midnight oil to finish my project."
+        },
+        {
+          id: "si-4",
+          term: "over the moon",
+          definition: "extremely happy",
+          example: "She was over the moon when she passed the exam."
+        },
+        {
+          id: "si-5",
+          term: "under the weather",
+          definition: "slightly ill",
+          example: "I'm feeling a bit under the weather today."
+        },
+        {
+          id: "si-6",
+          term: "on edge",
+          definition: "nervous and unable to relax",
+          example: "Everyone was on edge before the results came out."
+        },
+        {
+          id: "si-7",
+          term: "a double-edged sword",
+          definition: "something that has both good and bad effects",
+          example: "Social media is a double-edged sword."
+        },
+        {
+          id: "si-8",
+          term: "in the long run",
+          definition: "over a long period of time; eventually",
+          example: "Learning a language is hard, but it pays off in the long run."
+        },
+        {
+          id: "si-9",
+          term: "a thing of the past",
+          definition: "something that no longer exists or is no longer common",
+          example: "Writing letters by hand is almost a thing of the past."
+        },
+        {
+          id: "si-10",
+          term: "once in a blue moon",
+          definition: "very rarely",
+          example: "I only eat fast food once in a blue moon."
+        },
+        {
+          id: "si-11",
+          term: "a matter of opinion",
+          definition: "something people can reasonably disagree about",
+          example: "Whether cities are better than villages is a matter of opinion."
+        },
+        {
+          id: "si-12",
+          term: "cut down on",
+          definition: "to reduce the amount of something",
+          example: "I'm trying to cut down on sugar."
+        }
+      ]
+    },
+    {
+      id: "ielts-deck-speaking-fluency",
+      title: "Speaking: Phrases for Fluency",
+      sourceNoteId: "ielts-28",
+      cards: [
+        {
+          id: "sf-1",
+          term: "Well, let me think about that...",
+          definition: "buys time at the start of a difficult question",
+          example: "Well, let me think about that... I suppose city life has more variety."
+        },
+        {
+          id: "sf-2",
+          term: "That's an interesting question.",
+          definition: "buys a second and shows you are engaged",
+          example: "That's an interesting question. I've never really considered it."
+        },
+        {
+          id: "sf-3",
+          term: "It really depends on...",
+          definition: "introduces a balanced answer",
+          example: "It really depends on the person's age and interests."
+        },
+        {
+          id: "sf-4",
+          term: "To be honest,",
+          definition: "opens a personal opinion",
+          example: "To be honest, I prefer quiet places."
+        },
+        {
+          id: "sf-5",
+          term: "What I mean is...",
+          definition: "repair: clarifies something you just said",
+          example: "What I mean is, most people don't have enough free time."
+        },
+        {
+          id: "sf-6",
+          term: "Let me put it another way.",
+          definition: "repair: rephrases an unclear point",
+          example: "Let me put it another way: cities offer more opportunities."
+        },
+        {
+          id: "sf-7",
+          term: "What's more,",
+          definition: "adds another point",
+          example: "What's more, public transport is much better there."
+        },
+        {
+          id: "sf-8",
+          term: "On the other hand,",
+          definition: "introduces a contrast",
+          example: "On the other hand, the countryside is much more peaceful."
+        },
+        {
+          id: "sf-9",
+          term: "As a result,",
+          definition: "introduces a consequence",
+          example: "As a result, many young people move to the city."
+        },
+        {
+          id: "sf-10",
+          term: "For instance,",
+          definition: "introduces an example",
+          example: "For instance, my cousin moved there to find work."
+        }
       ]
     }
   ]
