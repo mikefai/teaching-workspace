@@ -932,7 +932,7 @@ window.APEX_DATA.ielts = {
         LR: "Is at least one specific topic word used (for example 'recipe', 'ingredients', 'from scratch') instead of 'good' and 'nice'?",
         GRA: "Is the reason expressed in a full clause (for example 'because it helps me relax') rather than a fragment?"
       },
-      bandNote: "One-sentence answers ('Yes, I do.') give the examiner almost nothing to assess. Stronger: 'Yes, I really do, because it helps me relax after work. For example, last weekend I made a vegetable curry from scratch and shared it with my neighbours.'"
+      bandNote: "One-sentence answers ('Yes, I do.') give the examiner almost nothing to assess. Stronger: 'Yes, I really do. It helps me relax after work, and I enjoy trying new recipes. For example, last weekend I made a vegetable curry from scratch and shared it with my neighbours.'"
     },
     {
       id: "gp-s4",
@@ -945,20 +945,20 @@ window.APEX_DATA.ielts = {
         LR: "Is a precise feeling or reason used instead of 'good' or 'nice' (for example 'peaceful', 'unforgettable')?",
         GRA: "Is a future form used accurately (for example 'I would love to go back next summer' or 'I'm hoping to')?"
       },
-      bandNote: "Weak: 'Yes, so that's all about that place.' Stronger: 'All in all, it's somewhere I'd love to go back to, because the quiet streets and the sea air made me feel completely relaxed. I'm hoping to return next summer with my family.'"
+      bandNote: "Weak: 'Yes, so that's all about that place.' Stronger: 'All in all, it's somewhere I'd love to go back to, because the quiet streets and the sea air made me feel completely relaxed and peaceful. I'm hoping to return next summer with my family.'"
     },
     {
       id: "gp-s5",
       skill: "Speaking Part 3",
       title: "Compare Past and Present",
-      prompt: "Part 3 question: 'How has the way people travel to work changed in your country over the last thirty years?' Write TWO spoken-style sentences: one about the past and one about the present, joined by a contrast marker such as 'whereas' or 'nowadays'.",
+      prompt: "Part 3 question: 'How has the way people travel to work changed in your country over the last thirty years?' Write ONE spoken-style sentence that describes both the past and the present, joined by a contrast marker such as 'whereas' or 'nowadays'.",
       rubric: {
         TA: "Does the answer clearly describe both a past situation and a present situation, not only one?",
         CC: "Is a contrast marker used correctly to link the two time periods?",
         LR: "Are time expressions varied (for example 'thirty years ago', 'these days', 'in the past')?",
         GRA: "Are the tenses correct: past simple or 'used to' for the past, present simple or present perfect for the present?"
       },
-      bandNote: "Band 5 answers describe only the present. Band 7+ compares: 'Thirty years ago, most people used buses or walked, whereas these days many commute by car or train, which has made roads much busier.'"
+      bandNote: "Weaker answers often describe only the present. Band 7+ compares: 'Thirty years ago, most people used buses or walked, whereas these days many commute by car or train, which has made roads much busier.'"
     },
     {
       id: "gp-s6",
@@ -977,14 +977,14 @@ window.APEX_DATA.ielts = {
       id: "gp-s7",
       skill: "Speaking Pronunciation",
       title: "Mark the Word Stress",
-      prompt: "Say each word aloud and mark the stressed syllable (for example 'im-POR-tant'): photograph, photographer, photographic, important, university, comfortable. Then check your answers in a learner's dictionary with audio.",
+      prompt: "Say each word aloud and mark the stressed syllable (for example 'be-GIN'): photograph, photographer, photographic, important, university, comfortable. Then check your answers in a learner's dictionary with audio.",
       rubric: {
         TA: "Is exactly one syllable marked as the main stress in each word?",
         CC: "Does the stress move when the word changes (photograph, photographer, photographic)?",
         LR: "Are 'important', 'university' and 'comfortable' stressed on the syllable a dictionary gives?",
-        GRA: "Is 'comfortable' counted as three syllables (not four) in natural speech?"
+        GRA: "Is 'comfortable' counted as three syllables in natural speech (four in careful speech)?"
       },
-      bandNote: "Answers: PHO-to-graph, pho-TO-gra-pher, pho-to-GRA-phic, im-POR-tant, u-ni-VER-si-ty, COMF-ta-ble (about three syllables in natural speech, not four). Many learners stress English words on the last syllable; learning the stress with each new word fixes this faster than correcting it later."
+      bandNote: "Answers: PHO-to-graph, pho-TO-gra-pher, pho-to-GRA-phic, im-POR-tant, u-ni-VER-si-ty, COMF-ta-ble (three syllables in natural speech, four in careful speech). Learners from some first-language backgrounds stress English words on the last syllable; learning the stress with each new word fixes this faster than correcting it later."
     }
   ],
 
@@ -1941,7 +1941,7 @@ window.APEX_DATA.ielts = {
       bandFocus: "6.0–8.0",
       timeLimitMinutes: 3,
       prompt: "Answer these three Part 1 questions aloud, extending each answer to 3–4 sentences:\n1. Where is your hometown?\n2. What do you like most about it?\n3. Has it changed much since you were a child?",
-      modelAnswer: "I come from a medium-sized city on the coast, and I lived there until I was eighteen. What I like most about it is the sea. In summer, we used to walk along the waterfront after dinner, and it felt as though the whole town was outside, which created a very friendly atmosphere.\n\nIt has changed quite a lot since I was a child. When I was young, there were only a few small shops near our home, but now there are several shopping centres and a lot of new apartment blocks. That has made life more convenient, although the streets are busier than they used to be, and I think some of the old character has disappeared.\n\nI still go back a few times a year, mainly to see my family, and every time I notice something new.",
+      modelAnswer: "I come from a medium-sized city on the coast, and I lived there until I was eighteen. It is a lively place with a long history as a fishing port, and most of my family still live there.\n\nWhat I like most about it is the sea. In summer, we used to walk along the waterfront after dinner, and it felt as though the whole town was outside, which created a very friendly atmosphere. I also enjoy the fresh fish in the local restaurants.\n\nIt has changed quite a lot since I was a child. When I was young, there were only a few small shops near our home, but now there are several shopping centres and a lot of new apartment blocks. That has made life more convenient, although the streets are busier than they used to be, and I think some of the old character has disappeared. I still go back a few times a year, mainly to see my family, and every time I notice something new.",
       bandAnnotation: "Fluency and Coherence: Each answer is extended with a reason or an example, and the ideas flow with natural linking ('although', 'mainly to'). Lexical Resource: Precise, natural vocabulary ('waterfront', 'friendly atmosphere', 'old character'). Grammatical Range and Accuracy: A mix of tenses (present, past simple, 'used to', present perfect) and complex clauses ('which created...', 'although...'). Pronunciation: Not assessed from a transcript; say the answer aloud and stress key words such as 'sea', 'changed' and 'convenient'."
     },
     {
@@ -1962,7 +1962,7 @@ window.APEX_DATA.ielts = {
       timeLimitMinutes: 3,
       prompt: "Describe a film or documentary that taught you something.\nYou should say:\n- what it was\n- when you watched it\n- what you learned from it\nand explain why it was important to you.\n\nYou have 1 minute to plan and then should speak for 1–2 minutes.",
       modelAnswer: "I'd like to talk about a documentary about plastic in the oceans that I watched about three years ago, when I was at university. A friend recommended it, and we watched it together one evening in her flat.\n\nThe film followed marine scientists who studied how plastic waste travels across the sea and harms animals. What I learned was how much of the rubbish we throw away every day ends up far from where it started. For example, one scientist showed a bird's stomach full of small pieces of plastic, which was shocking.\n\nIt was important to me because it changed my habits. Before I saw it, I used plastic bags without thinking, but afterwards I started bringing a cloth bag to the supermarket and refusing straws in cafés. These are small changes, but I think they matter, especially if many people make them. What I also liked was that the film didn't only describe problems; it showed ordinary people organising beach clean-ups, so I felt that individual action could make a difference. I still recommend it to friends whenever the topic of the environment comes up.",
-      bandAnnotation: "Fluency and Coherence: The answer follows the cue card in order, develops each point and links ideas smoothly ('For example', 'but afterwards', 'What I also liked was'). Lexical Resource: Topic vocabulary ('marine scientists', 'plastic waste', 'beach clean-ups') and natural collocations ('make a difference', 'comes up'). Grammatical Range and Accuracy: Past simple and past perfect-style sequencing, relative clauses ('who studied...', 'which was shocking') and conditional-style structures. Pronunciation: Not assessed from a transcript; practise stressing 'plastic', 'oceans' and 'important'."
+      bandAnnotation: "Fluency and Coherence: The answer follows the cue card in order, develops each point and links ideas smoothly ('For example', 'but afterwards', 'What I also liked was'). Lexical Resource: Topic vocabulary ('marine scientists', 'plastic waste', 'beach clean-ups') and natural collocations ('make a difference', 'comes up'). Grammatical Range and Accuracy: Past simple narrative with time markers ('Before I saw it... but afterwards'), relative clauses ('who studied...', 'which was shocking') and a first-conditional phrase ('if many people make them'). Pronunciation: Not assessed from a transcript; practise stressing 'plastic', 'oceans' and 'important'."
     },
     {
       id: "ielts-speak-04",
@@ -1992,7 +1992,7 @@ window.APEX_DATA.ielts = {
       timeLimitMinutes: 5,
       prompt: "Discuss these Part 3 questions aloud, giving reasons and examples (about 40–60 seconds each):\n1. What is the best way to learn a new skill?\n2. Should schools teach practical skills such as cooking or managing money?\n3. How might education change in the future?",
       modelAnswer: "I think the best way to learn a new skill is to combine practice with feedback. Reading about something helps, but you only really improve when you try it yourself and someone points out your mistakes. For example, when I learned to cook, I made much faster progress after a friend showed me how to cut vegetables properly than I had from watching videos alone.\n\nI definitely think schools should teach practical skills such as cooking and managing money. Many young people leave school able to solve complex equations but unable to make a simple budget, which can cause real problems when they start living independently. Of course, these lessons shouldn't replace core subjects, but a few hours a week would be very useful.\n\nIn the future, I expect education to become more flexible. Online courses already allow people to study at their own pace, and I think classrooms will increasingly mix technology with face-to-face teaching. At the same time, teachers will probably play a more important role as guides who help students think critically, rather than simply giving them information, since information is now available everywhere.",
-      bandAnnotation: "Fluency and Coherence: A clear answer-reason-example pattern in each response, with natural linking ('For example', 'Of course', 'At the same time'). Lexical Resource: Precise topic vocabulary ('core subjects', 'live independently', 'think critically') and natural collocations ('make faster progress', 'at their own pace'). Grammatical Range and Accuracy: Comparatives, relative clauses ('who help students...'), a 'since' reason clause and future forms ('will probably play'). Pronunciation: Not assessed from a transcript; practise the stress in 'independently', 'critically' and 'information'."
+      bandAnnotation: "Fluency and Coherence: A clear answer-reason-example pattern in each response, with natural linking ('For example', 'Of course', 'At the same time'). Lexical Resource: Precise topic vocabulary ('core subjects', 'living independently', 'think critically') and natural collocations ('make faster progress', 'at their own pace'). Grammatical Range and Accuracy: Comparatives, relative clauses ('who help students...'), a 'since' reason clause and future forms ('will probably play'). Pronunciation: Not assessed from a transcript; practise the stress in 'independently', 'critically' and 'information'."
     }
   ],
 
@@ -2159,13 +2159,13 @@ window.APEX_DATA.ielts = {
         {
           id: "sf-1",
           term: "Well, let me think about that...",
-          definition: "buys time at the start of a difficult question",
+          definition: "gives you time to think at the start of a difficult question",
           example: "Well, let me think about that... I suppose city life has more variety."
         },
         {
           id: "sf-2",
           term: "That's an interesting question.",
-          definition: "buys a second and shows you are engaged",
+          definition: "gives you a moment to think and shows you are engaged",
           example: "That's an interesting question. I've never really considered it."
         },
         {
