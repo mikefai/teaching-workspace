@@ -50,6 +50,7 @@ function claim(id, where) {
 (D.listeningSets || []).forEach(s => { claim(s.id, "listeningSets"); if (!/^ielts/.test(s.id)) fail(s.id, "must start with 'ielts'"); });
 (D.readingSets || []).forEach(s => { claim(s.id, "readingSets"); if (!/^ielts/.test(s.id)) fail(s.id, "must start with 'ielts'"); });
 (D.writingSets || []).forEach(s => { claim(s.id, "writingSets"); if (!/^ielts/.test(s.id)) fail(s.id, "must start with 'ielts'"); });
+(D.speakingSets || []).forEach(s => { claim(s.id, "speakingSets"); if (!/^ielts/.test(s.id)) fail(s.id, "must start with 'ielts'"); });
 (D.flashcardDecks || []).forEach(d => claim(d.id, "flashcardDecks"));
 
 // ---------- html hygiene ----------
@@ -141,6 +142,32 @@ const TFNG = ["True", "False", "Not Given"];
   }
 });
 
+// ---------- flashcard decks ----------
+(D.flashcardDecks || []).forEach(d => {
+  const cids = new Set();
+  if (!Array.isArray(d.cards) || d.cards.length < 1) fail(d.id, "deck has no cards");
+  (d.cards || []).forEach(c => {
+    if (!c.id || !c.term || !c.definition) fail(d.id, `card ${c.id || "?"} needs id, term and definition`);
+    if (cids.has(c.id)) fail(d.id, `duplicate card id ${c.id}`);
+    cids.add(c.id);
+  });
+  if (d.sourceNoteId && !(D.notes || []).some(n => n.id === d.sourceNoteId)) fail(d.id, `sourceNoteId ${d.sourceNoteId} does not exist`);
+});
+
+// ---------- speaking sets ----------
+const SPEAK_RANGE = { 1: [90, 260], 2: [180, 340], 3: [150, 340] };
+(D.speakingSets || []).forEach(s => {
+  const r = SPEAK_RANGE[s.part];
+  if (!r) return fail(s.id, "part must be 1, 2 or 3");
+  if (!s.prompt) fail(s.id, "missing prompt");
+  const w = words(s.modelAnswer);
+  if (w < r[0] || w > r[1]) fail(s.id, `modelAnswer is ${w} words, need ${r[0]}-${r[1]} for part ${s.part}`);
+  ["Fluency", "Lexical", "Grammatical", "Pronunciation"].forEach(k => {
+    if (!new RegExp(k).test(s.bandAnnotation || "")) fail(s.id, `bandAnnotation missing ${k}`);
+  });
+  if (!(s.timeLimitMinutes > 0)) fail(s.id, "timeLimitMinutes must be a positive number");
+});
+
 // ---------- expectations ----------
 const list = v => (v ? v.split(",").map(x => x.trim()).filter(Boolean) : []);
 list(flag("--expect-authored")).forEach(id => {
@@ -159,6 +186,8 @@ const expR = countFlag("--expect-reading");
 if (expR !== null && (D.readingSets || []).length < expR) fail("readingSets", `expected >= ${expR}, found ${(D.readingSets || []).length}`);
 const expW = countFlag("--expect-writing");
 if (expW !== null && (D.writingSets || []).length < expW) fail("writingSets", `expected >= ${expW}, found ${(D.writingSets || []).length}`);
+const expS = countFlag("--expect-speaking");
+if (expS !== null && (D.speakingSets || []).length < expS) fail("speakingSets", `expected >= ${expS}, found ${(D.speakingSets || []).length}`);
 
 if (failures.length) {
   console.log(failures.join("\n"));

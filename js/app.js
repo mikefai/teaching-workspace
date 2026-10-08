@@ -9,7 +9,7 @@
 const APP = {
   tab: "home",
   eslView: "notes",       // notes | mocks | flashcards
-  ieltsView: "notes",     // notes | practice | listening | reading | writing | mock | flashcards
+  ieltsView: "notes",     // notes | practice | listening | reading | writing | speaking | mock | flashcards
   search: "",
   filter: "all",
   detail: null,           // { kind:'esl-note'|'ielts-note', id }
@@ -284,6 +284,7 @@ function renderIeltsSuite() {
     { id: "listening", label: "Listening Practice" },
     { id: "reading", label: "Reading Practice" },
     { id: "writing", label: "Writing Practice" },
+    { id: "speaking", label: "Speaking Practice" },
     { id: "mock", label: "Ultimate Mock Exam" },
     { id: "flashcards", label: "Flashcards" }
   ], APP.ieltsView, "ieltsView");
@@ -323,6 +324,16 @@ function renderIeltsSuite() {
       desc: "Band focus: " + s.bandFocus + ". Minimum " + s.minWords + " words, with a model answer and annotation.",
       skillCls: "skill-ielts-writing",
       onLaunch: `launchIeltsWriting('${s.id}')`
+    })).join("") || emptyState()}</div>`;
+  } else if (APP.ieltsView === "speaking") {
+    const sets = D().ielts.speakingSets || [];
+    body = `<div class="grid md:grid-cols-2 gap-4">${sets.map(s => mockCard({
+      title: s.title,
+      badge: "Part " + s.part,
+      minutes: s.timeLimitMinutes,
+      desc: "Band focus: " + s.bandFocus + ". Plan, speak aloud, then compare with a model answer and annotation.",
+      skillCls: "skill-ielts-speaking",
+      onLaunch: `launchIeltsSpeaking('${s.id}')`
     })).join("") || emptyState()}</div>`;
   } else if (APP.ieltsView === "flashcards") {
     body = deckListView(D().ielts.flashcardDecks);
@@ -699,6 +710,19 @@ function launchIeltsWriting(setId) {
     parts: [{
       id: "writing", title: set.title, kind: "writing", timeLimitMinutes: set.timeLimitMinutes,
       minWords: set.minWords, prompt: set.prompt, dataTable: set.dataTable,
+      modelAnswer: { text: set.modelAnswer, bandAnnotation: set.bandAnnotation }
+    }]
+  });
+}
+
+function launchIeltsSpeaking(setId) {
+  const set = (D().ielts.speakingSets || []).find(s => s.id === setId);
+  if (!set) return;
+  startEngine({
+    id: set.id, title: set.title, subjectBadge: "IELTS Suite · Speaking Practice",
+    parts: [{
+      id: "speaking", title: set.title, kind: "writing", timeLimitMinutes: set.timeLimitMinutes,
+      prompt: set.prompt, revealLabel: "Reveal Model Answer", draftLabel: "Your notes or transcript (optional — say your answer aloud first)",
       modelAnswer: { text: set.modelAnswer, bandAnnotation: set.bandAnnotation }
     }]
   });

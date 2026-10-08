@@ -4,7 +4,7 @@
    Part shapes:
      { id, title, kind:'objective', passage?, audioSrc?, audioTitle?, audioContext?, transcript?,
        instructions?, questions:[...], timeLimitMinutes? }
-     { id, title, kind:'writing', prompt, minWords?, dataTable?:{caption?,headers[],rows[][]},
+     { id, title, kind:'writing', prompt, minWords?, revealLabel?, draftLabel?, dataTable?:{caption?,headers[],rows[][]},
        modelAnswer:{text,bandAnnotation}, timeLimitMinutes? }
 */
 
@@ -251,13 +251,13 @@ class TestEngine {
         </div>
         <div>
           <div class="flex items-center justify-between">
-            <label class="text-sm font-semibold text-[color:var(--ink-soft)]">Your Draft (optional — for your own practice)</label>
+            <label for="te-draft" class="text-sm font-semibold text-[color:var(--ink-soft)]">${escapeHtml(part.draftLabel || "Your Draft (optional — for your own practice)")}</label>
             <span id="te-word-count" class="text-xs font-semibold"></span>
           </div>
           <textarea id="te-draft" rows="8" class="apex-input w-full mt-1" placeholder="Write your answer here before revealing the model...">${escapeHtml(st.draft || "")}</textarea>
         </div>
         <div class="flex gap-2 no-print">
-          <button class="btn btn-primary" id="te-reveal-writing">${st.revealed ? "Model Answer Revealed ✓" : "Reveal Band 9 Model Answer"}</button>
+          <button class="btn btn-primary" id="te-reveal-writing">${st.revealed ? "Model Answer Revealed ✓" : escapeHtml(part.revealLabel || "Reveal Band 9 Model Answer")}</button>
         </div>
         ${st.revealed ? `
           <div class="model-answer">${escapeHtml(part.modelAnswer.text)}</div>
