@@ -807,7 +807,453 @@ window.APEX_DATA.ielts = {
     }
   ],
 
-  readingSets: [],
+  readingSets: [
+    {
+      id: "ielts-read-01",
+      title: "Reading Practice 1 — Bees in the City",
+      bandFocus: "6.0–7.5",
+      passageTitle: "Bees in the City",
+      timeLimitMinutes: 20,
+      instructions: "Read the passage and answer questions 1–13. (The studies and people described are fictional and written for practice.) Where a question says NO MORE THAN TWO WORDS, write words exactly as they appear in the passage. For True / False / Not Given, type True, False or Not Given.",
+      text: "[A] For many years, conservationists assumed that the countryside was the natural home of wild bees and that cities were hostile places where few species could survive. Concrete, traffic and a lack of open land seemed to leave little room for insects that depend on flowers. However, a series of surveys carried out in several European cities over the past decade has challenged this belief. In some cases, researchers recorded a greater variety of bee species in urban parks and gardens than in the surrounding farmland.\n\n[B] The explanation lies partly in the way modern farming has changed the countryside. Large fields planted with a single crop provide food for only a short period each year, and the hedgerows that once offered nesting sites have often been removed. Cities, by contrast, contain a patchwork of small habitats. Private gardens, allotments, railway embankments and roadside verges flower at different times, so that bees can find food from early spring until late autumn. Many wild species, particularly those that nest in the ground, also take advantage of bare soil and gaps in old walls.\n\n[C] Not all urban bees benefit equally, however. A study led by the ecologist Dr Marit Solberg compared the bee populations of twelve cities. She found that species which feed on a wide range of flowers, known as generalists, were thriving, while specialist species, which rely on a single type of plant, were often missing. One reason is that ornamental gardens frequently contain showy varieties bred for their appearance. These plants may produce little nectar or pollen, so they attract visitors but offer them almost nothing to eat. Dr Solberg argues that cities should therefore plant native wildflowers rather than decorative hybrids.\n\n[D] Another challenge is competition from managed honey bees. In recent years, rooftop hives have become fashionable in many cities, and some local governments have encouraged them as a way of supporting nature. Yet honey bees are a single species kept in large numbers, and they collect from the same flowers as wild bees. Researchers at one university monitored a park in which the number of hives was doubled. Over two summers, they observed that wild bees visited fewer flowers and that several rarer species disappeared from the park. The scientists stress that this finding comes from one site and should not be treated as proof that all rooftop hives cause harm, but they recommend that cities limit the density of hives until more evidence is available.\n\n[E] Despite these concerns, there are encouraging examples of how simple changes can help. In one northern city, officials stopped mowing selected areas of grass until late summer, allowing clover and dandelions to flower. Within three years, volunteer counters recorded a noticeable rise in the number of bee species in those areas. Residents were asked to leave a small corner of their gardens untidy, and many agreed. Dr Solberg believes that such low-cost measures, combined with a ban on certain pesticides in public spaces, would do more for urban bees than any single large project. \"Cities do not have to be perfect,\" she says. \"They only have to stop being empty.\"\n\n[F] Public involvement is also changing how bees are studied. Because professional surveys are expensive, many cities now rely on volunteers who photograph insects and upload the images to a shared database. Specialists then identify the species. Critics point out that volunteers tend to photograph the large, colourful bees that are easy to see and may overlook small or dull species, which could bias the results. To reduce this problem, some projects provide training days and simple identification guides. Even so, the researchers who manage the database accept that the figures show general trends, not exact numbers.",
+      questions: [
+        {
+          id: "rd1-q01",
+          type: "summary",
+          prompt: "1. Complete the sentence using NO MORE THAN TWO WORDS from the passage: In some surveys, more bee species were found in urban parks and gardens than in the surrounding ______.",
+          correctAnswer: "farmland",
+          explanation: "Paragraph A: 'a greater variety of bee species in urban parks and gardens than in the surrounding farmland'. Pattern: wrong subject — 'countryside' is the general term earlier in the paragraph but is not the word used in this sentence.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd1-q02",
+          type: "summary",
+          prompt: "2. Complete the sentence using NO MORE THAN TWO WORDS from the passage: On modern farms, a field planted with a single crop provides food for only a ______ period each year.",
+          correctAnswer: "short",
+          explanation: "Paragraph B: 'provide food for only a short period each year'. The gap needs an adjective before 'period'. Pattern: opposite polarity — 'long' would reverse the meaning.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd1-q03",
+          type: "summary",
+          prompt: "3. Complete the sentence using NO MORE THAN TWO WORDS from the passage: Bees can find food in cities from early spring until late autumn because different habitats flower at different ______.",
+          correctAnswer: "times",
+          explanation: "Paragraph B: 'flower at different times'. Pattern: partial match — 'habitats' appears nearby and fits the grammar but changes the meaning.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd1-q04",
+          type: "summary",
+          prompt: "4. Complete the sentence using NO MORE THAN TWO WORDS from the passage: Bee species that feed on a wide range of flowers are known as ______.",
+          correctAnswer: "generalists",
+          explanation: "Paragraph C: 'species which feed on a wide range of flowers, known as generalists'. Pattern: opposite polarity — 'specialist' is the nearby word with the reverse meaning.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd1-q05",
+          type: "summary",
+          prompt: "5. Complete the sentence using NO MORE THAN TWO WORDS from the passage: Showy garden plants bred for their appearance may produce little nectar or ______.",
+          correctAnswer: "pollen",
+          explanation: "Paragraph C: 'little nectar or pollen'. The gap follows 'nectar or', so a second food source of the same kind is needed. Pattern: true but irrelevant — 'nothing to eat' in the next sentence repeats the idea but is not the word that completes this one.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd1-q06",
+          type: "tfng",
+          prompt: "6. The surveys that challenged the old belief about wild bees were carried out in a single European city.",
+          correctAnswer: "False",
+          explanation: "Paragraph A: 'surveys carried out in several European cities'. The statement contradicts 'several'. Pattern: partial match — the surveys and the European setting are right, but the number of cities is wrong.",
+          tag: "tfng"
+        },
+        {
+          id: "rd1-q07",
+          type: "tfng",
+          prompt: "7. Specialist bee species were often absent from the cities that Dr Solberg studied.",
+          correctAnswer: "True",
+          explanation: "Paragraph C: 'specialist species ... were often missing'. 'Absent' paraphrases 'missing'.",
+          tag: "tfng"
+        },
+        {
+          id: "rd1-q08",
+          type: "tfng",
+          prompt: "8. Rooftop hives were first introduced to cities by local governments.",
+          correctAnswer: "Not Given",
+          explanation: "Paragraph D says some governments 'have encouraged them', but nothing is said about who introduced hives first. Pattern: true but irrelevant — governments and hives are linked in the text, but not in the way the statement claims.",
+          tag: "tfng"
+        },
+        {
+          id: "rd1-q09",
+          type: "tfng",
+          prompt: "9. The scientists say their park study proves that rooftop hives harm wild bees.",
+          correctAnswer: "False",
+          explanation: "Paragraph D: the finding 'should not be treated as proof that all rooftop hives cause harm'. Pattern: over-generalisation — the statement turns a one-site observation into proof.",
+          tag: "tfng"
+        },
+        {
+          id: "rd1-q10",
+          type: "tfng",
+          prompt: "10. In the northern city, the number of bee species rose after mowing was reduced.",
+          correctAnswer: "True",
+          explanation: "Paragraph E: officials stopped mowing selected areas and 'volunteer counters recorded a noticeable rise in the number of bee species in those areas'.",
+          tag: "tfng"
+        },
+        {
+          id: "rd1-q11",
+          type: "mcq",
+          prompt: "11. What is the writer's main purpose in paragraph B?",
+          options: [
+            "To criticise farmers for removing hedgerows",
+            "To explain why cities can support many bee species",
+            "To describe how ground bees build their nests",
+            "To compare private gardens with allotments"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph B explains how farming reduced food and nesting sites and how a patchwork of urban habitats provides both. A: wrong emphasis (hedgerow removal is one detail). C and D: true but irrelevant details.",
+          tag: "mcq"
+        },
+        {
+          id: "rd1-q12",
+          type: "mcq",
+          prompt: "12. What do the researchers recommend about rooftop hives?",
+          options: [
+            "Banning all hives in cities",
+            "Limiting the density of hives until more evidence is available",
+            "Doubling the number of hives in parks",
+            "Replacing honey bees with wild bees"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph D: 'they recommend that cities limit the density of hives until more evidence is available'. A is an over-generalisation; C repeats a detail of the experiment, not a recommendation; D is not mentioned.",
+          tag: "mcq"
+        },
+        {
+          id: "rd1-q13",
+          type: "mcq",
+          prompt: "13. What criticism of volunteer data is mentioned in paragraph F?",
+          options: [
+            "There are too few volunteers",
+            "Photographs are too expensive to collect",
+            "Volunteers may record mainly large, colourful bees",
+            "Specialists cannot identify bees from photographs"
+          ],
+          correctAnswer: 2,
+          explanation: "Paragraph F: volunteers 'tend to photograph the large, colourful bees' and 'may overlook small or dull species'. Pattern for A, B, D: true-sounding but unsupported claims; the text says surveys by professionals are expensive, and specialists do identify species from images.",
+          tag: "mcq"
+        }
+      ]
+    },
+    {
+      id: "ielts-read-02",
+      title: "Reading Practice 2 — Cities Built for Walking",
+      bandFocus: "6.5–8.0",
+      passageTitle: "Cities Built for Walking",
+      timeLimitMinutes: 20,
+      instructions: "Read the passage and answer questions 1–13. (The studies and people described are fictional and written for practice.) Questions 1–5 ask you to choose the best heading for a paragraph. Questions 6–9 ask which researcher holds each view (each researcher is used once). Questions 10–13 are multiple choice.",
+      text: "[A] Throughout the twentieth century, most cities were planned around the car. Wide roads, large car parks and separate districts for housing, shopping and work made sense when petrol was cheap and traffic was light. Today, however, a growing number of planners argue that this model has reached its limits. They advocate \"walkable\" cities, in which daily needs can be reached on foot within about fifteen minutes. The idea is simple, but its effects, and the arguments surrounding it, are surprisingly wide-ranging. Supporters point to cities in parts of northern Europe, where walking and cycling already account for a large share of everyday trips, while critics doubt that the same approach can be copied in places with very different climates, histories and street layouts. The debate is therefore as much about local conditions as about general principles, and the evidence discussed below should be read with that in mind.\n\n[B] The most immediate argument concerns health. Dr Lena Fischer, a public health researcher, has followed the habits of residents in two neighbourhoods with similar populations. In the first, shops, schools and parks were close to homes; in the second, they were separated by main roads. Over a three-year period, people in the first neighbourhood walked on average nearly twice as far each day, often without thinking of it as exercise. Dr Fischer concludes that the most effective way to increase physical activity is not to persuade people to exercise but to design places where walking is the easiest option.\n\n[C] Economists have also taken an interest. Professor Idris Moyo studied streets where traffic lanes were narrowed and pavements widened. Many shopkeepers had feared that fewer parking spaces would drive customers away. In fact, Professor Moyo found that sales in most of the shops rose, because pedestrians stop more often and visit more premises than drivers do. He cautions, though, that the results depended on the streets being close to public transport and that the same changes might not succeed in areas with few bus or train services.\n\n[D] A third strand of argument concerns the character of neighbourhoods. The urban planner Dr Helena Park believes that walkable design strengthens community life. When people pass one another on foot, they are more likely to recognise neighbours, stop for a conversation and notice when something is wrong. She points to a district in which a new pedestrian square was opened and reports that the number of community events organised by residents more than tripled within two years. Critics reply that such figures are hard to interpret, because the district also received extra funding for cultural activities during the same period.\n\n[E] Not everyone is convinced. Carlos Duarte, who manages transport for a mid-sized city, says that walkable ideals are easiest to apply in compact, older centres and much harder in sprawling suburbs. Many residents of such suburbs live several kilometres from the nearest shop and have no realistic alternative to driving. Mr Duarte also notes that elderly and disabled residents may find long walks difficult. He argues that cities should improve buses, cycle lanes and footpaths together, rather than concentrate on walking alone.\n\n[F] Most experts now agree that no single measure can transform a city. Walkable design works best when it is combined with reliable public transport and mixed housing, so that people on different incomes can live near services. Several cities have begun to measure success not by how quickly cars move through them but by how many people choose to spend time in public spaces. Whether this change in thinking will survive pressure from drivers remains to be seen, but the debate has already altered the questions that planners ask.",
+      questions: [
+        {
+          id: "rd2-q01",
+          type: "heading",
+          forParagraph: "B",
+          prompt: "1. Choose the best heading for paragraph B.",
+          options: [
+            "Why design may matter more than exercise campaigns",
+            "The cost of building new parks",
+            "A comparison of two school systems",
+            "Why many people dislike walking"
+          ],
+          correctAnswer: 0,
+          explanation: "Paragraph B reports that people walk more where facilities are close and concludes that design matters more than persuading people to exercise. B names a detail the text never costs; C and D are not mentioned. Pattern: heading matches a minor detail or an unsupported claim.",
+          tag: "matching-headings"
+        },
+        {
+          id: "rd2-q02",
+          type: "heading",
+          forParagraph: "C",
+          prompt: "2. Choose the best heading for paragraph C.",
+          options: [
+            "The rising price of petrol",
+            "How parking charges are set",
+            "Unexpected effects on local businesses",
+            "The decline of public transport"
+          ],
+          correctAnswer: 2,
+          explanation: "Paragraph C: shopkeepers feared a loss of customers, but 'sales in most of the shops rose'. Parking is mentioned only as the shopkeepers' worry, so B is a detail (true but irrelevant); A and D are not discussed.",
+          tag: "matching-headings"
+        },
+        {
+          id: "rd2-q03",
+          type: "heading",
+          forParagraph: "D",
+          prompt: "3. Choose the best heading for paragraph D.",
+          options: [
+            "The history of pedestrian squares",
+            "Funding for sports clubs",
+            "Why residents dislike events",
+            "Possible benefits for community life"
+          ],
+          correctAnswer: 3,
+          explanation: "Paragraph D argues that walkable design 'strengthens community life'. B picks up the 'extra funding' detail; A and C are not mentioned. Pattern: heading matches a detail, not the main idea.",
+          tag: "matching-headings"
+        },
+        {
+          id: "rd2-q04",
+          type: "heading",
+          forParagraph: "E",
+          prompt: "4. Choose the best heading for paragraph E.",
+          options: [
+            "Advantages of suburban life",
+            "Limits of walkable ideas outside city centres",
+            "How to build more car parks",
+            "The need for faster trains"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph E: ideals are 'easiest to apply in compact, older centres and much harder in sprawling suburbs'. A is the reverse of the paragraph's concern (opposite polarity); C and D are not discussed.",
+          tag: "matching-headings"
+        },
+        {
+          id: "rd2-q05",
+          type: "heading",
+          forParagraph: "F",
+          prompt: "5. Choose the best heading for paragraph F.",
+          options: [
+            "A call to ban private cars",
+            "The failure of recent projects",
+            "Combining walking with other improvements",
+            "Why drivers prefer cities"
+          ],
+          correctAnswer: 2,
+          explanation: "Paragraph F: walkable design 'works best when it is combined with reliable public transport and mixed housing'. A is over-generalisation (no one proposes a ban); B contradicts the paragraph's tone; D is not mentioned.",
+          tag: "matching-headings"
+        },
+        {
+          id: "rd2-q06",
+          type: "matching",
+          prompt: "6. Which researcher holds this view? 'Making walking the easiest choice is more effective than encouraging people to exercise.'",
+          options: ["Dr Fischer", "Professor Moyo", "Dr Park", "Mr Duarte"],
+          correctAnswer: 0,
+          explanation: "Paragraph B: Dr Fischer concludes the best way is 'to design places where walking is the easiest option'. Pattern: wrong subject — Dr Park also supports walkable design but argues from community life.",
+          tag: "matching-features"
+        },
+        {
+          id: "rd2-q07",
+          type: "matching",
+          prompt: "7. Which researcher holds this view? 'The benefit to shops may depend on nearby public transport.'",
+          options: ["Dr Fischer", "Professor Moyo", "Dr Park", "Mr Duarte"],
+          correctAnswer: 1,
+          explanation: "Paragraph C: Professor Moyo says 'the results depended on the streets being close to public transport'. Pattern: wrong subject — Mr Duarte also mentions buses, but as part of overall transport improvements, not shop sales.",
+          tag: "matching-features"
+        },
+        {
+          id: "rd2-q08",
+          type: "matching",
+          prompt: "8. Which researcher holds this view? 'Walkable design helps neighbours recognise and look out for one another.'",
+          options: ["Dr Fischer", "Professor Moyo", "Dr Park", "Mr Duarte"],
+          correctAnswer: 2,
+          explanation: "Paragraph D: Dr Park says people are 'more likely to recognise neighbours ... and notice when something is wrong'.",
+          tag: "matching-features"
+        },
+        {
+          id: "rd2-q09",
+          type: "matching",
+          prompt: "9. Which researcher holds this view? 'Buses, cycle lanes and footpaths should all be improved, not walking alone.'",
+          options: ["Dr Fischer", "Professor Moyo", "Dr Park", "Mr Duarte"],
+          correctAnswer: 3,
+          explanation: "Paragraph E: Mr Duarte argues that cities 'should improve buses, cycle lanes and footpaths together'.",
+          tag: "matching-features"
+        },
+        {
+          id: "rd2-q10",
+          type: "mcq",
+          prompt: "10. What did Dr Fischer's study find?",
+          options: [
+            "Residents of both neighbourhoods walked equally far",
+            "People walked further where facilities were close to their homes",
+            "Main roads made residents exercise more",
+            "Residents preferred to exercise in parks"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph B: people in the neighbourhood with nearby shops, schools and parks 'walked on average nearly twice as far'. A is opposite polarity; C reverses the cause; D is not stated.",
+          tag: "mcq"
+        },
+        {
+          id: "rd2-q11",
+          type: "mcq",
+          prompt: "11. Why are the figures about community events hard to interpret?",
+          options: [
+            "The events were very small",
+            "The district also received extra funding for culture",
+            "Residents refused to attend",
+            "The pedestrian square was unfinished"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph D: the district 'also received extra funding for cultural activities during the same period', so the rise may have another cause. The other options are not mentioned.",
+          tag: "mcq"
+        },
+        {
+          id: "rd2-q12",
+          type: "mcq",
+          prompt: "12. According to Mr Duarte, what is the main difficulty for suburban residents?",
+          options: [
+            "There are no shops in any suburb",
+            "They live far from shops and have no realistic alternative to driving",
+            "They dislike public transport",
+            "Cycle lanes are too dangerous"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph E: many residents 'live several kilometres from the nearest shop and have no realistic alternative to driving'. A is over-generalisation ('no shops in any suburb'); C and D are not stated.",
+          tag: "mcq"
+        },
+        {
+          id: "rd2-q13",
+          type: "mcq",
+          prompt: "13. What do some cities now measure to judge success?",
+          options: [
+            "The speed of traffic",
+            "The number of cars sold",
+            "How many people choose to spend time in public spaces",
+            "The total length of pavements"
+          ],
+          correctAnswer: 2,
+          explanation: "Paragraph F: 'not by how quickly cars move through them but by how many people choose to spend time in public spaces'. A is the old measure that the paragraph rejects (opposite polarity).",
+          tag: "mcq"
+        }
+      ]
+    },
+    {
+      id: "ielts-read-03",
+      title: "Reading Practice 3 — Sleep and the Student (Distractor Workout)",
+      bandFocus: "7.0–8.5",
+      passageTitle: "Sleep and the Student",
+      timeLimitMinutes: 20,
+      instructions: "Read the passage and answer questions 1–13. (The studies and people described are fictional and written for practice.) Every explanation names the distractor pattern that the wrong options use, so review each one after you finish. For True / False / Not Given, type True, False or Not Given. Where a question says NO MORE THAN TWO WORDS, write words exactly as they appear in the passage.",
+      text: "[A] Students have long been told that an all-night revision session is the best way to prepare for an exam. A growing body of research suggests the opposite. When we sleep, the brain does not simply switch off; it replays the day's experiences and moves important information from short-term to long-term storage. A student who sacrifices sleep to read one more chapter may therefore be undermining the very process that makes learning permanent. Sleep researchers have studied this link for more than a century, but modern brain-scanning techniques have allowed them to observe memory processing directly, and the picture that is emerging is more detailed than anyone expected. Understanding what happens during the night is important not only for individual students but also for teachers and parents who set study routines. This article reviews some of the main findings, the limits of the evidence and the practical advice that scientists offer.\n\n[B] One influential experiment, carried out at a university in Canada, divided sixty volunteers into two groups. Both groups learned a list of unfamiliar word pairs in the evening. One group then slept normally; the other stayed awake all night and was allowed to sleep for the following two nights. When both groups were tested a week later, the group that had slept on the first night recalled about a fifth more word pairs. The researchers noted that the sleep-deprived volunteers had made up the lost hours, which suggests that the timing of sleep, not merely the total amount, affects memory.\n\n[C] Different types of sleep seem to serve different purposes. Deep sleep, which occurs mainly in the first half of the night, appears to be important for facts and figures, while the dreaming stage, which dominates the later hours, may help with creative problem-solving and the understanding of complex ideas. Cutting a night short by two hours, for example by waking early to revise, therefore removes a disproportionate share of the dreaming stage. Sleep scientist Dr Amara Osei warns that students who regularly sleep for five hours may be losing the very stage that allows them to link new knowledge with what they already know.\n\n[D] Critics urge caution. Some psychologists point out that many sleep studies involve small groups of volunteers who are mostly university students, and that results may not apply to older learners or to children. Others note that individuals differ: a few people seem to function well on much less sleep than average. There is also the difficulty that a participant who feels well rested may simply be more motivated to perform well in a test. Researchers acknowledge these limits, but they argue that findings from different laboratories point in the same direction.\n\n[E] What practical advice follows? Dr Osei suggests that students should plan to finish their main revision by early evening, allowing time to relax before bed. She also recommends a short review of key material just before sleep, since information seen last may be replayed first. Napping can help, she adds, but only if it is brief, as naps longer than about thirty minutes can leave a person groggy. Above all, she stresses regularity: going to bed and getting up at similar times each day gives the brain a predictable rhythm that supports both sleep and memory.\n\n[F] Some schools have responded by starting lessons later. A district that moved its first lesson from 8.00 to 9.00 reported fewer absences in the following year, although it is difficult to separate the effect of sleep from other changes made at the same time, such as a new timetable. Teachers said that students appeared more alert in morning classes, but the district did not collect test scores, so the question of exam performance remains open.",
+      questions: [
+        {
+          id: "rd3-q01",
+          type: "tfng",
+          prompt: "1. The brain is inactive during sleep.",
+          correctAnswer: "False",
+          explanation: "Paragraph A: 'the brain does not simply switch off; it replays the day's experiences'. Pattern: opposite polarity — the statement is the old belief that the passage rejects.",
+          tag: "tfng"
+        },
+        {
+          id: "rd3-q02",
+          type: "tfng",
+          prompt: "2. The volunteers in the Canadian experiment were all university students.",
+          correctAnswer: "Not Given",
+          explanation: "Paragraph B says only 'sixty volunteers'. Paragraph D says many studies use mostly students, but does not say this one did. Pattern: true but irrelevant — a general remark about studies is not a fact about this experiment.",
+          tag: "tfng"
+        },
+        {
+          id: "rd3-q03",
+          type: "tfng",
+          prompt: "3. The group that slept on the first night remembered more word pairs a week later.",
+          correctAnswer: "True",
+          explanation: "Paragraph B: the group that slept on the first night 'recalled about a fifth more word pairs'. Pattern: a statement that the other group did better would be opposite polarity.",
+          tag: "tfng"
+        },
+        {
+          id: "rd3-q04",
+          type: "tfng",
+          prompt: "4. Long naps are as helpful as short ones.",
+          correctAnswer: "False",
+          explanation: "Paragraph E: napping helps 'only if it is brief', and naps longer than about thirty minutes 'can leave a person groggy'. Pattern: over-generalisation — the statement treats all naps as equally helpful.",
+          tag: "tfng"
+        },
+        {
+          id: "rd3-q05",
+          type: "mcq",
+          prompt: "5. What does the experiment in paragraph B suggest?",
+          options: [
+            "Total sleep matters more than timing",
+            "The timing of sleep as well as the amount affects memory",
+            "Staying awake improves recall",
+            "Word pairs are difficult to learn"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph B: 'the timing of sleep, not merely the total amount, affects memory'. A is a partial match that drops 'timing'; C is opposite polarity; D is true but irrelevant.",
+          tag: "mcq"
+        },
+        {
+          id: "rd3-q06",
+          type: "mcq",
+          prompt: "6. According to paragraph C, what does waking two hours early mainly remove?",
+          options: ["Deep sleep", "The dreaming stage", "The need for naps", "Facts and figures"],
+          correctAnswer: 1,
+          explanation: "Paragraph C: deep sleep occurs mainly in the first half, the dreaming stage 'dominates the later hours', so cutting the end of the night 'removes a disproportionate share of the dreaming stage'. A is wrong subject (deep sleep belongs to the first half, which is unaffected); C is true but irrelevant (naps are discussed elsewhere); D confuses what deep sleep is for with what is lost.",
+          tag: "mcq"
+        },
+        {
+          id: "rd3-q07",
+          type: "mcq",
+          prompt: "7. What is the overall message of paragraph D?",
+          options: [
+            "It has no value",
+            "Cautious: limits are acknowledged but findings agree overall",
+            "Completely certain",
+            "It applies only to children"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph D lists limits but ends 'findings from different laboratories point in the same direction'. A is opposite polarity; C is over-generalisation; D reverses a limitation about children.",
+          tag: "mcq"
+        },
+        {
+          id: "rd3-q08",
+          type: "mcq",
+          prompt: "8. What is said about the district that started lessons later?",
+          options: [
+            "Test scores rose",
+            "Absences fell, but the cause is unclear",
+            "Teachers disliked the change",
+            "Nothing changed"
+          ],
+          correctAnswer: 1,
+          explanation: "Paragraph F: 'fewer absences' but it is 'difficult to separate the effect of sleep from other changes'. A is Not Given (no scores were collected) and is true but irrelevant to absences; C and D are opposite polarity, since teachers reported students seemed more alert.",
+          tag: "mcq"
+        },
+        {
+          id: "rd3-q09",
+          type: "summary",
+          prompt: "9. Complete the sentence using NO MORE THAN TWO WORDS from the passage: During sleep, the brain ______ the day's experiences.",
+          correctAnswer: "replays",
+          explanation: "Paragraph A: 'it replays the day's experiences'. Pattern: opposite polarity — 'switch off' is the nearby phrase for what the brain does not do.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd3-q10",
+          type: "summary",
+          prompt: "10. Complete the sentence using NO MORE THAN TWO WORDS from the passage: Deep sleep occurs mainly in the ______ of the night.",
+          correctAnswer: "first half",
+          explanation: "Paragraph C: 'mainly in the first half of the night'. Pattern: opposite polarity — 'later hours' belongs to the dreaming stage.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd3-q11",
+          type: "summary",
+          prompt: "11. Complete the sentence using NO MORE THAN TWO WORDS from the passage: The dreaming stage may help with creative problem-solving and the ______ of complex ideas.",
+          correctAnswer: "understanding",
+          explanation: "Paragraph C: 'the understanding of complex ideas'. Pattern: partial match — 'link' (in the next sentence) fits the meaning but not the grammar of the gap.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd3-q12",
+          type: "summary",
+          prompt: "12. Complete the sentence using NO MORE THAN TWO WORDS from the passage: Dr Osei recommends a short ______ of key material just before sleep.",
+          correctAnswer: "review",
+          explanation: "Paragraph E: 'a short review of key material just before sleep'. Pattern: true but irrelevant — 'revision' appears earlier in the paragraph but refers to the main study session.",
+          tag: "summary-completion"
+        },
+        {
+          id: "rd3-q13",
+          type: "summary",
+          prompt: "13. Complete the sentence using NO MORE THAN TWO WORDS from the passage: Going to bed at similar times each day gives the brain a predictable ______.",
+          correctAnswer: "rhythm",
+          explanation: "Paragraph E: 'a predictable rhythm that supports both sleep and memory'. Pattern: wrong subject — 'regularity' is the habit, not what the brain receives.",
+          tag: "summary-completion"
+        }
+      ]
+    }
+  ],
 
   writingSets: [],
 
