@@ -1,0 +1,308 @@
+/* ApexPrep Academy — design tokens & custom styles (Tailwind handles utility layout) */
+
+:root{
+  --paper: #faf7f1;
+  --paper-raised: #ffffff;
+  --ink: #1a1d23;
+  --ink-soft: #4b5261;
+  --muted: #7b8494;
+  --line: #e6e0d4;
+  --heading: #0b1e33;      /* flips in dark mode; use for h1/h2/h3/section titles */
+  --texture-dot: rgba(11,30,51,0.035);
+
+  /* fixed brand colors — deliberately do NOT flip with theme (hero banner, brand mark, button fills) */
+  --navy-950: #0b1e33;
+  --navy-900: #122a45;
+  --navy-800: #1c3f66;
+  --navy-700: #2a5586;
+  --navy-600: #35699e;
+
+  --amber-600: #b5741a;
+  --amber-500: #d98e2a;
+  --amber-100: #fbe8c8;
+  --amber-50:  #fdf3e3;
+
+  --teal-700: #0f6155;
+  --teal-100: #d7f0ea;
+
+  --indigo-700: #3c3a8c;
+  --indigo-100: #e3e2f7;
+
+  --green-700: #166a45;
+  --green-100: #d9f2e5;
+  --red-700: #a3312a;
+  --red-100: #fbe1df;
+
+  --shadow-card: 0 1px 2px rgba(20,20,30,.04), 0 6px 20px -8px rgba(20,20,30,.12);
+  --shadow-pop: 0 12px 40px -12px rgba(11,30,51,.35);
+
+  --content-scale: 1; /* reading-comfort font size multiplier, adjusted by the Aa controls */
+}
+
+/* Dark mode — toggled by JS setting data-theme="dark" on <html>; persisted via Store.
+   Structural tokens (paper/ink/line/heading) flip, and so do the semantic chip pairs
+   (teal/indigo/green/red/amber "100"+"700" pairs) so a chip's own background/text stay
+   a self-contained, legible pairing in either theme. Brand navy-* and the accent
+   amber-500 stay fixed (hero banner, brand mark, primary buttons, CTA underline). */
+:root[data-theme="dark"]{
+  --paper: #12161d;
+  --paper-raised: #1a1f29;
+  --ink: #e6e4dd;
+  --ink-soft: #b7bcc7;
+  --muted: #838a99;
+  --line: #2b3242;
+  --heading: #eef1f7;
+  --texture-dot: rgba(255,255,255,0.035);
+  --shadow-card: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px -8px rgba(0,0,0,.5);
+  --shadow-pop: 0 12px 40px -12px rgba(0,0,0,.6);
+
+  /* Semantic chip pairs (badges, band-annotation, correct/incorrect state, flashcard back)
+     flip together so a chip's paired text/background stay self-contained and legible —
+     light mode: dark text on a pale tint; dark mode: bright text on a deep, desaturated tint. */
+  --teal-700: #5eead4; --teal-100: #113a34;
+  --indigo-700: #b4b1f0; --indigo-100: #2b2a4a;
+  --green-700: #6ee7a8; --green-100: #123b26;
+  --red-700: #f5a39c; --red-100: #3f1e1c;
+  --amber-600: #f0b35e; --amber-100: #3d2c12; --amber-50: #2e2410;
+}
+
+/* the handful of rules below use a literal hex rather than a token, so they need an
+   explicit dark-mode override instead of flipping automatically */
+:root[data-theme="dark"] .mistake-box{ border-color:#5a2e2a; }
+:root[data-theme="dark"] .mistake-box li{ color:#f5a39c; }
+:root[data-theme="dark"] .model-answer{ background:#211d16; }
+:root[data-theme="dark"] .diag-table th{ background:#211d16; }
+:root[data-theme="dark"] .explain-panel{ background:#211d16; }
+:root[data-theme="dark"] .transcript-panel{ background:#211d16; }
+
+html, body { background: var(--paper); color: var(--ink); }
+body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; transition: background-color .2s ease, color .2s ease; }
+.font-serif-academic { font-family: 'Lora', Georgia, serif; }
+
+/* subtle paper texture */
+body::before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:0;
+  background-image: radial-gradient(circle at 1px 1px, var(--texture-dot) 1px, transparent 0);
+  background-size: 22px 22px;
+  opacity:.5;
+}
+#app-root{ position:relative; z-index:1; }
+
+/* ---------- Header ---------- */
+.brand-mark{
+  width:2.5rem; height:2.5rem; border-radius:.65rem;
+  background: linear-gradient(145deg, var(--navy-700), var(--navy-950));
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-family:'Lora',serif; font-weight:700; font-size:1.05rem;
+  box-shadow: var(--shadow-card);
+}
+
+.nav-tab{
+  position:relative; padding:.55rem .2rem; font-weight:600; font-size:.92rem;
+  color: var(--ink-soft); white-space:nowrap; transition: color .15s ease;
+}
+.nav-tab:hover{ color: var(--heading); }
+.nav-tab.active{ color: var(--heading); }
+.nav-tab.active::after{
+  content:""; position:absolute; left:0; right:0; bottom:-1px; height:3px; border-radius:2px;
+  background: var(--amber-500);
+}
+.nav-tab .tab-dot{ display:inline-block; width:.4rem; height:.4rem; border-radius:999px; margin-right:.4rem; }
+
+/* ---------- Timer widget ---------- */
+.timer-pill{
+  display:inline-flex; align-items:center; gap:.4rem;
+  border:1px solid var(--line); background:var(--paper-raised);
+  border-radius:999px; padding:.35rem .75rem; font-variant-numeric: tabular-nums;
+  font-size:.82rem; font-weight:600; color:var(--ink-soft);
+  box-shadow: var(--shadow-card);
+}
+.timer-pill.is-running{ color:var(--heading); border-color:var(--navy-600); }
+.timer-pill.is-low{ color:var(--red-700); border-color:var(--red-700); animation:pulse-red 1.2s infinite; }
+@keyframes pulse-red{ 0%,100%{ box-shadow:0 0 0 0 rgba(163,49,42,.25);} 50%{ box-shadow:0 0 0 6px rgba(163,49,42,0);} }
+
+/* ---------- Cards ---------- */
+.apex-card{
+  background: var(--paper-raised); border:1px solid var(--line); border-radius:.9rem;
+  box-shadow: var(--shadow-card); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.apex-card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-pop); border-color: var(--navy-600); }
+
+.badge{ display:inline-flex; align-items:center; gap:.3rem; font-size:.7rem; font-weight:700; letter-spacing:.02em; text-transform:uppercase; padding:.2rem .55rem; border-radius:999px; }
+.badge-esl{ background:var(--teal-100); color:var(--teal-700); }
+.badge-ielts{ background:var(--indigo-100); color:var(--indigo-700); }
+.badge-sat{ background:var(--amber-100); color:var(--amber-600); }
+.badge-soon{ background:#efe9de; color:var(--muted); }
+.badge-level{ background:#eef2f6; color:var(--navy-800); }
+
+/* ---------- Buttons ---------- */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:.4rem; font-weight:600; font-size:.88rem; border-radius:.6rem; padding:.55rem 1rem; transition:.15s ease; cursor:pointer; border:1px solid transparent; }
+.btn-primary{ background:var(--navy-900); color:#fff; }
+.btn-primary:hover{ background:var(--navy-950); }
+.btn-amber{ background:var(--amber-500); color:#2a1a03; }
+.btn-amber:hover{ background:var(--amber-600); color:#fff; }
+.btn-outline{ background:transparent; border-color:var(--line); color:var(--ink-soft); }
+.btn-outline:hover{ border-color:var(--navy-700); color:var(--heading); }
+.btn:disabled{ opacity:.45; cursor:not-allowed; }
+
+/* ---------- Search / filter bar ---------- */
+.apex-input, .apex-select{
+  border:1px solid var(--line); background:var(--paper-raised); border-radius:.6rem;
+  padding:.5rem .8rem; font-size:.88rem; color:var(--ink);
+}
+.apex-input:focus, .apex-select:focus{ outline:none; border-color:var(--navy-600); box-shadow:0 0 0 3px rgba(42,85,134,.15); }
+
+/* ---------- Reading-comfort font scale (Aa- / Aa+ controls) ---------- */
+.note-article, .passage-panel, .audio-panel, .question-card{ font-size: calc(1em * var(--content-scale)); }
+
+/* ---------- Header comfort controls ---------- */
+.icon-btn{
+  display:inline-flex; align-items:center; justify-content:center; width:2.15rem; height:2.15rem;
+  border-radius:.55rem; border:1px solid var(--line); background:var(--paper-raised); color:var(--ink-soft);
+  font-size:1rem; cursor:pointer; transition:.15s ease;
+}
+.icon-btn:hover{ border-color:var(--navy-600); color:var(--heading); }
+.font-scale-group{ display:inline-flex; align-items:center; border:1px solid var(--line); border-radius:.55rem; overflow:hidden; background:var(--paper-raised); }
+.font-scale-group button{ padding:.4rem .6rem; font-size:.8rem; font-weight:700; color:var(--ink-soft); cursor:pointer; }
+.font-scale-group button:hover{ background:var(--paper); color:var(--heading); }
+.font-scale-group button + button{ border-left:1px solid var(--line); }
+
+/* ---------- Bookmark star ---------- */
+.bookmark-star{
+  display:inline-flex; align-items:center; justify-content:center; width:1.9rem; height:1.9rem;
+  border-radius:.5rem; color:var(--muted); font-size:1.05rem; cursor:pointer; flex-shrink:0;
+  transition:.15s ease; background:transparent; border:1px solid transparent;
+}
+.bookmark-star:hover{ background:var(--amber-50); border-color:var(--amber-100); }
+.bookmark-star.is-saved{ color:var(--amber-600); }
+
+/* ---------- Segmented subnav pill (used for study/practice/tools switches) ---------- */
+.pill-group{ display:flex; flex-wrap:wrap; gap:.4rem; }
+
+/* ---------- Flashcards ---------- */
+.deck-card{ background:var(--paper-raised); border:1px solid var(--line); border-radius:.9rem; box-shadow:var(--shadow-card); padding:1.25rem; }
+.deck-progress-track{ background:var(--line); border-radius:999px; height:.4rem; overflow:hidden; margin-top:.6rem; }
+.deck-progress-fill{ height:100%; border-radius:999px; background:linear-gradient(90deg, var(--teal-700), var(--navy-700)); }
+
+.flash-stage{ perspective:1200px; max-width:36rem; margin:0 auto; }
+.flash-card{
+  position:relative; min-height:14rem; border-radius:1rem; cursor:pointer;
+  transform-style:preserve-3d; transition:transform .45s cubic-bezier(.4,.2,.2,1);
+  box-shadow:var(--shadow-pop);
+}
+.flash-card.is-flipped{ transform:rotateY(180deg); }
+.flash-face{
+  position:absolute; inset:0; backface-visibility:hidden; border-radius:1rem;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+  padding:2rem 1.5rem; border:1px solid var(--line);
+}
+.flash-face-front{ background:var(--paper-raised); }
+.flash-face-back{ background:var(--indigo-100); color:var(--indigo-700); transform:rotateY(180deg); }
+.flash-term{ font-family:'Lora',serif; font-weight:700; font-size:1.4rem; color:var(--heading); }
+.flash-face-back .flash-term{ color:var(--indigo-700); }
+.flash-hint{ font-size:.78rem; color:var(--muted); margin-top:.75rem; text-transform:uppercase; letter-spacing:.04em; }
+.flash-example{ font-family:'Lora',serif; font-style:italic; margin-top:.9rem; font-size:.95rem; }
+
+.flash-mastery-dot{ width:.5rem; height:.5rem; border-radius:999px; display:inline-block; }
+.flash-mastery-0{ background:var(--muted); }
+.flash-mastery-1{ background:var(--amber-500); }
+.flash-mastery-2{ background:var(--green-700); }
+
+/* ---------- Progress dashboard ---------- */
+.stat-tile{ background:var(--paper-raised); border:1px solid var(--line); border-radius:.8rem; padding:1rem 1.2rem; text-align:center; }
+.stat-tile .big{ font-size:1.9rem; font-weight:800; color:var(--heading); }
+.stat-tile .label{ font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin-top:.2rem; }
+.attempt-row{ display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding:.6rem 0; border-bottom:1px solid var(--line); font-size:.86rem; }
+.attempt-row:last-child{ border-bottom:none; }
+
+/* ---------- Note detail article ---------- */
+.note-article h4{ font-family:'Lora',serif; font-weight:600; font-size:1.05rem; color:var(--heading); margin-top:1.4rem; margin-bottom:.4rem; }
+.note-article p, .note-article li{ line-height:1.65; color:var(--ink-soft); }
+.note-article ul{ list-style: disc; padding-left:1.3rem; margin:.4rem 0; }
+.note-article strong{ color:var(--ink); }
+.note-article em{ color:var(--heading); font-style:italic; }
+
+.mistake-box{ background:var(--red-100); border:1px solid #f0c9c5; border-radius:.6rem; padding:.9rem 1rem; }
+.mistake-box li{ color:#7a2b25; }
+.l1-note{ background:var(--amber-50); border:1px solid var(--amber-100); border-left:4px solid var(--amber-500); border-radius:.5rem; padding:.85rem 1rem; }
+.tip-box{ background:var(--teal-100); border-left:4px solid var(--teal-700); border-radius:.5rem; padding:.85rem 1rem; }
+.model-answer{ background:#f5f2ea; border:1px solid var(--line); border-radius:.7rem; padding:1rem 1.2rem; white-space:pre-line; font-family:'Lora',serif; line-height:1.75; }
+.band-annotation{ background:var(--indigo-100); border-radius:.6rem; padding:.85rem 1rem; color:var(--indigo-700); font-size:.9rem; line-height:1.6; }
+
+.diag-table{ width:100%; border-collapse:collapse; font-size:.85rem; margin-top:.5rem; }
+.diag-table th, .diag-table td{ border:1px solid var(--line); padding:.45rem .6rem; text-align:left; }
+.diag-table th{ background:#f1ede3; color:var(--heading); }
+
+/* ---------- Reading passage ---------- */
+.passage-panel{
+  font-family:'Lora',serif; line-height:1.85; color:var(--ink);
+  background: var(--paper-raised); border:1px solid var(--line); border-radius:.9rem;
+  padding:1.4rem 1.6rem; white-space:pre-line;
+}
+.passage-panel h3{ font-weight:700; margin-bottom:.6rem; color:var(--heading); }
+
+/* ---------- Listening audio ---------- */
+.audio-panel{
+  background: var(--paper-raised); border:1px solid var(--line); border-radius:.9rem;
+  padding:1.4rem 1.6rem;
+}
+.audio-panel h3{ font-weight:700; margin-bottom:.4rem; color:var(--heading); font-family:'Lora',serif; }
+.audio-context{ font-size:.9rem; color:var(--ink-soft); margin-bottom:.2rem; }
+.audio-panel audio{ width:100%; margin-top:.6rem; }
+.transcript-panel{
+  background:#f1ede3; border-radius:.5rem; padding:.9rem 1rem; margin-top:.5rem;
+  font-family:'Lora',serif; line-height:1.75; white-space:pre-line; color:var(--ink-soft); font-size:.9rem;
+}
+
+/* ---------- Test engine ---------- */
+.question-card{ background:var(--paper-raised); border:1px solid var(--line); border-radius:.8rem; padding:1.1rem 1.2rem; }
+.question-card.correct{ border-color:var(--green-700); background:var(--green-100); }
+.question-card.incorrect{ border-color:var(--red-700); background:var(--red-100); }
+
+.option-row{
+  display:flex; align-items:flex-start; gap:.6rem; border:1px solid var(--line); border-radius:.6rem;
+  padding:.6rem .8rem; cursor:pointer; background:var(--paper-raised); transition:.12s ease;
+}
+.option-row:hover{ border-color:var(--navy-600); }
+.option-row.selected{ border-color:var(--navy-700); background:var(--indigo-100); }
+.option-row.reveal-correct{ border-color:var(--green-700); background:var(--green-100); }
+.option-row.reveal-incorrect{ border-color:var(--red-700); background:var(--red-100); }
+.option-row input{ margin-top:.2rem; }
+
+.gridin-input{ width:8rem; }
+
+.explain-toggle{ font-size:.82rem; font-weight:600; color:var(--navy-700); cursor:pointer; user-select:none; }
+.explain-panel{ background:#f1ede3; border-radius:.5rem; padding:.7rem .9rem; margin-top:.5rem; font-size:.88rem; color:var(--ink-soft); line-height:1.55; }
+
+.score-ring{ width:7rem; height:7rem; }
+
+.weak-bar-track{ background:var(--line); border-radius:999px; height:.55rem; overflow:hidden; }
+.weak-bar-fill{ height:100%; border-radius:999px; background: linear-gradient(90deg, var(--amber-500), var(--navy-700)); }
+
+/* progress dots for section nav inside a test */
+.sec-pill{ font-size:.78rem; font-weight:600; padding:.3rem .65rem; border-radius:999px; border:1px solid var(--line); color:var(--ink-soft); cursor:pointer; }
+.sec-pill.active{ background:var(--navy-900); color:#fff; border-color:var(--navy-900); }
+.sec-pill.done{ background:var(--green-100); border-color:var(--green-700); color:var(--green-700); }
+
+/* ---------- misc ---------- */
+/* NOTE: don't redefine .hidden here — Tailwind's CDN build already supplies it
+   (including the responsive md:flex override used by the desktop nav); an
+   !important redefinition here would permanently hide anything Tailwind un-hides. */
+.scrollbar-thin::-webkit-scrollbar{ height:6px; width:6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb{ background:var(--line); border-radius:999px; }
+
+.fade-in{ animation: fadeIn .25s ease; }
+@keyframes fadeIn{ from{ opacity:0; transform:translateY(4px);} to{opacity:1; transform:translateY(0);} }
+
+/* ---------- Print ---------- */
+@media print {
+  body::before{ display:none; }
+  header, .no-print, nav, .app-footer { display:none !important; }
+  .print-only-block{ display:block !important; }
+  main{ padding:0 !important; }
+  .apex-card, .question-card, .passage-panel, .audio-panel, .note-article{ box-shadow:none !important; border:1px solid #999 !important; }
+  .audio-panel audio{ display:none; }
+  a[href]::after{ content:""; }
+  body, .passage-panel, .note-article p, .note-article li{ color:#000 !important; }
+}

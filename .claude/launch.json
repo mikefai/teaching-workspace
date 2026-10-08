@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "apexprep-static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8532", "--directory", "C:\Users\mike\Documents\TEACHING\ENGLISH - ALL - HUB"],
+      "port": 8532
+    }
+  ]
+}

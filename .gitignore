@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.claude/data/
+.remember/
+.claude/settings.local.json
+.superpowers/
+.enola/

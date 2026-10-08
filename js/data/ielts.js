@@ -1,0 +1,511 @@
+/* ApexPrep Academy — IELTS Academic & General Suite data module
+   15 of 30 study notes are fully authored (Pack 1). The remaining 15 (Pack 2) are
+   listed as roadmap stubs with comingSoon:true — see schema notes at the bottom
+   for how to complete them without touching app.js. */
+window.APEX_DATA = window.APEX_DATA || {};
+
+window.APEX_DATA.ielts = {
+
+  notes: [
+    // ===================== PACK 1 — FULLY AUTHORED (15) =====================
+    {
+      id: "ielts-01", title: "Writing Task 1 (Academic): Line Graphs & Trends", skill: "Writing",
+      category: "writing-t1", bandFocus: "6.5–9.0", comingSoon: false,
+      tags: ["writing task 1", "line graph", "trends", "academic"],
+      summary: "Describing change over time with accurate trend and data language — the Band 9 template.",
+      body: [
+        { heading: "Task Overview", html: "You have 20 minutes to describe a line graph in at least 150 words. You are NOT asked for an opinion — only an objective summary of the visual data. Task Achievement (TA) is scored on whether you accurately select and report the <em>main</em> features and trends, not every single data point." },
+        { heading: "The Four-Paragraph Structure", html: "<strong>1. Introduction</strong> — paraphrase the task question (never copy it). <strong>2. Overview</strong> — 2 sentences, no numbers, stating the 1–2 most striking overall trends. This single paragraph is worth roughly as much as the rest of the task combined for TA — most Band 5–6 answers skip it entirely. <strong>3–4. Body paragraphs</strong> — group similar data logically (e.g. rising lines together, falling/stable lines together) and support with specific figures." },
+        { heading: "Trend Language Bank", html: "<strong>Verbs (rise):</strong> increase, rise, climb, grow, surge, soar (dramatic), edge up (small). <strong>Verbs (fall):</strong> decrease, decline, drop, fall, plummet, plunge (dramatic), dip (small, temporary). <strong>Verbs (stable):</strong> remain stable/steady, level off, plateau, stagnate. <strong>Adverbs (rate/degree):</strong> sharply, dramatically, steadily, gradually, slightly, marginally. <strong>Nouns:</strong> a sharp rise, a steady decline, a gradual increase, a slight fluctuation." },
+        { heading: "Band 9 Model Answer", html: "<em>Task: The graph below shows the number of visitors (in millions) to three London museums between 2010 and 2020.</em>" }
+      ],
+      modelAnswer: {
+        text: "The line graph illustrates how visitor numbers at three major London museums changed over an eleven-year period from 2010 to 2020.\n\nOverall, all three museums experienced a general upward trend in visitor numbers over most of the period, although a sharp and unprecedented decline is visible for all of them at the very end, corresponding to 2020. The Natural History Museum consistently attracted the highest number of visitors throughout.\n\nIn 2010, the Natural History Museum welcomed approximately 4.5 million visitors, compared to around 3 million at the Science Museum and just 2 million at the Design Museum. Over the following eight years, all three figures rose steadily, with the Natural History Museum reaching a peak of roughly 6 million visitors by 2018. The Science Museum followed a broadly similar, if less pronounced, trajectory, climbing to approximately 4.5 million in the same year, while the Design Museum grew at a comparatively modest pace, edging up to just over 2.5 million.\n\nFrom 2019 onwards, however, all three museums saw a dramatic reversal of this pattern. Visitor numbers plummeted across the board, with the Natural History Museum falling to under 1 million by 2020 — its lowest point in the entire period. The other two museums mirrored this sudden collapse, converging at similarly low figures by the end of the timeframe.",
+        bandAnnotation: "TA: Clear overview identifying both the shared upward trend and the shared 2020 collapse, plus the standout feature (NHM's consistent lead). CC: Logical grouping (rise phase, then reversal phase) with fluent linking (however, while, with). LR: Precise, varied trend vocabulary (plummeted, edging up, converging) without repetition. GRA: A wide range of complex structures (relative clauses, participle clauses 'corresponding to', 'reaching a peak') used accurately."
+      },
+      turkishL1Note: "Turkish learners often begin Task 1 with an opinion or a cause ('This is because...') — Task 1 is descriptive only; save analysis and causes for Task 2. Also watch for a missing overview paragraph, the single biggest TA-cost error for this group."
+    },
+
+    {
+      id: "ielts-02", title: "Writing Task 2: Opinion Essays (Agree/Disagree)", skill: "Writing",
+      category: "writing-t2", bandFocus: "6.5–9.0", comingSoon: false,
+      tags: ["writing task 2", "opinion essay", "agree disagree", "academic"],
+      summary: "Building a clear, consistent position and a logical four-paragraph argument in 40 minutes.",
+      body: [
+        { heading: "Task Overview", html: "You have 40 minutes and at least 250 words. The examiner must be able to identify your position from the introduction onward, and that position must not shift or contradict itself later — inconsistency is one of the fastest ways to cap Task Response (TA) at Band 6 or below, regardless of language quality." },
+        { heading: "The Thesis Statement Formula", html: "State the topic + your clear position + a one-clause preview of your two main reasons. Example: <em>'While some argue that university education should be free for all students, I firmly believe that a means-tested funding system is fairer, primarily because it targets resources more effectively and preserves institutional quality.'</em>" },
+        { heading: "Four-Paragraph Structure", html: "<strong>1. Introduction</strong> — paraphrase + thesis statement. <strong>2. Body 1</strong> — first reason + explanation + specific example. <strong>3. Body 2</strong> — second reason + explanation + specific example. <strong>4. Conclusion</strong> — restate position (different words) + brief summary of reasons. No new ideas in the conclusion." },
+        { heading: "Topic Sentence Method", html: "Start every body paragraph with a topic sentence stating the single main idea of that paragraph, then develop it with: explanation ('This is because...') → example ('For instance...') → result/link back to the thesis." }
+      ],
+      modelAnswer: {
+        prompt: "Some people believe that unpaid community service should be a compulsory part of high school education. To what extent do you agree or disagree?",
+        text: "It has been suggested that all secondary school students should be required to complete a fixed number of unpaid hours serving their local community before graduation. I largely agree with this proposal, primarily because it builds practical civic skills and exposes young people to social realities that classroom learning alone cannot provide.\n\nFirstly, mandatory service teaches responsibility and teamwork in a way that few academic subjects can replicate. When a student is required to show up consistently to help at a food bank or tutor younger children, they learn accountability to people outside their immediate family and friendship circle. For example, schools in several Canadian provinces that have implemented mandatory volunteer hours report that participating students demonstrate improved time-management skills and a stronger sense of belonging within their communities, benefits that persist well beyond the specific hours logged.\n\nSecondly, compulsory service exposes students to social issues that many would otherwise never encounter directly. A teenager from a comfortable background who spends time at a homeless shelter or an elderly care home gains a form of social awareness that lectures on inequality cannot replicate. This exposure often shapes career choices and civic attitudes well into adulthood; indeed, several long-term studies have linked mandatory youth volunteering to higher rates of civic engagement, such as voting, in later life.\n\nHowever, critics rightly point out that forcing participation may undermine the very spirit of volunteerism, since students who are compelled to serve may do so resentfully rather than genuinely. This concern can largely be addressed through thoughtful implementation — allowing students to choose from a range of approved organisations, for instance, preserves an element of autonomy while still guaranteeing the exposure.\n\nIn conclusion, while a compulsory scheme carries some risk of resentment, the practical and civic benefits of mandatory service make it a worthwhile addition to secondary education, provided students retain some choice over how they fulfil the requirement.",
+        bandAnnotation: "TA: Clear, sustained position ('largely agree'); addresses the counter-argument without abandoning the thesis — a Band 7+ marker. CC: Each body paragraph opens with a clear topic sentence and closes by linking back to the thesis. LR: Precise collocations ('civic engagement', 'sense of belonging', 'thoughtful implementation') with no repetition of 'good/bad'. GRA: A mix of complex sentences (relative clauses, conditional 'This concern can largely be addressed through...') with high accuracy."
+      },
+      turkishL1Note: "A frequent Turkish L1 pattern is stating a position in the introduction, then unconsciously arguing 'both sides equally' in the body — this reads as inconsistent to an examiner even if each individual sentence is grammatically fine. Reread your thesis before writing each body paragraph to check it still supports the same side."
+    },
+
+    {
+      id: "ielts-03", title: "Writing Task 2: Discussion Essays (Both Views)", skill: "Writing",
+      category: "writing-t2", bandFocus: "6.5–9.0", comingSoon: false,
+      tags: ["writing task 2", "discussion essay", "both views", "academic"],
+      summary: "Presenting two sides fairly before giving your own opinion — a distinct structure from the opinion essay.",
+      body: [
+        { heading: "Recognising the Task Type", html: "Look for the phrase 'Discuss both views and give your own opinion.' This is NOT the same as an opinion essay — you must give real, balanced weight to both perspectives before stating your own view, usually in the conclusion (though some Band 8+ writers signal their view from the introduction while still developing both views fairly in the body)." },
+        { heading: "Four-Paragraph Structure", html: "<strong>1. Introduction</strong> — paraphrase + state that there are two views + (optional) preview your own opinion. <strong>2. Body 1</strong> — View A, developed with reasons/examples as if you believe it. <strong>3. Body 2</strong> — View B, developed equally seriously. <strong>4. Conclusion</strong> — weigh the two views and state your own opinion clearly." },
+        { heading: "The Fairness Trap", html: "A common Band 6 ceiling is giving View A one weak sentence and View B a full paragraph, revealing bias too early. Both body paragraphs should be similar in length and developed with equal seriousness, even if you privately disagree with one — your own opinion belongs at the end, not smuggled into the 'wrong side's' paragraph." }
+      ],
+      modelAnswer: {
+        prompt: "Some people think that the government should invest more money in public transport, while others believe building more roads is a better solution to traffic congestion. Discuss both views and give your own opinion.",
+        text: "Traffic congestion is a growing concern in cities worldwide, and opinions differ sharply on the best solution: expanding public transport networks or building additional road infrastructure. This essay will examine both perspectives before outlining my own view.\n\nProponents of road expansion argue that new roads and additional lanes provide immediate relief to bottlenecks, allowing existing traffic to flow more freely without requiring commuters to change their habits. This view holds particular appeal for policymakers under pressure to show quick results, since road construction, while disruptive in the short term, can visibly reduce a specific congestion point within a year or two. Furthermore, in regions with low population density, where public transport ridership would likely remain low regardless of investment, expanding roads may represent a more cost-effective use of public funds.\n\nOn the other hand, advocates of public transport investment contend that new roads merely encourage more car use, a phenomenon economists refer to as 'induced demand', meaning that congestion returns within a few years as more drivers take advantage of the improved capacity. Investment in buses, trams and rail, by contrast, offers a long-term structural solution: cities such as Copenhagen and Singapore have demonstrated that a reliable, well-funded public transport network can substantially reduce private car dependency over time, with associated benefits for air quality and urban space that road expansion cannot provide.\n\nIn my view, while road improvements may offer short-term relief in specific circumstances, public transport investment represents the more sustainable long-term strategy for most urban areas. The evidence on induced demand suggests that road expansion alone tends to reproduce the very problem it aims to solve, whereas transport systems that give commuters a genuinely attractive alternative to driving address the root cause of congestion rather than its symptoms.\n\nIn conclusion, although both approaches have situational merit, prioritising public transport investment offers a more durable solution to the underlying problem of urban traffic.",
+        bandAnnotation: "TA: Both views receive genuinely balanced development (similar length, real reasons, real examples) before the writer's own opinion is clearly stated. CC: Clear signposting ('Proponents of...', 'On the other hand...', 'In my view...') guides the reader through the discussion structure. LR: Topic-specific vocabulary ('induced demand', 'ridership', 'urban car dependency') used accurately and naturally. GRA: Complex noun phrases and subordination used with control ('a phenomenon economists refer to as...')."
+      },
+      turkishL1Note: "Watch for calque connectors like 'In addition to this situation' or 'Besides this' used as paragraph openers — replace with natural English discourse markers ('Furthermore', 'By contrast', 'On the other hand') to avoid a Coherence and Cohesion ceiling around Band 6."
+    },
+
+    {
+      id: "ielts-04", title: "Reading Strategy: Skimming, Scanning & Time Management", skill: "Reading",
+      category: "reading", bandFocus: "5.5–9.0", comingSoon: false,
+      tags: ["reading strategy", "skimming", "scanning", "time management"],
+      summary: "The skim-scan-read sequence and a realistic 60-minute time budget across three passages.",
+      body: [
+        { heading: "The Skim-Scan-Read Sequence", html: "<strong>1. Skim (1–2 min per passage)</strong> — read the title, first and last sentence of each paragraph, to build a rough mental map of what each paragraph covers. Do not read every word. <strong>2. Scan</strong> — for a specific question, search only for the relevant keyword/paraphrase area located during skimming, rather than rereading the whole passage. <strong>3. Close-read</strong> — only the 2–3 sentences around a located answer get careful, word-by-word attention." },
+        { heading: "A Realistic 60-Minute Budget", html: "20 minutes per passage is the standard target, but passage 3 is usually hardest — many high-scoring candidates use 17/20/23 minutes across passages 1/2/3 rather than a strict even split. Always transfer answers as you go; never save all transfer for the end, since IELTS Reading (paper-based) gives no extra transfer time." },
+        { heading: "Prioritise Question Order Strategically", html: "Within a passage, question types that follow the passage's paragraph order (TFNG, Matching Information) should generally be done in order — this lets your eyes move forward through the text only once. Question types that require the whole passage (Matching Headings) are often more efficient done last, once you already know each paragraph's content from earlier questions." }
+      ],
+      commonMistakes: [
+        "Reading the whole passage word-for-word before looking at any question — the single biggest time-waster.",
+        "Spending more than 3 minutes stuck on one question; guess-and-flag, then return only if time remains.",
+        "Turkish L1 note: many learners read left-to-right at a fixed academic-reading pace learned for L1 texts; practising scanning specifically as a distinct, faster eye-movement skill (not just 'reading faster') closes this gap quickly."
+      ],
+      practiceTip: "Take any passage you've already read carefully once. Time yourself finding five specific facts by scanning only — no rereading from the start — and compare your time to your first read."
+    },
+
+    {
+      id: "ielts-05", title: "True / False / Not Given — The Complete Framework", skill: "Reading",
+      category: "reading", bandFocus: "5.5–9.0", comingSoon: false,
+      tags: ["tfng", "true false not given", "reading question types"],
+      summary: "The single highest-value framework for the question type that causes the most band loss.",
+      body: [
+        { heading: "The Core Logic", html: "<strong>TRUE</strong> — the statement matches passage information (often paraphrased). <strong>FALSE</strong> — the statement contradicts the passage. <strong>NOT GIVEN</strong> — the passage does not mention this specific information at all, so it can be neither confirmed nor denied — even if it 'seems likely' to be true based on general knowledge." },
+        { heading: "The Most Common Trap", html: "Candidates confuse FALSE and NOT GIVEN far more than TRUE errors. Ask: 'Does the passage directly contradict this?' → FALSE. 'Does the passage simply never address this specific claim?' → NOT GIVEN, even if a related topic is discussed nearby." },
+        { heading: "Watch for Qualifying Words", html: "Absolute words in the statement (always, never, all, only, completely) versus softer words in the passage (often, most, generally) frequently create a FALSE answer, because the statement over-claims what the passage actually says. Comparative and superlative claims ('the most important factor') are Not Given traps if the passage lists several factors without ranking them." },
+        { heading: "A Worked Example", html: "Passage extract: <em>'Many researchers now believe that regular exercise can improve short-term memory, although the long-term cognitive benefits remain the subject of ongoing debate.'</em><br>Statement: <em>'Scientists agree that exercise improves long-term memory.'</em> → <strong>FALSE</strong> (the passage says this is 'debated', not agreed, and specifically about long-term, not short-term, effects — a double contradiction)." }
+      ],
+      commonMistakes: [
+        "Choosing FALSE when the correct answer is NOT GIVEN, because the topic is 'nearby' in the text even though the specific claim isn't addressed.",
+        "Being influenced by outside/general knowledge rather than only what the passage states.",
+        "Missing negation words (rarely, seldom, unless) that flip a statement's logical value."
+      ],
+      practiceTip: "Take three TFNG questions you got wrong in past practice and, for each, write one sentence explaining exactly which word in the statement caused the trap."
+    },
+
+    {
+      id: "ielts-06", title: "Matching Headings — Paraphrase Traps", skill: "Reading",
+      category: "reading", bandFocus: "6.0–9.0", comingSoon: false,
+      tags: ["matching headings", "reading question types", "paraphrase"],
+      summary: "Matching a paragraph's main idea (not its topic detail) to a heading — with more headings than paragraphs.",
+      body: [
+        { heading: "Main Idea, Not Just Topic", html: "A heading matches the paragraph's <strong>overall purpose or argument</strong>, not just a topic word mentioned inside it. A paragraph that mentions 'cost' in one sentence is not automatically matched to a heading about cost if the paragraph's main point is actually about safety." },
+        { heading: "Method: First & Last Sentence First", html: "Read the first and last sentence of the paragraph carefully — these usually frame the main idea. Then skim the middle only to confirm. This is faster and more accurate than reading the whole paragraph in detail before deciding." },
+        { heading: "There Are Always Extra Headings", html: "Because there are more headings than paragraphs, at least 2–3 headings are deliberately wrong distractors, usually built from a paraphrase of a MINOR detail within a paragraph rather than its main idea — this is the single most common trap in this question type." },
+        { heading: "Cross-Elimination", html: "Once a heading is used, cross it out. If you're stuck between two headings for one paragraph, check whether either heading fits a different, still-unmatched paragraph better — headings are unique, so this process of elimination often resolves ambiguity." }
+      ],
+      commonMistakes: [
+        "Matching a heading based on one repeated keyword rather than the paragraph's actual main idea.",
+        "Forgetting that headings are used only once — reusing a 'good fit' from an earlier paragraph.",
+        "Attempting Matching Headings questions before understanding roughly what each paragraph covers — do a light skim of the whole passage first."
+      ],
+      practiceTip: "For a passage you've read before, cover the given headings and write your own one-line heading for each paragraph first — then compare your version to the exam's paraphrased options."
+    },
+
+    {
+      id: "ielts-07", title: "Listening Sections 1 & 2: Form Completion & Prediction", skill: "Listening",
+      category: "listening", bandFocus: "5.5–8.0", comingSoon: false,
+      tags: ["listening", "section 1", "section 2", "form completion", "prediction"],
+      summary: "Everyday social and informational contexts — the highest-scoring sections if strategy is solid.",
+      body: [
+        { heading: "Section Profiles", html: "<strong>Section 1</strong> — a conversation between two speakers in an everyday social context (e.g. booking a hotel, enrolling in a course). <strong>Section 2</strong> — a monologue giving information about a facility or event (e.g. a museum tour, a local festival). Both are considered the 'easier half' of the Listening test and should be a near-perfect score for a Band 7+ target." },
+        { heading: "Predict Before You Listen", html: "Always use the given time before audio starts to read ahead and predict: word type needed (name, number, date, place), likely spelling issues, and plural/singular clues. For a form field 'Postcode: ___', you already know to expect letters and numbers, which primes your ear before the audio begins." },
+        { heading: "Common Traps in These Sections", html: "Speakers often self-correct ('It's on Baker Street — no wait, sorry, Barker Street') — the corrected version is the answer, so keep listening past the first-mentioned option. Spelling is frequently given aloud letter-by-letter for names; practise the English alphabet at natural speaking speed, since B/P/D and M/N confusion is a common cause of lost marks even for accurate listeners." }
+      ],
+      commonMistakes: [
+        "Writing the FIRST number/word heard instead of waiting for a correction or a more specific later mention.",
+        "Losing your place after missing one answer — always move on immediately; a missed question costs 1 mark, but chasing it usually costs 2–3 more.",
+        "Ignoring the stated word limit (e.g. 'NO MORE THAN TWO WORDS') — writing three words when the limit is two results in the entire answer being marked wrong, even if the content is correct."
+      ],
+      practiceTip: "Practise writing dictated addresses, phone numbers, and spelled names at natural native speed — this specific micro-skill accounts for a disproportionate number of Section 1 errors."
+    },
+
+    {
+      id: "ielts-08", title: "Listening Sections 3 & 4: Academic Lecture Mapping", skill: "Listening",
+      category: "listening", bandFocus: "6.0–9.0", comingSoon: false,
+      tags: ["listening", "section 3", "section 4", "academic lecture"],
+      summary: "Multi-speaker academic discussions and a single extended lecture — the highest-difficulty sections.",
+      body: [
+        { heading: "Section Profiles", html: "<strong>Section 3</strong> — a discussion between 2–4 speakers in an academic context (e.g. students discussing an assignment with a tutor); requires tracking who says what and distinguishing agreement from disagreement. <strong>Section 4</strong> — a single unbroken academic lecture with no natural conversational pauses, testing sustained concentration for roughly five minutes." },
+        { heading: "Mapping the Lecture Structure", html: "Before Section 4 starts, quickly scan the question set for structural signal words (Introduction / Causes / Effects / Solutions / Case study) — these often mirror the lecture's own signposting language ('Firstly... Turning now to... Finally...'), letting you anticipate roughly where in the talk each answer will appear." },
+        { heading: "Handling Speaker Disagreement in Section 3", html: "Distinguish which speaker holds which opinion, especially when one speaker initially agrees then partially disagrees ('That's true, but I still think...') — questions frequently test the FINAL, qualified opinion rather than the first reaction." }
+      ],
+      commonMistakes: [
+        "Losing concentration midway through Section 4's unbroken monologue — practise sustained 5-minute listening specifically, not just short clips.",
+        "Attributing an opinion to the wrong speaker in Section 3's multi-speaker format.",
+        "Getting stuck trying to understand every word rather than tracking the answer-relevant structure signposted by the question paper."
+      ],
+      practiceTip: "After listening to any academic podcast segment, write a 4-line structural outline (Intro/Main point 1/Main point 2/Conclusion) purely from listening, without reading a transcript."
+    },
+
+    {
+      id: "ielts-09", title: "Speaking Part 1: Extended Answers (The AREA Framework)", skill: "Speaking",
+      category: "speaking", bandFocus: "5.5–8.0", comingSoon: false,
+      tags: ["speaking part 1", "area framework", "fluency"],
+      summary: "Turning short factual answers into natural, extended responses without over-rehearsing.",
+      body: [
+        { heading: "Why Short Answers Cap Your Band", html: "Part 1 asks familiar, personal questions (home, work/study, hobbies, daily routine). A one-sentence answer ('I live with my family') gives the examiner almost nothing to assess for Fluency & Coherence or Lexical Resource — extension is not optional, it's the whole point of the task." },
+        { heading: "The AREA Framework", html: "<strong>A</strong>nswer the question directly. <strong>R</strong>eason — briefly explain why. <strong>E</strong>xample — give one specific, concrete example or detail. <strong>A</strong>dd a related comment or feeling to close naturally.<br><br>Example — Q: 'Do you enjoy cooking?'<br>A: 'Yeah, I actually really enjoy it.' (Answer)<br>R: 'It's one of the few times in the day I can completely switch off from screens.' (Reason)<br>E: 'Last weekend, for instance, I spent almost two hours making a proper Turkish menemen from scratch just for fun.' (Example)<br>A: 'It's become a bit of a stress-reliever for me, to be honest.' (Add)" },
+        { heading: "Avoiding the 'Memorised Speech' Trap", html: "Examiners are trained to detect rehearsed, generic answers that don't quite fit the actual question asked. AREA is a flexible thinking framework, not a script to memorise word-for-word — practise applying the structure spontaneously to new, unpredictable Part 1 topics." }
+      ],
+      commonMistakes: [
+        "Giving a one-word or one-sentence answer and stopping, forcing the examiner to ask another question to get any material to assess.",
+        "Reciting a clearly pre-memorised answer that doesn't match the specific question — examiners are trained to spot and penalise this.",
+        "Turkish L1 note: rising, list-like intonation transferred from Turkish speech patterns can make fluent English sound hesitant or unfinished to an examiner's ear — practising AREA answers aloud (not just planning them silently) helps fix this."
+      ],
+      practiceTip: "Record yourself answering five random Part 1 questions using AREA, without any prior preparation, then listen back and check each answer genuinely has all four AREA elements."
+    },
+
+    {
+      id: "ielts-10", title: "Speaking Part 2: Cue Card Strategy & the 1-Minute Plan", skill: "Speaking",
+      category: "speaking", bandFocus: "6.0–8.5", comingSoon: false,
+      tags: ["speaking part 2", "cue card", "long turn"],
+      summary: "Structuring a 2-minute 'long turn' using the full 1-minute planning time effectively.",
+      body: [
+        { heading: "Task Structure", html: "You get a cue card with a topic and 3–4 bullet prompts, 1 minute to plan (with paper and pencil provided), and must speak for 1–2 minutes without interruption. The examiner will not speak during your turn, so pacing is entirely your responsibility." },
+        { heading: "The 1-Minute Plan (4 Bullet Notes, Not Full Sentences)", html: "Write single words or short phrases, one per bullet point on the card, plus a note for tense (many cue cards ask about the past, e.g. 'Describe a time when...' — decide your timeframe immediately). Do not attempt to write full sentences; you will run out of time and end up reading rather than speaking naturally." },
+        { heading: "A Simple 4-Part Content Structure", html: "<strong>1. Set the scene</strong> (who/what/when/where). <strong>2. Give the main story/description</strong> — the bulk of your 2 minutes. <strong>3. Add a specific detail or example</strong> that makes it feel real, not generic. <strong>4. Close with a reflection</strong> (how you felt, why it mattered, what changed) — this naturally signals a strong ending to the examiner rather than trailing off." },
+        { heading: "If You Run Out of Things to Say", html: "Add a related but natural tangent: a comparison to a similar experience, what you'd do differently now, or how a friend/family member reacted — running past 1 minute without excessive padding is normal and expected." }
+      ],
+      commonMistakes: [
+        "Writing full sentences during planning time and then reading them aloud in a flat, unnatural rhythm.",
+        "Ignoring one or two of the bullet points entirely — try to touch on all of them, even briefly.",
+        "Stopping after 45–60 seconds — this signals underdevelopment and limits both Fluency & Coherence and Lexical Resource scoring."
+      ],
+      practiceTip: "Set a timer and give yourself exactly 1 minute to plan (bullet notes only) and 2 minutes to speak on a randomly chosen cue card topic — record it and check you covered all 4 structural parts."
+    },
+
+    {
+      id: "ielts-11", title: "Speaking Part 3: Abstract Discussion & Idea Development", skill: "Speaking",
+      category: "speaking", bandFocus: "6.5–9.0", comingSoon: false,
+      tags: ["speaking part 3", "abstract discussion", "idea development"],
+      summary: "Moving from personal experience to broader, idea-based discussion — the hardest part for most candidates.",
+      body: [
+        { heading: "What Changes in Part 3", html: "Part 3 questions extend the Part 2 topic into abstract, societal, or comparative territory ('How has X changed in your country over the last 20 years?', 'Do you think Y will become more common in the future?'). Personal anecdotes are no longer the main content — the examiner wants to hear you reason, compare, speculate, and evaluate." },
+        { heading: "Idea-Development Scaffolding", html: "For any 'why/how has this changed/what will happen' question: state a general trend or claim → give one clear reason → acknowledge a counterpoint or exception → give a brief speculative conclusion. This mirrors academic paragraph structure translated into spoken language." },
+        { heading: "Hedging Language for Speculation", html: "Native-like abstract discussion relies heavily on hedging: 'It's likely that...', 'I'd imagine that...', 'To some extent, I think...', 'It really depends on...'. Overusing flat, absolute claims ('It is definitely true that...') for every answer sounds unnatural and under-uses a key Band 7+ language resource." }
+      ],
+      commonMistakes: [
+        "Answering an abstract 'in society' question with only a personal anecdote, without generalising to the wider question asked.",
+        "Giving a one-sentence opinion with no reasoning — Part 3 specifically rewards developed, multi-step reasoning.",
+        "Turkish L1 note: learners sometimes over-hedge in Turkish-influenced ways ('maybe, I don't know, perhaps') that read as uncertainty rather than natural academic speculation — practise confident hedging language instead ('It's likely that...', 'I'd argue that...')."
+      ],
+      practiceTip: "Take one Part 2 cue card topic and write three Part 3-style 'wider society' follow-up questions for it yourself, then answer each using the scaffold above."
+    },
+
+    {
+      id: "ielts-12", title: "Band 6→7 Vocabulary Upgrade: Topic Collocations", skill: "Vocabulary & Grammar",
+      category: "vocab-grammar", bandFocus: "6.0–7.5", comingSoon: false,
+      tags: ["vocabulary", "collocations", "band 7", "lexical resource"],
+      summary: "Precise, topic-specific collocations that separate Band 6 vocabulary from Band 7+.",
+      body: [
+        { heading: "Why 'Upgrading' Beats 'Adding' Vocabulary", html: "Lexical Resource (LR) rewards precision and naturalness, not rare or complicated words used incorrectly. The most efficient path from Band 6 to 7 is replacing common, slightly imprecise words with more specific collocations you already understand — not memorising obscure vocabulary lists." },
+        { heading: "Environment", html: "Band 6: 'bad for the environment', 'pollution is a big problem'. Band 7+: 'environmentally damaging / detrimental to ecosystems', 'a pressing environmental concern', 'carbon emissions', 'unsustainable practices', 'biodiversity loss'." },
+        { heading: "Education", html: "Band 6: 'learn a lot', 'get good marks'. Band 7+: 'acquire practical skills', 'academic achievement', 'a rigorous curriculum', 'rote learning' (vs) 'critical thinking', 'higher education institutions'." },
+        { heading: "Technology & Society", html: "Band 6: 'technology changes things fast'. Band 7+: 'rapid technological advancement', 'digital transformation', 'a double-edged sword', 'widen/narrow the digital divide', 'data privacy concerns'." },
+        { heading: "Economy & Work", html: "Band 6: 'people don't have jobs', 'the economy is bad'. Band 7+: 'unemployment rates', 'economic downturn/recession', 'job security', 'a competitive job market', 'income inequality'." }
+      ],
+      commonMistakes: [
+        "Inserting a sophisticated word from a vocabulary list into the wrong collocation — examiners notice unnatural pairings immediately, and this can cost more than it gains.",
+        "Turkish L1 note: direct word-for-word translation of Turkish collocations often produces phrases that are grammatically fine but not how English speakers actually pair these words — always learn new vocabulary in full collocational chunks, never as single isolated words."
+      ],
+      practiceTip: "Take an essay you wrote previously and highlight five 'Band 6' vocabulary choices, then rewrite each using a more precise collocation from this note or your own notes."
+    },
+
+    {
+      id: "ielts-13", title: "Grammar-Band Mapping: Structures That Unlock Band 7", skill: "Vocabulary & Grammar",
+      category: "vocab-grammar", bandFocus: "6.0–8.0", comingSoon: false,
+      tags: ["grammar", "band 7", "gra", "complex sentences"],
+      summary: "Which specific grammar structures the GRA descriptor actually rewards at each band, with before/after examples.",
+      body: [
+        { heading: "Why This Matters More Than 'Grammar Accuracy' Alone", html: "GRA (Grammatical Range and Accuracy) scores BOTH range and accuracy — a candidate who writes only simple sentences with zero errors is still capped around Band 5–6, because 'range' is explicitly required for Band 7+. The goal is controlled complexity, not maximum complexity." },
+        { heading: "Band 5 → Band 7 Structure Upgrades", html: "<strong>Relative clauses:</strong> 'The plan is good. It saves money.' → 'The plan, which saves money, is generally well received.' <strong>Passive voice for objectivity:</strong> 'People believe the policy failed.' → 'The policy is widely believed to have failed.' <strong>Conditionals for argumentation:</strong> 'If we don't act, problems will get worse.' → 'Were governments to delay action further, the resulting problems would likely prove far more costly to resolve.' <strong>Participle clauses:</strong> 'The report was published last year. It highlighted several risks.' → 'Published last year, the report highlighted several risks.'" },
+        { heading: "Cumulative/Reduced Clauses for Fluency", html: "Combining ideas with '-ing' clauses avoids a string of short, choppy sentences: 'The company reduced costs. This allowed it to lower prices.' → 'By reducing costs, the company was able to lower its prices.'" }
+      ],
+      commonMistakes: [
+        "Forcing complex structures inaccurately just to 'show range' — one accurate complex sentence is worth more than three inaccurate ones.",
+        "Turkish L1 note: because Turkish embeds relative-clause-like information before the noun, learners sometimes avoid English relative clauses altogether even when they understand the rule — deliberately including at least 2–3 per essay builds the habit."
+      ],
+      practiceTip: "Take three simple sentences from a recent practice essay and rewrite each using a different structure from this note: one relative clause, one passive, one participle clause."
+    },
+
+    {
+      id: "ielts-14", title: "Turkish L1 Error Patterns — Full Diagnostic Guide", skill: "Vocabulary & Grammar",
+      category: "vocab-grammar", bandFocus: "All bands", comingSoon: false,
+      tags: ["turkish l1", "error patterns", "diagnostic", "gra", "lr"],
+      summary: "A consolidated diagnostic map of the ten most predictable Turkish-to-English transfer errors in IELTS performance.",
+      body: [
+        { heading: "How to Use This Guide", html: "These are not random mistakes — they are systematic, predictable patterns that arise from real structural differences between Turkish and English. Framing them this way (a predictable pattern, not a personal deficiency) also helps students correct them faster and with less discouragement." },
+        { heading: "The Ten Core Patterns", html: "<table class='diag-table'><tr><th>Domain</th><th>Typical Error</th><th>Band Impact</th></tr>" +
+          "<tr><td>Articles</td><td>Omitting 'the/a' (Turkish has no articles)</td><td>GRA capped ~5.5</td></tr>" +
+          "<tr><td>Word order</td><td>SOV-influenced word order in complex sentences</td><td>GRA capped ~5.5</td></tr>" +
+          "<tr><td>Verb tenses</td><td>Over-reliance on present simple; avoidance of perfect aspects</td><td>GRA capped ~6.0</td></tr>" +
+          "<tr><td>Passive voice</td><td>Under-use in formal writing (rarer in spoken Turkish)</td><td>GRA / LR both affected</td></tr>" +
+          "<tr><td>Relative clauses</td><td>Avoidance due to pre-nominal Turkish equivalent structure</td><td>GRA capped ~6.0</td></tr>" +
+          "<tr><td>Connectors</td><td>Direct translation of Turkish discourse markers</td><td>CC capped ~6.0</td></tr>" +
+          "<tr><td>Lexical chunks</td><td>Word-for-word translation of Turkish collocations</td><td>LR capped ~5.5</td></tr>" +
+          "<tr><td>Prepositions</td><td>Postposition→preposition mapping errors</td><td>GRA accuracy</td></tr>" +
+          "<tr><td>Pronunciation</td><td>Final consonant cluster reduction; vowel harmony transfer</td><td>Speaking fluency</td></tr>" +
+          "<tr><td>Register</td><td>Formal/informal register confusion</td><td>TA / LR</td></tr></table>" },
+        { heading: "Self-Diagnostic Routine", html: "After writing or recording any practice task, check specifically for these ten patterns in order, rather than reading generally for 'mistakes'. Most students carry 2–4 dominant patterns, not all ten equally — identify your personal top 3 and target them directly for the fastest band gains." }
+      ],
+      commonMistakes: [
+        "Treating every error as random rather than checking it against this list — most Turkish L1 errors cluster predictably and respond well to targeted, not general, correction.",
+        "Correcting only written grammar while ignoring the same patterns in spontaneous speech, where they are usually more frequent."
+      ],
+      practiceTip: "Mark up your last written or recorded practice task using only this table's ten categories as your checklist — most students find 2–3 patterns account for the majority of their errors."
+    },
+
+    {
+      id: "ielts-15", title: "IELTS Test Day Strategy & Time Management", skill: "Strategy",
+      category: "strategy", bandFocus: "All bands", comingSoon: false,
+      tags: ["test day", "strategy", "time management", "exam technique"],
+      summary: "A section-by-section execution plan for the day itself, when nerves and time pressure are highest.",
+      body: [
+        { heading: "Listening (≈30 min + transfer time)", html: "Use every gap between sections to read ahead, not to relax — the recording gives you time before each section starts specifically for this. Never leave a blank answer; an educated guess costs nothing, a blank guarantees zero." },
+        { heading: "Reading (60 minutes, no extra transfer time)", html: "Decide your time budget before starting (e.g. 17/20/23 minutes across the three passages) and stick to it with a watch, not a feeling. If a question is taking more than ~90 seconds with no progress, mark your best guess and move on — you can return only if time remains at the end." },
+        { heading: "Writing (60 minutes total: 20 + 40)", html: "Start with Task 2 if you tend to run out of time and it's worth double the marks — but only if you've practised this order beforehand; test day is not the time to try a new strategy for the first time. Leave 2–3 minutes at the end of each task to check articles, subject-verb agreement, and word count." },
+        { heading: "Speaking (11–14 minutes)", html: "Arrive with a calm, rehearsed opening routine (not rehearsed content) — a few slow breaths before entering the room measurably reduces the physiological anxiety response and improves initial fluency in Part 1." }
+      ],
+      commonMistakes: [
+        "Trying an unfamiliar new time-management strategy for the first time on the actual test day rather than in practice.",
+        "Spending so long perfecting Task 1 that Task 2 (worth twice the marks) is rushed or incomplete.",
+        "Leaving Listening or Reading questions blank instead of guessing — there is no penalty for a wrong guess."
+      ],
+      practiceTip: "Do one full timed mock under real conditions (no pausing, phone away) within the final two weeks before your test — time-pressure familiarity is itself a trainable skill, not just content knowledge."
+    },
+
+    // ===================== PACK 2 — ROADMAP STUBS (15) =====================
+    { id: "ielts-16", title: "Writing Task 1: Bar & Pie Charts — Data Selection Framework", skill: "Writing", category: "writing-t1", comingSoon: true, tags: ["writing task 1", "bar chart", "pie chart"], summary: "Choosing which figures matter and grouping categorical data logically. Coming in Content Pack 2." },
+    { id: "ielts-17", title: "Writing Task 1: Process Diagrams — Sequencing Language", skill: "Writing", category: "writing-t1", comingSoon: true, tags: ["writing task 1", "process diagram"], summary: "Describing a cyclical or linear process using passive sequencing language. Coming in Content Pack 2." },
+    { id: "ielts-18", title: "Writing Task 1: Maps & Comparisons", skill: "Writing", category: "writing-t1", comingSoon: true, tags: ["writing task 1", "maps"], summary: "Describing change between two maps using spatial and change-over-time language. Coming in Content Pack 2." },
+    { id: "ielts-19", title: "Writing Task 2: Problem/Solution Essays", skill: "Writing", category: "writing-t2", comingSoon: true, tags: ["writing task 2", "problem solution"], summary: "Structuring causes, problems, and realistic solutions in a balanced four-paragraph essay. Coming in Content Pack 2." },
+    { id: "ielts-20", title: "Writing Task 2: Advantages/Disadvantages & Direct Question Essays", skill: "Writing", category: "writing-t2", comingSoon: true, tags: ["writing task 2", "advantages disadvantages"], summary: "Handling the two remaining Task 2 essay types with the correct structural expectations. Coming in Content Pack 2." },
+    { id: "ielts-21", title: "Sentence & Summary Completion — Word Limit Rules", skill: "Reading", category: "reading", comingSoon: true, tags: ["reading", "summary completion"], summary: "Exact word-limit compliance and paraphrase-aware gap filling. Coming in Content Pack 2." },
+    { id: "ielts-22", title: "Multiple Choice & Matching Features", skill: "Reading", category: "reading", comingSoon: true, tags: ["reading", "mcq", "matching features"], summary: "Handling multi-answer MCQs and matching names/terms to descriptions. Coming in Content Pack 2." },
+    { id: "ielts-23", title: "Reading: Distractor Analysis Masterclass", skill: "Reading", category: "reading", comingSoon: true, tags: ["reading", "distractors"], summary: "Why each wrong answer is designed to be plausible, question type by question type. Coming in Content Pack 2." },
+    { id: "ielts-24", title: "Listening: Parallel Expression & Paraphrase", skill: "Listening", category: "listening", comingSoon: true, tags: ["listening", "paraphrase"], summary: "Recognising when the recording says X but the correct answer requires understanding it means Y. Coming in Content Pack 2." },
+    { id: "ielts-25", title: "Listening: Spelling, Numbers & Common Traps", skill: "Listening", category: "listening", comingSoon: true, tags: ["listening", "spelling", "numbers"], summary: "High-frequency number and spelling traps across all four sections. Coming in Content Pack 2." },
+    { id: "ielts-26", title: "Listening: Map/Plan/Diagram Labelling", skill: "Listening", category: "listening", comingSoon: true, tags: ["listening", "map labelling"], summary: "Following spatial/directional language in real time to label a plan correctly. Coming in Content Pack 2." },
+    { id: "ielts-27", title: "Speaking: Band 7+ Idiomatic Language Bank", skill: "Speaking", category: "speaking", comingSoon: true, tags: ["speaking", "idiomatic language"], summary: "Natural idiomatic phrases that read as native-like rather than textbook-rehearsed. Coming in Content Pack 2." },
+    { id: "ielts-28", title: "Speaking: Fluency & Coherence — Managing Hesitation", skill: "Speaking", category: "speaking", comingSoon: true, tags: ["speaking", "fluency", "hesitation"], summary: "Natural filler strategies that buy thinking time without being penalised. Coming in Content Pack 2." },
+    { id: "ielts-29", title: "Speaking: Pronunciation for Turkish L1 Speakers", skill: "Speaking", category: "speaking", comingSoon: true, tags: ["speaking", "pronunciation", "turkish l1"], summary: "Consonant-cluster reduction and vowel-harmony transfer, and how to target them directly. Coming in Content Pack 2." },
+    { id: "ielts-30", title: "Overcoming Test Anxiety — Psychology for Band Success", skill: "Strategy", category: "strategy", comingSoon: true, tags: ["psychology", "test anxiety", "mindset"], summary: "Self-efficacy, reframing, and calm-focus techniques grounded in test-anxiety research. Coming in Content Pack 2." }
+  ],
+
+  guidedPractice: [
+    {
+      id: "gp-w1", skill: "Writing Task 1", title: "Overview Paragraph Drill",
+      prompt: "The chart shows the percentage of households with internet access in four countries from 2000 to 2020. Write ONLY the overview paragraph (2 sentences, no numbers) — the part most Band 5–6 candidates skip entirely.",
+      rubric: {
+        TA: "Does the overview correctly capture the 1–2 most significant overall trends, without listing every data point?",
+        CC: "Is it clearly separated from the introduction and body, and logically sequenced?",
+        LR: "Are general trend words used accurately (e.g. 'a general upward trend', 'converged', 'diverged') without needing specific figures?",
+        GRA: "Is at least one complex structure used accurately (e.g. a relative clause or 'while' contrast)?"
+      },
+      bandNote: "A Band 7+ overview names the two most important patterns in the data (e.g., 'all countries rose overall, but Country A consistently led') using zero numbers — numbers belong only in the body paragraphs."
+    },
+    {
+      id: "gp-w2", skill: "Writing Task 2", title: "Thesis Statement Builder",
+      prompt: "Topic: 'Some believe social media has a positive effect on society, while others disagree.' Write ONE thesis statement sentence using the formula: topic + clear position + one-clause preview of two reasons.",
+      rubric: {
+        TA: "Is the position unambiguous and specific (not 'it depends' or 'both sides have points')?",
+        CC: "Does the sentence structure logically preview what the two body paragraphs will cover?",
+        LR: "Is topic-specific vocabulary used precisely (e.g. 'social connectivity', 'misinformation') rather than vague words like 'good/bad things'?",
+        GRA: "Is a complex sentence used accurately (e.g. 'While... I believe... primarily because...')?"
+      },
+      bandNote: "Weak: 'Social media has good and bad points.' Band 7+: 'While social media undeniably strengthens social connectivity across distances, I believe its overall societal effect is negative, primarily because it accelerates the spread of misinformation and contributes to declining mental wellbeing among young users.'"
+    },
+    {
+      id: "gp-r1", skill: "Reading", title: "TFNG Micro-Set",
+      prompt: "Passage extract: 'City councils in several European countries have begun trialling four-day work weeks for municipal employees. Early results from Iceland's large-scale trial were widely reported as positive, though researchers caution that results may not generalise to the private sector or to countries with different labour structures.' Statement: 'Researchers agree the four-day week will succeed in every country.'",
+      rubric: {
+        TA: "Correct classification: NOT GIVEN — the passage explicitly cautions against generalising, which is a signal against blanket success, but does not make a direct claim either way about 'every country'.",
+        CC: "N/A for this micro-drill (single-question focus).",
+        LR: "N/A for this micro-drill.",
+        GRA: "N/A for this micro-drill."
+      },
+      bandNote: "Common trap: students choose FALSE because the passage 'sounds cautious', but caution about generalising is not the same as a direct contradiction of the specific claim — that distinction is exactly what separates FALSE from NOT GIVEN."
+    },
+    {
+      id: "gp-l1", skill: "Listening", title: "Prediction Warm-Up",
+      prompt: "You will hear a form with the field: 'Preferred appointment time: _______ (no more than two words)'. Before listening, predict: what word TYPE is required, and what plural/spelling issues might arise.",
+      rubric: {
+        TA: "Correctly predicts a time-related answer type (e.g. 'morning', 'early afternoon') rather than a name or number.",
+        CC: "N/A for this micro-drill.",
+        LR: "Recognises common time-related vocabulary that might be spoken (e.g. 'quarter past', 'first thing').",
+        GRA: "N/A for this micro-drill."
+      },
+      bandNote: "Prediction narrows your listening attention to a specific word class before the audio starts, which measurably reduces the 'panic gap' between hearing the answer and writing it correctly."
+    },
+    {
+      id: "gp-s2", skill: "Speaking Part 2", title: "Cue Card Bullet-Note Practice",
+      prompt: "Cue card: 'Describe a skill you learned that you found difficult at first. You should say: what the skill was, how you learned it, how long it took, and explain why you found it difficult.' Write ONLY your 1-minute bullet-point plan (not full sentences).",
+      rubric: {
+        TA: "Does the plan address all four bullet points, even briefly?",
+        CC: "Is there a clear beginning/middle/end structure implied by the notes' order?",
+        LR: "Are 2–3 specific topic words jotted down (not full sentences) to prompt precise vocabulary later?",
+        GRA: "Is a tense/timeframe decision made explicitly in the notes (e.g. 'past — 2 years ago')?"
+      },
+      bandNote: "A strong bullet-note plan is 8–12 words total across all four points — if your notes look like full sentences, you're writing too much and will run out of planning time."
+    },
+    {
+      id: "gp-s3", skill: "Speaking Part 3", title: "Idea-Development Scaffold Drill",
+      prompt: "Question: 'Do you think skills like this will become more or less important in the future?' Answer using the scaffold: general trend → one clear reason → a counterpoint/exception → brief speculative conclusion.",
+      rubric: {
+        TA: "Does the answer move beyond personal anecdote into a genuine, reasoned prediction?",
+        CC: "Are the four scaffold steps signalled with clear discourse markers (e.g. 'That said...', 'It's likely that...')?",
+        LR: "Is hedging language used naturally (e.g. 'I'd imagine', 'to some extent') rather than flat absolute claims?",
+        GRA: "Is at least one conditional or speculative structure used accurately (e.g. 'if X continues, Y will likely...')?"
+      },
+      bandNote: "This is the clearest Band 6 vs Band 7+ divide in Part 3: Band 6 answers often stop after the 'reason' step; Band 7+ answers reliably add the counterpoint and speculative close."
+    }
+  ],
+
+  listeningSets: [
+    {
+      id: "ielts-listen-s1-01",
+      title: "Section 1 — Riverside Fitness: Gym Membership Enquiry",
+      section: 1,
+      contextType: "Social/transactional (2-speaker conversation)",
+      bandFocus: "5.5–7.0",
+      timeLimitMinutes: 12,
+      audioSrc: "audio/ielts/section1/gym-membership-enquiry.mp3",
+      audioTitle: "Gym Membership Enquiry",
+      audioContext: "You will hear a man phoning a gym to ask about membership and book an induction session. First, you have some time to look at questions 1–10.",
+      instructions: "Complete the form below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+      transcript: "RECEPTIONIST: Good morning, Riverside Fitness, how can I help you today?\nCALLER: Oh, hi. I was hoping to get some information about joining the gym — memberships, prices, that kind of thing.\nRECEPTIONIST: Of course. Have you been to Riverside before, or would this be your first time?\nCALLER: First time, yeah. A friend of mine goes there and said good things about it.\nRECEPTIONIST: Great, we're always happy to hear that. Right, shall I take a few details first, and then I can talk you through what we offer?\nCALLER: Sure.\nRECEPTIONIST: Could I get your full name, please?\nCALLER: It's Daniel Whitfield.\nRECEPTIONIST: Sorry, could you spell the surname for me?\nCALLER: Yep — W-H-I-T-F-I-E-L-D.\nRECEPTIONIST: Perfect, thank you. And a contact number?\nCALLER: It's 07 — sorry, let me just check — 07945 226130.\nRECEPTIONIST: 07945 226130, got it. And would you prefer we contact you by phone or email?\nCALLER: Email's probably easier, actually.\nRECEPTIONIST: No problem — what's the address?\nCALLER: It's d dot whitfield, all one word, at skymail dot com.\nRECEPTIONIST: Great, thank you. Now, in terms of membership, we've actually got three main options. There's the Standard membership, which is gym-floor access only; the Premium, which adds the pool and the fitness classes; and then there's an Off-Peak option, which is cheaper but restricted to before 10am and after 7pm.\nCALLER: Right. What sort of price are we talking?\nRECEPTIONIST: Standard's 35 pounds a month, Premium's 52, and Off-Peak works out at 28.\nCALLER: I think Premium sounds like what I need, to be honest — I really want to get back into swimming.\nRECEPTIONIST: Good choice — the pool's one of our most popular facilities. I'll also mention there's a one-off joining fee of 20 pounds, but that's waived if you sign up before the end of the month, which — actually, that's this Friday, so you're just in time.\nCALLER: Oh, that's handy.\nRECEPTIONIST: It is. Now, we do recommend booking an induction session before you start using the equipment on your own — it's about 45 minutes with one of our trainers, just going over the machines and general safety.\nCALLER: Yeah, that makes sense. When could I do that?\nRECEPTIONIST: Let me check... we've got a slot this Thursday at 6pm, or otherwise the following Tuesday at 9am.\nCALLER: Thursday at 6 works better for me.\nRECEPTIONIST: Lovely, I'll pencil you in for that. Oh, and one more thing — is there anything we should know, medically, before your induction? Any injuries, conditions, anything like that?\nCALLER: Um, I did have a knee operation a couple of years ago, but it's fully healed now — just thought I'd mention it.\nRECEPTIONIST: Thanks for letting us know, I'll add a note to your file so the trainer's aware. Right, I think that's everything — welcome to Riverside Fitness, Daniel!\nCALLER: Thanks very much, see you Thursday.",
+      questions: [
+        { id: "l1-q1", prompt: "1. Surname:", correctAnswer: "Whitfield", explanation: "Spelled aloud letter by letter: 'W-H-I-T-F-I-E-L-D.'", tag: "spelling" },
+        { id: "l1-q2", prompt: "2. Contact number:", correctAnswer: "07945226130", explanation: "The caller self-corrects mid-number ('It's 07 — sorry, let me just check — 07945 226130'), and the receptionist repeats it back to confirm — the repeated version is the reliable answer.", tag: "numbers" },
+        { id: "l1-q3", prompt: "3. Preferred contact method:", correctAnswer: "email", explanation: "'Email's probably easier, actually.'", tag: "detail" },
+        { id: "l1-q4", prompt: "4. Email address:", correctAnswer: "d.whitfield@skymail.com", explanation: "'It's d dot whitfield, all one word, at skymail dot com.'", tag: "spelling" },
+        { id: "l1-q5", prompt: "5. Membership type chosen:", correctAnswer: "Premium", explanation: "'I think Premium sounds like what I need, to be honest.'", tag: "detail" },
+        { id: "l1-q6", prompt: "6. Monthly price: £", correctAnswer: "52", explanation: "'Standard's 35 pounds a month, Premium's 52, and Off-Peak works out at 28' — the caller chose Premium.", tag: "numbers" },
+        { id: "l1-q7", prompt: "7. Joining fee waived if signed up by:", correctAnswer: "Friday", explanation: "Parallel-expression/self-correction trap: the receptionist first says 'before the end of the month', then corrects herself — 'actually, that's this Friday' — Friday is the real deadline, not a vague 'end of the month.'", tag: "parallel-expression" },
+        { id: "l1-q8", prompt: "8. Induction session day:", correctAnswer: "Thursday", explanation: "'We've got a slot this Thursday at 6pm... Thursday at 6 works better for me.'", tag: "detail" },
+        { id: "l1-q9", prompt: "9. Induction session time:", correctAnswer: "6pm", explanation: "'This Thursday at 6pm' — confirmed again by the caller as 'Thursday at 6.'", tag: "numbers" },
+        { id: "l1-q10", prompt: "10. Medical note added about:", correctAnswer: "knee", explanation: "'I did have a knee operation a couple of years ago, but it's fully healed now.'", tag: "detail" }
+      ]
+    }
+  ],
+
+  ultimateMock: {
+    id: "ielts-ultimate-mock-1",
+    title: "IELTS Ultimate Mock Exam — Set 1",
+    note: "A full, integrated Academic mock: one Reading passage with a mixed question set, plus both Writing tasks with Band 9 model answers and full annotations. Sets 2–5 follow the same schema (see roadmap notes) and will be added as Content Pack 2.",
+    reading: {
+      title: "Vertical Farming: Growing Up, Not Out",
+      timeLimitMinutes: 20,
+      text: "For most of agricultural history, growing more food has meant using more land. Vertical farming challenges that basic assumption by stacking growing systems upward, inside climate-controlled buildings, rather than spreading them outward across fields. Advocates argue that the approach could transform how cities feed themselves; sceptics counter that the economics remain, for now, deeply uncertain.\n\nThe core appeal of vertical farming lies in its extraordinary land efficiency. A single hectare of vertically stacked growing trays, arranged across multiple levels within a warehouse, can theoretically produce the yield of many hectares of traditional open-field farmland, since the constraint of horizontal space is effectively removed. Combined with hydroponic or aeroponic growing methods, which deliver nutrients directly to plant roots without soil, water usage can also be reduced dramatically compared with conventional irrigation — some operators claim reductions of over ninety percent.\n\nProximity to consumers offers a second major advantage. Because vertical farms can be built inside or near the cities they serve, produce can be harvested and sold within hours rather than being transported for days across long supply chains. This proximity not only reduces the environmental cost associated with transportation but also allows crops to be picked at peak ripeness, since they no longer need to survive a lengthy journey before reaching a supermarket shelf.\n\nHowever, the technology faces a significant and, so far, unresolved economic obstacle: energy consumption. Unlike traditional farms, which rely on free sunlight, most vertical farms depend on artificial LED lighting to drive photosynthesis around the clock, and that electricity demand is substantial. Several well-funded vertical farming startups have collapsed in recent years, largely because their operating costs — dominated by electricity — made it impossible to price produce competitively against traditionally grown alternatives, particularly for lower-margin staple crops. As a result, the crops currently grown profitably in vertical farms tend to be high-value, fast-growing leafy greens and herbs rather than staples such as wheat or rice, which require far more space and time to reach a comparable market value.\n\nProponents respond that the economics will shift as renewable energy becomes cheaper and LED efficiency continues to improve, pointing to the dramatic cost declines already seen in solar panel and battery technology over the past two decades. Critics remain more cautious, noting that agricultural economics differ in important ways from those of other energy-dependent technologies, and that vertical farming may ultimately prove to be a valuable niche solution — well suited to leafy greens in dense urban centres — rather than a wholesale replacement for traditional agriculture.\n\nWhat seems increasingly clear is that vertical farming is unlikely to solve global food security on its own. Even the most optimistic projections suggest it will remain a complement to, rather than a substitute for, traditional farming for the foreseeable future. Its most promising role may be geographic and logistical rather than purely agricultural: bringing fresh produce closer to dense urban populations, reducing food miles, and providing a degree of resilience against supply-chain disruptions that affect conventionally sourced produce.",
+      paragraphLabels: ["A", "B", "C", "D", "E", "F"],
+      questions: [
+        { id: "um-r-1", type: "heading", forParagraph: "B", prompt: "Choose the best heading for Paragraph B.", options: ["The rising cost of urban land", "Why less land is needed to grow the same amount of food", "A comparison between hydroponics and aeroponics", "The history of greenhouse farming"], correctAnswer: 1, explanation: "Paragraph B's main idea is land efficiency through stacking and reduced water use — not a cost comparison or historical account.", tag: "matching-headings" },
+        { id: "um-r-2", type: "heading", forParagraph: "C", prompt: "Choose the best heading for Paragraph C.", options: ["The benefits of shorter supply chains", "Why supermarkets prefer local produce", "The rising popularity of urban farming as a hobby", "How transportation costs are calculated"], correctAnswer: 0, explanation: "Paragraph C focuses on proximity to consumers reducing transport time and environmental cost, and improving freshness — i.e., benefits of shorter supply chains.", tag: "matching-headings" },
+        { id: "um-r-3", type: "heading", forParagraph: "D", prompt: "Choose the best heading for Paragraph D.", options: ["The environmental benefits of LED technology", "Government subsidies for renewable energy", "The energy cost problem limiting profitability", "Why staple crops are always unprofitable"], correctAnswer: 2, explanation: "Paragraph D's main idea is that energy consumption/electricity cost is the key economic obstacle limiting which crops are profitable — not a blanket claim that staples are 'always' unprofitable (an overstatement trap).", tag: "matching-headings" },
+        { id: "um-r-4", type: "tfng", prompt: "Vertical farms typically use significantly less water than traditional farms, according to the passage.", correctAnswer: "True", explanation: "Paragraph B: 'water usage can also be reduced dramatically... some operators claim reductions of over ninety percent.'", tag: "tfng" },
+        { id: "um-r-5", type: "tfng", prompt: "The passage states that all vertical farming startups have failed financially.", correctAnswer: "False", explanation: "Paragraph D says 'several' well-funded startups have collapsed, not all — this overstates the passage's actual claim.", tag: "tfng" },
+        { id: "um-r-6", type: "tfng", prompt: "The passage specifies the exact percentage of vertical farms currently growing leafy greens worldwide.", correctAnswer: "Not Given", explanation: "The passage states leafy greens/herbs 'tend to' be the profitable crops but gives no specific worldwide percentage figure.", tag: "tfng" },
+        { id: "um-r-7", type: "summary", prompt: "Complete the summary using NO MORE THAN TWO WORDS from the passage: Vertical farms mostly grow high-value, fast-growing ______ rather than staple crops.", correctAnswer: "leafy greens", explanation: "Paragraph D: 'the crops currently grown profitably in vertical farms tend to be high-value, fast-growing leafy greens and herbs.'", tag: "summary-completion" },
+        { id: "um-r-8", type: "summary", prompt: "Complete the summary using NO MORE THAN TWO WORDS from the passage: Proponents believe costs will fall as ______ becomes cheaper, similar to trends seen in solar and battery technology.", correctAnswer: "renewable energy", explanation: "Paragraph E: 'the economics will shift as renewable energy becomes cheaper and LED efficiency continues to improve.'", tag: "summary-completion" },
+        { id: "um-r-9", type: "mcq", prompt: "According to the final paragraph, what is likely to be vertical farming's most valuable long-term role?", options: ["Fully replacing traditional agriculture worldwide", "Solving global food security independently", "Complementing traditional farming by supplying fresh produce closer to cities", "Eliminating the need for supermarkets"], correctAnswer: 2, explanation: "Final paragraph: 'it will remain a complement to, rather than a substitute for, traditional farming... bringing fresh produce closer to dense urban populations.'", tag: "detail" },
+        { id: "um-r-10", type: "mcq", prompt: "What is the writer's overall stance on vertical farming?", options: ["Enthusiastically in favour, with no reservations", "Dismissive, viewing it as a failed technology", "Balanced — acknowledging real advantages alongside a significant unresolved economic challenge", "Neutral to the point of expressing no clear view at all"], correctAnswer: 2, explanation: "The passage presents genuine advantages (land/water efficiency, proximity) alongside a clearly stated obstacle (energy cost) and a measured conclusion — a balanced stance, not enthusiasm, dismissal, or total neutrality.", tag: "main-idea" }
+      ]
+    },
+    writingTask1: {
+      timeLimitMinutes: 20,
+      minWords: 150,
+      prompt: "The chart below shows the percentage of households with internet access in four countries (Brazil, Germany, Kenya, and South Korea) between 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      modelAnswer: "The chart illustrates trends in household internet access across four countries — Brazil, Germany, Kenya and South Korea — over a twenty-year period.\n\nOverall, all four countries saw substantial growth in internet access, though they started from very different points and South Korea maintained a clear lead throughout, while Kenya remained consistently behind the other three nations.\n\nIn 2000, South Korea already had comparatively high internet penetration at around 40%, far ahead of Germany (20%), Brazil (5%) and Kenya (under 1%). Over the next decade, South Korea's rate climbed rapidly, surpassing 90% by 2010, while Germany followed a similar upward path at a slightly slower pace, reaching approximately 80% in the same year.\n\nBrazil's growth, though starting from a low base, accelerated sharply after 2005, eventually converging with Germany's figures by around 2018, when both countries hovered near 85–90%. Kenya's trajectory was markedly different: although access remained minimal until roughly 2010, a rapid rise followed over the subsequent decade, reaching approximately 30% by 2020 — still considerably lower than the other three nations, but representing by far the steepest proportional increase of any country shown.",
+      bandAnnotation: "TA: Clear overview naming both the shared growth trend and the two standout features (South Korea's lead, Kenya's lag) before any numbers appear. CC: Logical grouping by growth pattern rather than a robotic country-by-country list. LR: Precise data language ('converging', 'hovered near', 'markedly different trajectory'). GRA: Complex structures used accurately throughout (participle clause 'though starting from a low base', comparative structures)."
+    },
+    writingTask2: {
+      timeLimitMinutes: 40,
+      minWords: 250,
+      prompt: "Some people believe that the best way to reduce crime is to give longer prison sentences. Others, however, believe there are better alternative methods of reducing crime. Discuss both views and give your own opinion.",
+      modelAnswer: "Rising crime rates in many societies have reignited debate over the most effective response: some argue for longer prison sentences as a deterrent, while others advocate alternative approaches such as rehabilitation and addressing root causes. This essay will examine both perspectives before presenting my own view.\n\nSupporters of longer sentences argue that harsher punishment deters potential offenders and keeps convicted criminals off the streets for extended periods, directly reducing their opportunity to reoffend. This view has particular intuitive appeal for violent or repeat offenders, where public safety concerns are most acute, and many governments have responded to public pressure by lengthening minimum sentences for serious crimes.\n\nHowever, advocates of alternative methods point to a substantial body of criminological research suggesting that sentence length has only a weak deterrent effect on most offenders, particularly those driven by poverty, addiction, or lack of education rather than rational cost-benefit calculation. Countries such as Norway, which prioritise rehabilitation and reintegration over punishment, report considerably lower reoffending rates than nations with comparatively longer average sentences, suggesting that addressing the underlying drivers of criminal behaviour may be more effective than punishment alone. Proponents of this view also highlight that overcrowded prisons focused purely on punishment can function as 'crime schools', where first-time offenders learn from more experienced criminals rather than reforming.\n\nIn my opinion, while longer sentences remain justifiable for the most serious and violent crimes, where public protection is paramount, alternative approaches offer a more effective long-term strategy for the majority of offences. Rehabilitation programmes, employment support, and addiction treatment address the actual causes of reoffending in a way that imprisonment alone does not, and the comparative international evidence on reoffending rates supports this conclusion.\n\nIn conclusion, although both perspectives contain valid concerns, a combined strategy — firm sentencing for serious violent crime alongside genuine investment in rehabilitation for the broader offender population — is likely to reduce crime more effectively than relying on prison length alone.",
+      bandAnnotation: "TA: Both views are developed with comparable depth and specific supporting evidence (Norway example) before the writer's own nuanced position is stated. CC: Clear paragraph-level signposting throughout ('Supporters of...', 'However, advocates of...', 'In my opinion...'). LR: Precise topic vocabulary ('reoffending rates', 'deterrent effect', 'reintegration') used naturally. GRA: Wide range of accurate complex structures, including a reduced relative clause ('Countries such as Norway, which prioritise...') and abstract noun phrases ('the underlying drivers of criminal behaviour')."
+    }
+  },
+
+  flashcardDecks: [
+    {
+      id: "ielts-deck-vocab-upgrade", title: "Band 6→7 Vocabulary Upgrade", sourceNoteId: "ielts-12",
+      cards: [
+        { id: "vu-1", term: "bad for the environment", definition: "Band 7 upgrade: environmentally damaging / detrimental to ecosystems", example: "Plastic waste is detrimental to marine ecosystems." },
+        { id: "vu-2", term: "a big problem", definition: "Band 7 upgrade: a pressing concern", example: "Air pollution is a pressing concern in major cities." },
+        { id: "vu-3", term: "gases that cause warming", definition: "Band 7 upgrade: carbon emissions", example: "Carbon emissions from vehicles remain a major contributor to climate change." },
+        { id: "vu-4", term: "using resources badly", definition: "Band 7 upgrade: unsustainable practices", example: "Overfishing is an example of unsustainable practices." },
+        { id: "vu-5", term: "loss of animal species", definition: "Band 7 upgrade: biodiversity loss", example: "Deforestation is a leading cause of biodiversity loss." },
+        { id: "vu-6", term: "learn a lot", definition: "Band 7 upgrade: acquire practical skills", example: "Students acquire practical skills through internships." },
+        { id: "vu-7", term: "get good marks", definition: "Band 7 upgrade: academic achievement", example: "Academic achievement is influenced by many factors beyond intelligence." },
+        { id: "vu-8", term: "a hard course", definition: "Band 7 upgrade: a rigorous curriculum", example: "The rigorous curriculum prepares students for university." },
+        { id: "vu-9", term: "memorising facts", definition: "Band 7 upgrade (as a contrast term): rote learning", example: "Rote learning is being replaced by critical thinking in modern classrooms." },
+        { id: "vu-10", term: "technology changes fast", definition: "Band 7 upgrade: rapid technological advancement", example: "Rapid technological advancement has transformed the workplace." },
+        { id: "vu-11", term: "going digital", definition: "Band 7 upgrade: digital transformation", example: "The digital transformation of banking has reduced the need for physical branches." },
+        { id: "vu-12", term: "something with good and bad sides", definition: "Band 7 upgrade: a double-edged sword", example: "Social media is often described as a double-edged sword." },
+        { id: "vu-13", term: "gap between rich/poor tech access", definition: "Band 7 upgrade: the digital divide", example: "Government investment aims to narrow the digital divide." },
+        { id: "vu-14", term: "worries about privacy", definition: "Band 7 upgrade: data privacy concerns", example: "Data privacy concerns have grown alongside AI adoption." },
+        { id: "vu-15", term: "people don't have jobs", definition: "Band 7 upgrade: unemployment rates", example: "Unemployment rates rose sharply during the recession." },
+        { id: "vu-16", term: "the economy is bad", definition: "Band 7 upgrade: an economic downturn", example: "The country is experiencing an economic downturn." },
+        { id: "vu-17", term: "jobs are hard to find", definition: "Band 7 upgrade: a competitive job market", example: "Graduates face a highly competitive job market." },
+        { id: "vu-18", term: "rich and poor gap", definition: "Band 7 upgrade: income inequality", example: "Income inequality has widened in many developed nations." }
+      ]
+    },
+    {
+      id: "ielts-deck-turkish-l1", title: "Turkish L1 Error Spotting", sourceNoteId: "ielts-14",
+      cards: [
+        { id: "l1-1", term: "Articles — spot the fix", definition: "❌ 'She is teacher at local school.' → ✅ 'She is a teacher at the local school.' (Turkish has no articles — GRA capped ~5.5 if frequent)", example: "She is a teacher at the local school." },
+        { id: "l1-2", term: "Word order — spot the fix", definition: "❌ 'Yesterday I my homework finished.' → ✅ 'Yesterday I finished my homework.' (SOV-influenced order — GRA capped ~5.5)", example: "Yesterday I finished my homework." },
+        { id: "l1-3", term: "Verb tenses — spot the fix", definition: "❌ 'I live here since 2015.' → ✅ 'I have lived here since 2015.' (avoidance of perfect aspect — GRA capped ~6.0)", example: "I have lived here since 2015." },
+        { id: "l1-4", term: "Passive voice — spot the fix", definition: "❌ 'Someone must do this before Friday.' (in a formal report) → ✅ 'This must be done before Friday.' (under-use of passive)", example: "This must be done before Friday." },
+        { id: "l1-5", term: "Relative clauses — spot the fix", definition: "❌ avoids the clause entirely → ✅ 'The report, which had already been reviewed, was approved.' (GRA capped ~6.0 if avoided)", example: "The report, which had already been reviewed, was approved." },
+        { id: "l1-6", term: "Connectors — spot the fix", definition: "❌ 'In addition to this situation, prices rose.' → ✅ 'Furthermore, prices rose.' (calqued discourse marker — CC capped ~6.0)", example: "Furthermore, prices rose." },
+        { id: "l1-7", term: "Lexical chunks — spot the fix", definition: "❌ 'do a mistake' → ✅ 'make a mistake' (word-for-word collocation transfer — LR capped ~5.5)", example: "make a mistake" },
+        { id: "l1-8", term: "Prepositions — spot the fix", definition: "❌ 'depend to' → ✅ 'depend on' (postposition→preposition mapping error)", example: "It depends on the weather." },
+        { id: "l1-9", term: "Register — spot the fix", definition: "❌ 'Hey, I would be grateful if...' → ✅ pick one register and hold it consistently (formal OR informal, never mixed)", example: "I would be grateful if you could confirm the details." }
+      ]
+    }
+  ]
+};
+
+/* SCHEMA NOTES — for completing Pack 2 or adding Mock Sets 2–5:
+ * notes[]: add { id, title, skill, category, bandFocus, comingSoon:false, tags[], summary, body:[{heading, html}],
+ *                modelAnswer?:{prompt?, text, bandAnnotation}, turkishL1Note?, commonMistakes?, practiceTip? }
+ *   then flip the matching stub's comingSoon to false (or replace it) — app.js reads comingSoon to render the "Coming Soon" badge automatically, no UI code changes needed.
+ * guidedPractice[]: { id, skill, title, prompt, rubric:{TA,CC,LR,GRA}, bandNote }
+ * ultimateMock: to add Set 2, duplicate the object under a new key (e.g. ultimateMock2) with the same
+ *   {reading, writingTask1, writingTask2} shape, then register it in js/app.js renderIeltsMockList().
+ * flashcardDecks[]: { id, title, sourceNoteId?, cards:[{id, term, definition, example}] } — add a new deck
+ * object to grow the Flashcards tool; app.js discovers decks generically, no UI changes needed.
+ * listeningSets[]: { id, title, section (1-4), contextType, bandFocus, timeLimitMinutes,
+ *   audioSrc (relative path under audio/ielts/section{N}/...), audioTitle, audioContext,
+ *   instructions, transcript (full script — shown only after submission, not during the
+ *   exercise), questions:[{id, prompt, correctAnswer, explanation, tag}] } — the questions
+ *   reuse the same plain-text shape as gapfill/summary questions elsewhere, so they're
+ *   auto-scored with no engine changes. To add another Section 1 set or Sections 2–4: author
+ *   the script with the anthropic-skills:ielts-academic-instructor skill (references/listening.md
+ *   + references/exam-authenticity.md) for the correct section profile and difficulty, generate
+ *   the audio (see scripts/clipchamp-listening-s1-01.md for the manual-recording process used
+ *   for Set 1, or scripts/generate_listening_audio.py for the ElevenLabs API route — that one
+ *   needs a paid ElevenLabs plan, free-tier accounts get a 402 on every TTS call) into
+ *   audio/ielts/section{N}/, then add one object here — app.js discovers listeningSets generically
+ *   (js/app.js renderIeltsSuite "listening" branch), no UI code changes needed.
+ */
